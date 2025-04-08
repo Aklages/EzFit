@@ -2,13 +2,17 @@
 
 Informações básicas do projeto.
 
-* **Projeto:** [NOME DO PROJETO]
-* **Repositório GitHub:** [LINK PARA O REPOSITÓRIO NO GITHUB]
+* **Projeto:** EzFit
+* **Repositório GitHub:** [Repositório EzFit](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2025-1-ti1-0385100-ezfit.git)
 * **Membros da equipe:**
 
-  * [Fulano](https://github.com/fulano) ⚠️ EXEMPLO ⚠️
-  * [Beltrano](https://github.com/beltrano) ⚠️ EXEMPLO ⚠️
-  * [Cicrano](https://github.com/cicrano) ⚠️ EXEMPLO ⚠️
+  * [André Kirst](https://github.com/Aklages)
+  * Bruno Henrique
+  * Diego Volponi
+  * Lucca Maximo
+  * Matheus Henrique
+  * Victor Amaral
+
 
 A documentação do projeto é estruturada da seguinte forma:
 
@@ -28,58 +32,39 @@ Detalhes sobre o espaço de problema, os objetivos do projeto, sua justificativa
 
 ## Problema
 
-**✳️✳️✳️ COLOQUE AQUI O SEU TEXTO ✳️✳️✳️**
-
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Nesse momento você deve apresentar o problema que a sua aplicação deve resolver. No entanto, não é a hora de comentar sobre a aplicação. Descreva também o contexto em que essa aplicação será usada, se houver: empresa, tecnologias, etc. Novamente, descreva apenas o que de fato existir, pois ainda não é a hora de apresentar requisitos detalhados ou projetos.
->
-> **Orientações**:
->
-> - [Objetivos, Problema de pesquisa e Justificativa](https://medium.com/@versioparole/objetivos-problema-de-pesquisa-e-justificativa-c98c8233b9c3)
-> - [Matriz Certezas, Suposições e Dúvidas](https://medium.com/educa%C3%A7%C3%A3o-fora-da-caixa/matriz-certezas-suposi%C3%A7%C3%B5es-e-d%C3%BAvidas-fa2263633655)
-> - [Brainstorming](https://www.euax.com.br/2018/09/brainstorming/)
+O sedentarismo é um problema crescente na sociedade moderna, impulsionado por estilos de vida cada vez mais digitais, rotinas estressantes e a falta de motivação para a prática regular de atividades físicas. Embora muitas pessoas desejem adotar hábitos mais saudáveis, fatores como a escassez de tempo e a ausência de estímulos dificultam o início e a manutenção de uma rotina ativa. Esse cenário contribui para o aumento de problemas de saúde física e mental, tornando urgente a busca por soluções que incentivem mudanças de comportamento.
 
 ## Objetivos
 
-**✳️✳️✳️ COLOQUE AQUI O SEU TEXTO ✳️✳️✳️**
+O objetivo geral deste trabalho é desenvolver uma aplicação web que auxilie jovens adultos na superação do sedentarismo, oferecendo recomendações personalizadas de atividades físicas com base nas necessidades e preferências individuais dos usuários.
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Aqui você deve descrever os objetivos do trabalho indicando que o objetivo geral é desenvolver um software para solucionar o problema apresentado acima. Apresente também alguns (pelo menos 2) objetivos específicos dependendo de onde você vai querer concentrar a sua prática investigativa, ou como você vai aprofundar no seu trabalho.
->
-> **Orientações**:
->
-> - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
+Como objetivos específicos, destacam-se:
+
+* Implementar um sistema de recomendação de atividades físicas considerando fatores como distância, tempo disponível e objetivos pessoais de saúde ou desempenho.
+* Propor funcionalidades que incentivem o engajamento do usuário, como vídeos motivacionais, informações científicas sobre os impactos do sedentarismo.
+* Disponibilizar a criação e participação de comunidades/grupos de interesse com foco em práticas esportivas coletivas.
 
 ## Justificativa
 
-**✳️✳️✳️ COLOQUE AQUI O SEU TEXTO ✳️✳️✳️**
+A motivação para a criação do EzFit surgiu a partir da observação da realidade de muitos
+jovens adultos, que se encontram desmotivados ou sem tempo. Diversos estudos e levantamentos mostram
+as graves consequências do sedentarismo, como obesidade, ansiedade e baixa produtividade.
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Descreva a importância ou a motivação para trabalhar com esta aplicação que você escolheu. Indique as razões pelas quais você escolheu seus objetivos específicos ou as razões para aprofundar em certos aspectos do software.
->
-> O grupo de trabalho pode fazer uso de questionários, entrevistas e dados estatísticos, que podem ser apresentados, com o objetivo de esclarecer detalhes do problema que será abordado pelo grupo.
->
-> **Orientações**:
->
-> - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
+O grupo realizou entrevistas com pessoas sedentárias que apontaram a falta de tempo e a falta de motivação como as principais
+barreiras para iniciar a pratica de exercícios físicos.
+
+Dessa forma, o EzFit se justifica como uma solução inovadora e relevante para esse público,
+utilizando recursos tecnológicos para recomendar exercícios físicos de acordo com a disponibilidade do usuário.
 
 ## Público-Alvo
 
-**✳️✳️✳️ COLOQUE AQUI O SEU TEXTO ✳️✳️✳️**
+O público-alvo da aplicação é composto por jovens adultos, geralmente entre 18 e 25 anos, que desejam adotar hábitos de vida mais saudáveis, mas enfrentam dificuldades para iniciar ou manter uma rotina de atividades físicas. Entre os principais desafios estão a falta de tempo, a ausência de motivação e o desconhecimento sobre quais práticas são mais adequadas para seu perfil e objetivos.
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Descreva quais são as pessoas que usarão a sua aplicação indicando os diferentes perfis. A ideia é, dentro do possível, conhecer um pouco mais sobre o perfil dos usuários: conhecimentos prévios, relação com a tecnologia, relações hierárquicas, etc.
->
-> Adicione informações sobre o público-alvo por meio de uma descrição textual, ou diagramas de personas, mapa de stakeholders, ou como o grupo achar mais conveniente.
->
-> **Orientações**:
->
-> - [Público-alvo: o que é, tipos, como definir seu público e exemplos](https://klickpages.com.br/blog/publico-alvo-o-que-e/)
-> - [Qual a diferença entre público-alvo e persona?](https://rockcontent.com/blog/diferenca-publico-alvo-e-persona/)
+Esses usuários possuem, em geral, familiaridade com tecnologia, estando habituados ao uso de smartphones, redes sociais e plataformas digitais em geral. Por isso, espera-se que tenham facilidade em interagir com a aplicação proposta, principalmente se ela oferecer uma navegação intuitiva e recursos que promovam engajamento.
+
+Exemplos de usuários usando a história de usuário + persona:
+Felipe, 22 anos, estagiário, deseja encontrar tempo e motivação para praticar exercícios físicos.
+Pedro, 25 anos, Analista financeiro, deseja praticar exercícios físicos para ficar em forma.
 
 # Product Discovery
 
