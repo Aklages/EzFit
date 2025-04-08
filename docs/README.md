@@ -171,24 +171,97 @@ Artefatos relacionados com a interface e a interacão do usuário na proposta de
 
 Estes são os protótipos de telas do sistema.
 
-**✳️✳️✳️ COLOQUE AQUI OS PROTÓTIPOS DE TELAS COM TÍTULO E DESCRIÇÃO ✳️✳️✳️**
+![tela](images/homepage.png)
+![tela](images/registro.png)
+![tela](images/login.png)
+![tela](images/usuariologado.png)
+![tela](images/config.png)
+![tela](images/monte.png)
+![tela](images/treino.png)
+![tela](images/localizacao.png)
+![tela](images/comunidade.png)
+![tela](images/criar.png)
+![tela](images/meus.png)
+![tela](images/motivacao.png)
+![tela](images/motivosparatreinar.png)
 
-##### TELA XPTO ⚠️ EXEMPLO ⚠️
+##### TELA HOMEPAGE
 
-Descrição para a tela XPTO
+Tela inicial, para convencer o usuário a criar seu cadastro no site.
 
-![Exemplo de wireframe](images/exemplo-wireframe.png)
+![tela](images/homepage.png)
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Wireframes são protótipos das telas da aplicação usados em design de interface para sugerir a estrutura de um site web e seu relacionamentos entre suas páginas. Um wireframe web é uma ilustração semelhante ao layout de elementos fundamentais na interface.
->
-> **Orientações**:
->
-> - [Ferramentas de Wireframes](https://rockcontent.com/blog/wireframes/)
-> - [Figma](https://www.figma.com/)
-> - [Adobe XD](https://www.adobe.com/br/products/xd.html#scroll)
-> - [MarvelApp](https://marvelapp.com/developers/documentation/tutorials/)
+##### TELA REGISTRO
+
+Tela para criar cadastro no site.
+
+![tela](images/registro.png)
+
+##### TELA LOGIN
+
+Tela para logar no site.
+
+![tela](images/login.png)
+
+##### TELA USUARIO_LOGADO
+
+Tela principal do usuário, com os cards que leva as outras telas com as funcionalidades principais.
+
+![tela](images/usuariologado.png)
+
+##### TELA CONFIGURAÇÕES
+
+Tela para configurar sua conta.
+
+![tela](images/config.png)
+
+##### TELA MONTAR_TREINO
+
+Tela para montar o treino do usuário usando nosso algoritmo.
+
+![tela](images//monte.png)
+
+##### TELA TREINOS
+
+Tela para visualizar os treinos.
+
+![tela](images/treino.png)
+
+##### TELA LOCALIZAÇÃO
+
+Tela para encontrar localizações com possibilidade de praticar exercícios físicos.
+
+![tela](images/localizacao.png)
+
+##### TELA COMUNIDADE
+
+Tela para encontrar grupos de interesse.
+
+![tela](images/comunidade.png)
+
+##### TELA CRIAR_GRUPO
+
+Tela para criar grupos.
+
+![tela](images/criar.png)
+
+##### TELA VER_GRUPOS
+
+Tela para visualizar os grupos criados pelo usuário.
+
+![tela](images/meus.png)
+
+##### TELA MOTIVAÇÃO
+
+Tela com conteúdos para motivar o usuário.
+
+![tela](images/motivacao.png)
+
+##### TELA CONSCIENTIZAÇÃO
+
+Tela com conteúdos para conscientizar o usuário.
+
+![tela](images/motivosparatreinar.png)
 
 ### User Flow
 
@@ -196,7 +269,7 @@ Descrição para a tela XPTO
 
 ### Protótipo Interativo
 
-✅ [Protótipo Interativo EzFit]([https://marvelapp.com/prototype/4hd6091?emb=1&iosapp=false&frameless=false](https://www.figma.com/proto/q5gZfvlqbbKevA76tNFEP8/EzFit?node-id=1-2&p=f&t=15MXuUJPTyTeC0Ra-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A2))
+[Protótipo Interativo EzFit]([https://marvelapp.com/prototype/4hd6091?emb=1&iosapp=false&frameless=false](https://www.figma.com/proto/q5gZfvlqbbKevA76tNFEP8/EzFit?node-id=1-2&p=f&t=15MXuUJPTyTeC0Ra-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A2))
 
 # Metodologia
 
