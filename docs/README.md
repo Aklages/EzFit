@@ -91,18 +91,14 @@ Pedro, 25 anos, Analista financeiro, deseja praticar exercícios físicos para f
 
 ### Personas
 
-**✳️✳️✳️ APRESENTE OS DIAGRAMAS DE PERSONAS ✳️✳️✳️**
+![persona](images/persona_felipe.jpg)
+![valor](images/valor_felipe.jpg)
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Relacione as personas identificadas no seu projeto e os respectivos mapas de empatia. Lembre-se que você deve ser enumerar e descrever precisamente e de forma personalizada todos os principais envolvidos com a solução almeja.
->
-> **Orientações**:
->
-> - [Persona x Público-alvo](https://flammo.com.br/blog/persona-e-publico-alvo-qual-a-diferenca/)
-> - [O que é persona?](https://resultadosdigitais.com.br/blog/persona-o-que-e/)
-> - [Rock Content](https://rockcontent.com/blog/personas/)
-> - [Criar personas (Hotmart)](https://blog.hotmart.com/pt-br/como-criar-persona-negocio/)
+![persona](images/persona_amanda.jpg)
+![valor](images/valor_amanda.jpg)
+
+![persona](images/persona_pedro.jpg)
+![valor](images/valor_pedro.jpg)
 
 # Product Design
 
@@ -112,19 +108,17 @@ Nesse momento, vamos transformar os insights e validações obtidos em soluçõe
 
 Com base na análise das personas foram identificadas as seguintes histórias de usuários:
 
-| EU COMO...`PERSONA` | QUERO/PRECISO ...`FUNCIONALIDADE`        | PARA ...`MOTIVO/VALOR`               |
-| --------------------- | ------------------------------------------ | -------------------------------------- |
-| Usuário do sistema   | Registrar minhas tarefas ⚠️ EXEMPLO ⚠️ | Não esquecer de fazê-las             |
-| Administrador         | Alterar permissões ⚠️ EXEMPLO ⚠️      | Permitir que possam administrar contas |
-
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Apresente aqui as histórias de usuário que são relevantes para o projeto de sua solução. As Histórias de Usuário consistem em uma ferramenta poderosa para a compreensão e elicitação dos requisitos funcionais e não funcionais da sua aplicação. Se possível, agrupe as histórias de usuário por contexto, para facilitar consultas recorrentes à essa parte do documento.
->
-> **Orientações**:
->
-> - [Histórias de usuários com exemplos e template](https://www.atlassian.com/br/agile/project-management/user-stories)
-> - [Como escrever boas histórias de usuário (User Stories)](https://medium.com/vertice/como-escrever-boas-users-stories-hist%C3%B3rias-de-usu%C3%A1rios-b29c75043fac)
+| EU COMO...`PERSONA`     | QUERO/PRECISO ...`FUNCIONALIDADE`              | PARA ...`MOTIVO/VALOR`                       |
+| ---------------------   | ------------------------------------------     | --------------------------------------       |
+| Amanda                  | Praticar atividades em grupo                   | Continuar tendo interação social             |
+| Pedro                   | Praticar alguma atividade física               | Perder a barriga e me manter em forma        |
+| Felipe                  | Encontrar tempo e motivação                    | Ter uma boa saúde                            |
+| Trabalhador CLT 6x1     | Encontrar motivação para exercitar             | Melhorar a minha saúde                       |
+| Estudante e estagiário  | Encontrar tempo para exercitar                 | Melhorar a minha saúde                       |
+| Jovem diabético         | Manter uma regularidade nas atividades físicas | Controlar minha saúde e manter meu bem estar |
+| Estudante universitário | começar uma atividade física                   | Melhorar meus rendimentos nos estudos        |
+| Jovem acima do peso     | Fazer atividades físicas                       | Perder peso e melhorar minha autoestima      |
+| Jovem adulto            | Incluir exercício físico na rotina             | Evitar doenças hereditárias                  |
 
 ## Proposta de Valor
 
@@ -146,31 +140,28 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 | ID     | Descrição do Requisito                                   | Prioridade |
 | ------ | ---------------------------------------------------------- | ---------- |
-| RF-001 | Permitir que o usuário cadastre tarefas ⚠️ EXEMPLO ⚠️ | ALTA       |
-| RF-002 | Emitir um relatório de tarefas no mês ⚠️ EXEMPLO ⚠️ | MÉDIA     |
+| RF-001 | A aplicação deve conter uma área de registro | ALTA       |
+| RF-002 | A aplicação deve conter propostas de exercícios físicos | ALTA     |
+| RF-003 | A aplicação deve conter uma opção de criar rotinas de atividades físicas | ALTA     |
+| RF-004 | A aplicação deve conter uma opção de organizar/criar rotina das atividades físicas do usuário | ALTA     |
+| RF-005 | A aplicação deve conter um filtro baseado em tempo disponível e localização próxima | ALTA     |
+| RF-006 | A aplicação deve conter informações científicas sobre sedentarismo | MÉDIA     |
+| RF-007 | A aplicação deve conter uma aba de comunidade, para os usuarios interagirem em grupos de interesse | MÉDIA     |
+| RF-008 | A aplicação deve recomendar treinos baseados nas preferência. (Treino em casa, treino na academia) | MÉDIA     |
+| RF-009 | A aplicação deve recomendar vídeos motivacionais ou artigos com o intuito de evitar a desmotivação para a prática de atividades fisicas  | MÉDIA     |
+| RF-010 | O sistema deve gerar um arquivo csv sobre o treino recomendado  | MÉDIA     |
+| RF-011 | A aplicação deve conter uma opção de adicionar amigos | BAIXA     |
+| RF-012 | A aplicação deve conter uma opção de olhar perfis de outras pessoas | BAIXA     |
 
 ### Requisitos não Funcionais
 
 | ID      | Descrição do Requisito                                                              | Prioridade |
 | ------- | ------------------------------------------------------------------------------------- | ---------- |
-| RNF-001 | O sistema deve ser responsivo para rodar em um dispositivos móvel ⚠️ EXEMPLO ⚠️ | MÉDIA     |
-| RNF-002 | Deve processar requisições do usuário em no máximo 3s ⚠️ EXEMPLO ⚠️          | BAIXA      |
-
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Os requisitos de um projeto são classificados em dois grupos:
->
-> - [Requisitos Funcionais (RF)](https://pt.wikipedia.org/wiki/Requisito_funcional):
->   correspondem a uma funcionalidade que deve estar presente na plataforma (ex: cadastro de usuário).
-> - [Requisitos Não Funcionais (RNF)](https://pt.wikipedia.org/wiki/Requisito_n%C3%A3o_funcional):
->   correspondem a uma característica técnica, seja de usabilidade, desempenho, confiabilidade, segurança ou outro (ex: suporte a dispositivos iOS e Android).
->
-> Lembre-se que cada requisito deve corresponder à uma e somente uma característica alvo da sua solução. Além disso, certifique-se de que todos os aspectos capturados nas Histórias de Usuário foram cobertos.
->
-> **Orientações**:
->
-> - [O que são Requisitos Funcionais e Requisitos Não Funcionais?](https://codificar.com.br/requisitos-funcionais-nao-funcionais/)
-> - [O que são requisitos funcionais e requisitos não funcionais?](https://analisederequisitos.com.br/requisitos-funcionais-e-requisitos-nao-funcionais-o-que-sao/)
+| RNF-001 | A aplicação será desenvolvida com html, css e bootstrap. | ALTA     |
+| RNF-002 | O site será responsível e terá uma visualização adequada para diferentes dispositivos.          | ALTA      |
+| RNF-003 | O site deve estar de acordo com as normas da LGPD          | ALTA      |
+| RNF-004 | O site deve ter suporte para mais de um idioma          | BAIXA      |
+| RNF-005 | O site terá modo noturno          | BAIXA      |
 
 ## Projeto de Interface
 
