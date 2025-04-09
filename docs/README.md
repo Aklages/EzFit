@@ -171,97 +171,97 @@ Artefatos relacionados com a interface e a interacão do usuário na proposta de
 
 Estes são os protótipos de telas do sistema.
 
-![tela](images/homepage.png)
-![tela](images/registro.png)
-![tela](images/login.png)
-![tela](images/usuariologado.png)
-![tela](images/config.png)
-![tela](images/monte.png)
-![tela](images/treino.png)
-![tela](images/localizacao.png)
-![tela](images/comunidade.png)
-![tela](images/criar.png)
-![tela](images/meus.png)
-![tela](images/motivacao.png)
-![tela](images/motivosparatreinar.png)
+![tela](images/homepage.jpg)\
+![tela](images/registro.jpg)\
+![tela](images/login.jpg)\
+![tela](images/usuariologado.jpg)\
+![tela](images/config.jpg)\
+![tela](images/monte.jpg)\
+![tela](images/treino.jpg)\
+![tela](images/localizacao.jpg)\
+![tela](images/comunidade.jpg)\
+![tela](images/criar.jpg)\
+![tela](images/meus.jpg)\
+![tela](images/motivacao.jpg)\
+![tela](images/motivosparatreinar.jpg)
 
 ##### TELA HOMEPAGE
 
 Tela inicial, para convencer o usuário a criar seu cadastro no site.
 
-![tela](images/homepage.png)
+![tela](images/homepage.jpg)
 
 ##### TELA REGISTRO
 
 Tela para criar cadastro no site.
 
-![tela](images/registro.png)
+![tela](images/registro.jpg)
 
 ##### TELA LOGIN
 
 Tela para logar no site.
 
-![tela](images/login.png)
+![tela](images/login.jpg)
 
 ##### TELA USUARIO_LOGADO
 
 Tela principal do usuário, com os cards que leva as outras telas com as funcionalidades principais.
 
-![tela](images/usuariologado.png)
+![tela](images/usuariologado.jpg)
 
 ##### TELA CONFIGURAÇÕES
 
 Tela para configurar sua conta.
 
-![tela](images/config.png)
+![tela](images/config.jpg)
 
 ##### TELA MONTAR_TREINO
 
 Tela para montar o treino do usuário usando nosso algoritmo.
 
-![tela](images//monte.png)
+![tela](images//monte.jpg)
 
 ##### TELA TREINOS
 
 Tela para visualizar os treinos.
 
-![tela](images/treino.png)
+![tela](images/treino.jpg)
 
 ##### TELA LOCALIZAÇÃO
 
 Tela para encontrar localizações com possibilidade de praticar exercícios físicos.
 
-![tela](images/localizacao.png)
+![tela](images/localizacao.jpg)
 
 ##### TELA COMUNIDADE
 
 Tela para encontrar grupos de interesse.
 
-![tela](images/comunidade.png)
+![tela](images/comunidade.jpg)
 
 ##### TELA CRIAR_GRUPO
 
 Tela para criar grupos.
 
-![tela](images/criar.png)
+![tela](images/criar.jpg)
 
 ##### TELA VER_GRUPOS
 
 Tela para visualizar os grupos criados pelo usuário.
 
-![tela](images/meus.png)
+![tela](images/meus.jpg)
 
 ##### TELA MOTIVAÇÃO
 
 Tela com conteúdos para motivar o usuário.
 
-![tela](images/motivacao.png)
+![tela](images/motivacao.jpg)
 
 ##### TELA CONSCIENTIZAÇÃO
 
 Tela com conteúdos para conscientizar o usuário.
 
-![tela](images/motivosparatreinar.png)
+![tela](images/motivosparatreinar.jpg)
 
 ### User Flow
 
