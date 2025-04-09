@@ -122,15 +122,17 @@ Com base na análise das personas foram identificadas as seguintes histórias de
 
 ## Proposta de Valor
 
-**✳️✳️✳️ APRESENTE O DIAGRAMA DA PROPOSTA DE VALOR PARA CADA PERSONA ✳️✳️✳️**
+##### Proposta para Persona FELIPE
 
-##### Proposta para Persona XPTO ⚠️ EXEMPLO ⚠️
+![proposta](images/proposta_valor_felipe.jpg)
 
-![Exemplo de proposta de valor](images/exemplo-proposta-valor.png)
+##### Proposta para Persona AMANDA
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> O mapa da proposta de valor é uma ferramenta que nos ajuda a definir qual tipo de produto ou serviço melhor atende às personas definidas anteriormente.
+![proposta](images/proposta_valor_amanda.jpg)
+
+##### Proposta para Persona PEDRO
+
+![proposta](images/proposta_valor_pedro.jpg)
 
 ## Requisitos
 
@@ -170,20 +172,6 @@ Artefatos relacionados com a interface e a interacão do usuário na proposta de
 ### Wireframes
 
 Estes são os protótipos de telas do sistema.
-
-![tela](images/homepage.jpg)\
-![tela](images/registro.jpg)\
-![tela](images/login.jpg)\
-![tela](images/usuariologado.jpg)\
-![tela](images/config.jpg)\
-![tela](images/monte.jpg)\
-![tela](images/treino.jpg)\
-![tela](images/localizacao.jpg)\
-![tela](images/comunidade.jpg)\
-![tela](images/criar.jpg)\
-![tela](images/meus.jpg)\
-![tela](images/motivacao.jpg)\
-![tela](images/motivosparatreinar.jpg)
 
 ##### TELA HOMEPAGE
 
@@ -269,7 +257,7 @@ Tela com conteúdos para conscientizar o usuário.
 
 ### Protótipo Interativo
 
-[Protótipo Interativo EzFit]([https://marvelapp.com/prototype/4hd6091?emb=1&iosapp=false&frameless=false](https://www.figma.com/proto/q5gZfvlqbbKevA76tNFEP8/EzFit?node-id=1-2&p=f&t=15MXuUJPTyTeC0Ra-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A2))
+[Protótipo Interativo EzFit](https://www.figma.com/proto/q5gZfvlqbbKevA76tNFEP8/EzFit?node-id=0-1&t=im2LzitrSZq5L4yf-1)
 
 # Metodologia
 
