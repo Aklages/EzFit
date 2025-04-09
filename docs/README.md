@@ -11,7 +11,7 @@ Informações básicas do projeto.
   * Diego Volponi
   * Lucca Maximo
   * Matheus Henrique
-  * Victor Amaral
+  * [Victor Amaral](https://github.com/Vamarall)
 
 
 A documentação do projeto é estruturada da seguinte forma:
