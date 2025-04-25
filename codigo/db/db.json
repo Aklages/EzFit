@@ -21,5 +21,43 @@
       "email": "rommel@gmail.com",
       "id": 3
     }
+  ],
+  "treinos": [
+    {
+      "id": 1,
+      "alvo": "perder_peso",
+      "exercicios": []
+    }
+  ],
+  "historico": [
+
+  ],
+  "grupos": [
+    {
+      "id": 1,
+      "id_usuario": 1,
+      "titulo": "Basquete BH",
+      "descricao": "Grupo para quem quer praticar basquete em bh no bairro castelo",
+      "imagem": "../public/assets/images/",
+      "link": "link_whatsapp"
+    }
+  ],
+  "artigos": [
+    {
+      "id": 1,
+      "titulo": "Benefícios das atividades físicas",
+      "descricao": "Artigo sobre os benefícios a saúde causada pela prática de atividades físicas",
+      "imagem": "../public/assets/images/",
+      "link": "link_artigo"
+    }
+  ],
+  "videos": [
+
+  ],
+  "favoritos": [
+
+  ],
+  "comentarios": [
+
   ]
 }
