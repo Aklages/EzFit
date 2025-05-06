@@ -22,30 +22,40 @@
       "email": "rommel@gmail.com"
     }
   ],
+  "exercicios":[
+    {
+      "id": 1,
+      "nome": "Polichinelo",
+      "duracao_min": 5,
+      "repeticoes": null
+    },
+    {
+      "id": 2,
+      "nome": "Agachamento",
+      "duracao_min": null,
+      "repeticoes": 15
+    },
+    {
+      "id": 3,
+      "nome": "Abdominais",
+      "duracao_min": null,
+      "repeticoes": 10
+    }
+  ],
   "treinos": [
     {
       "id": 1,
       "objetivo": "perder_peso",
       "dias": 3,
       "tempo_livre_m": 30,
-      "local": "casa",
-      "exercicios": [
-        {
-          "nome": "Polichinelo",
-          "duracao_min": 5,
-          "repeticoes": null
-        },
-        {
-          "nome": "Agachamento",
-          "duracao_min": null,
-          "repeticoes": 15
-        },
-        {
-          "nome": "Abdominais",
-          "duracao_min": null,
-          "repeticoes": 10
-        }
-      ]
+      "local": "casa"
+    }
+  ],
+  "treinos_exercicios": [
+    {
+      "id": 1,
+      "id_treino": 1,
+      "id_exercicio": 1
     }
   ],
   "localizacao": [
@@ -138,11 +148,12 @@
       "link": "link_whatsapp"
     }
   ],
-  "artigos": [
+  "conteudo": [
     {
       "id": 1,
       "titulo": "Benefícios das atividades físicas",
       "descricao": "Artigo sobre os benefícios a saúde causada pela prática de atividades físicas",
+      "categoria": "artigo",
       "imagem": "../public/assets/images/",
       "link": "link_artigo"
     },
@@ -150,6 +161,7 @@
       "id": 2,
       "titulo": "O que gera motivação",
       "descricao": "Artigo sobre a explicação científica da motivação",
+      "categoria": "artigo",
       "imagem": "../public/assets/images/",
       "link": "link_artigo"
     },
@@ -157,29 +169,31 @@
       "id": 3,
       "titulo": "Dopamina",
       "descricao": "Entenda como dopamina funciona e como melhorar su saúde",
+      "categoria": "artigo",
       "imagem": "../public/assets/images/",
       "link": "link_artigo"
-    }    
-  ],
-  "videos": [
+    },
     {
-      "id": 1,
+      "id": 4,
       "titulo": "A Vida Que Vale a Pena Ser Vivida por Clovis de Barros Filho | Grandes Nomes | Assista Agora",
       "descricao": "Video de uma palestra do Clovis de Barros, professor da USP",
+      "categoria": "video",
       "imagem": "../public/assets/images/",
       "link": "https://www.youtube.com/watch?v=6zBPgSRvrBI"
     },
     {
-      "id": 2,
+      "id": 5,
       "titulo": "Principais ERROS sobre DISCIPLINA e MOTIVAÇÃO | Eslen Delanogare",
       "descricao": "Video sobre motivação e disciplina do psicologo Eslen Delanogare",
+      "categoria": "video",
       "imagem": "../public/assets/images/",
       "link": "https://www.youtube.com/watch?v=as9VwgH5c-A"
     },
     {
-      "id": 3,
+      "id": 6,
       "titulo": "Rock Balboa - Discurso Inspirador Para o Filho",
       "descricao": "Discurso motivacional do rock balboa",
+      "categoria": "video",
       "imagem": "../public/assets/images/",
       "link": "https://www.youtube.com/watch?v=jF9_7OWogIE"
     }
@@ -200,7 +214,7 @@
     {
       "id": 3,
       "id_usuario": 2,
-      "tipo": "artigo",
+      "tipo": "conteudo",
       "id_item": 1
     }
   ]
