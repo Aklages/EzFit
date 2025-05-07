@@ -20,9 +20,16 @@
       "senha": "123",
       "nome": "Rommel",
       "email": "rommel@gmail.com"
+    },
+    {
+      "id": 4,
+      "login": "andre",
+      "senha": "123",
+      "nome": "André",
+      "email": "andre@gmail.com"
     }
   ],
-  "exercicios":[
+  "exercicios": [
     {
       "id": 1,
       "nome": "Polichinelo",
