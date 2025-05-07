@@ -1,56 +1,68 @@
-@import url("https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"); 
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
-
-h3 {
-    color: #093070;
-    border-bottom: 1px solid #c1c1c1;
-}
-h4 {
-    color: #ff7645;
+:root {
+    --main-color: #AADEAD;
+    --second-color: #053308;
+    --white-color: #fefefe;
+    --bg-color: #F5FFED;
 }
 
-.banner img {
-    width: 100%;
-}
-
-.barra-info {
-    height: 2em;
-    background-color: #f0f0f0;
-    display: flex;
-    justify-content: space-between;
-}
-
-.menu ul {
-    list-style-type: none;
+* {
+    border: 0;
     margin: 0;
-    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
 }
 
-.menu li {
-    display: inline;
-    margin: 0px;
-    padding: 0.5em 1em; 
-    height: 2em;
-    line-height: 2em;
+body {
+    background-color: var(--bg-color);
 }
 
-.menu li a {
+header {
+    padding: 0 10vw 0 10vw;
+    background-color: var(--main-color);
+}
+
+header > a {
+    color: var(--second-color);
     text-decoration: none;
-    color: #ff7645;
-    font-weight: bold;
 }
 
-.menu li:hover {
-    background-color: darkblue;
-    color: white;
+.nome_user {
+    color: var(--second-color);
 }
 
-.dados-usuario {
-    height: 2em;
-    line-height: 2em;
-    margin-right: 20px;
+.icon_user {
+    color: var(--second-color);
+    font-size: 40px;
 }
 
-main {
-    padding: 20px;
+.logout {
+    color: var(--main-color);
+    background-color: var(--second-color);
+    border: solid none .1px;
+}
+
+.logout:hover {
+    color: var(--second-color);
+    background-color: var(--main-color);
+    border: solid var(--second-color) .1px;
+}
+
+footer {
+    padding: 0 10vw 0 10vw;
+    color: var(--white-color);
+    background-color: var(--second-color);
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+
+footer > div > a {
+    color: var(--white-color);
+    text-decoration: none;
+}
+
+footer > div > div > a {
+    color: var(--white-color);
+    text-decoration: none;
 }
