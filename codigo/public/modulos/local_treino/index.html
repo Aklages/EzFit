@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
@@ -13,6 +13,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/4f6d2b1093.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="./style.css">
     <script>
         function initPage() {
 
@@ -38,32 +39,48 @@
         </div>
     </header>
     <main>
-        <p>Encontre locais de interesse perto de você!</p>
-        <p>Clique aqui para completar com as informações da sua localização atual</p>
-        <button onclick="getLocalizacao()">Localização</button>
-        <form>
+        <div class="container d-flex flex-column my-5">
+            <p>Encontre locais de interesse perto de você!</p>
+            <p>Clique aqui para completar com as informações da sua localização atual</p>
+            <button onclick="getLocalizacao()">Localização</button>
             <div class="mb-3">
-              <label for="formPostcode" class="form-label">CEP</label>
-              <input type="text" class="form-control" id="formPostcode">
+                <label for="formPostcode" class="form-label">CEP</label>
+                <input type="text" class="form-control" id="formPostcode">
             </div>
             <div class="mb-3">
-              <label for="formRegion" class="form-label">Estado</label>
-              <input type="text" class="form-control" id="formRegion">
+                <label for="formRegion" class="form-label">Estado</label>
+                <input type="text" class="form-control" id="formRegion">
             </div>
             <div class="mb-3">
-              <label for="formPlace" class="form-label">Cidade</label>
-              <input type="text" class="form-control" id="formPlace">
+                <label for="formPlace" class="form-label">Cidade</label>
+                <input type="text" class="form-control" id="formPlace">
             </div>
             <div class="mb-3">
-              <label for="formNeighborhood" class="form-label">Bairro</label>
-              <input type="text" class="form-control" id="formNeighborhood">
+                <label for="formNeighborhood" class="form-label">Bairro</label>
+                <input type="text" class="form-control" id="formNeighborhood">
             </div>
             <div class="mb-3">
-              <label for="formStreet" class="form-label">Logadouro</label>
-              <input type="text" class="form-control" id="formStreet">
+                <label for="formStreet" class="form-label">Logadouro</label>
+                <input type="text" class="form-control" id="formStreet">
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
+            <div class="mb-3">
+                <label for="formDestaque" class="form-label">Distância limite desejada</label>
+                <select id="formDestaque" name="formDestaque">
+                    <option value="1km">1km</option>
+                    <option value="3km">3km</option>
+                    <option value="5km">5km</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="formDestaque" class="form-label">Interesse</label>
+                <select id="formDestaque" name="formDestaque">
+                    <option value="Academia">Academia</option>
+                    <option value="Parque">Parque</option>
+                    <option value="Quadra">Quadra</option>
+                </select>
+            </div><br>
+            <button class="btn btn-primary" onclick="getmap()">Buscar</button>
+        </div>
     </main>
     <footer class="d-flex flex-lg-row flex-column justify-content-between py-3 pb-5">
         <div class="d-flex flex-column">
@@ -96,6 +113,9 @@
             <div class="d-flex align-items-center py-2">
                 <a href="https://instagram.com" target="_blank"><span class="fa-brands fa-instagram"></span></a><p class="my-0 ms-1">@EzFit</p>
             </div>
+        </div>
+        <div id="map">
+            
         </div>
     </footer>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

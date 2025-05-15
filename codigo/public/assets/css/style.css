@@ -12,6 +12,10 @@
     font-family: "Inter", sans-serif;
 }
 
+html, body {
+    height: 100vh;
+}
+
 body {
     background-color: var(--bg-color);
 }
@@ -51,10 +55,6 @@ footer {
     padding: 0 10vw 0 10vw;
     color: var(--white-color);
     background-color: var(--second-color);
-    position: absolute;
-    right: 0;
-    left: 0;
-    bottom: 0;
 }
 
 footer > div > a {
