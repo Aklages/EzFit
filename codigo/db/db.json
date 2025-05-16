@@ -203,54 +203,54 @@
       "link": "link_whatsapp"
     }
   ],
-  "conteudo": [
+   "conteudo": [
     {
       "id": 1,
-      "titulo": "Benefícios das atividades físicas",
-      "descricao": "Artigo sobre os benefícios a saúde causada pela prática de atividades físicas",
+      "titulo": "Qualquer prática de atividade física é benéfica para o corpo humano",
+      "descricao": "Entenda por que o corpo humano precisa de movimento e como pequenas ações diárias já fazem diferença.",
       "categoria": "artigo",
-      "imagem": "../public/assets/images/",
-      "link": "link_artigo"
+      "imagem": "https://institutoagf.com.br/wp-content/uploads/2023/03/preguica-1.jpg",
+      "link": "https://jornal.usp.br/radio-usp/qualquer-pratica-de-atividade-fisica-e-benefica-para-o-corpo-humano/"
     },
     {
       "id": 2,
-      "titulo": "O que gera motivação",
-      "descricao": "Artigo sobre a explicação científica da motivação",
+      "titulo": "Benefícios da atividade física e do exercício físico na depressão",
+      "descricao": "Veja como a atividade física pode ser sua aliada na saúde mental e no bem-estar geral.",
       "categoria": "artigo",
-      "imagem": "../public/assets/images/",
-      "link": "link_artigo"
+      "imagem": "https://www.protagonismodigital.sed.ms.gov.br/uploads/7213bc99-3cb0-4555-83c9-99cb154ff8ad.jpeg",
+      "link": "https://www.scielo.br/j/rdpsi/a/RpX434mLxwCh976f4b3dKqw"
     },
     {
       "id": 3,
-      "titulo": "Dopamina",
-      "descricao": "Entenda como dopamina funciona e como melhorar su saúde",
+      "titulo": "12 dicas para vencer a preguiça e começar a se exercitar",
+      "descricao": "Descubra estratégias práticas para superar a preguiça e iniciar uma rotina de exercícios físicos.",
       "categoria": "artigo",
-      "imagem": "../public/assets/images/",
-      "link": "link_artigo"
-    },
-    {
+      "imagem": "https://istoedinheiro.com.br/wp-content/uploads/sites/17/2022/11/pexels-godisable-jacob-956724.jpg?x46096",
+      "link": "https://istoedinheiro.com.br/12-dicas-para-vencer-a-preguica-e-comecar-a-se-exercitar/"
+      },
+      {
       "id": 4,
-      "titulo": "A Vida Que Vale a Pena Ser Vivida por Clovis de Barros Filho | Grandes Nomes | Assista Agora",
-      "descricao": "Video de uma palestra do Clovis de Barros, professor da USP",
-      "categoria": "video",
-      "imagem": "../public/assets/images/",
-      "link": "https://www.youtube.com/watch?v=6zBPgSRvrBI"
+      "titulo": "Descobrindo o fator motivação e prazer com a atividade física",
+      "descricao": "Exercitar-se não precisa ser um sacrifício. Descubra como encontrar prazer no movimento.",
+      "categoria": "artigo",
+      "imagem": "https://www.ufrgs.br/jornal/wp-content/uploads/2024/07/Fonte_Pexels-cottonbro-5319375-1.jpg",
+      "link": "https://www.ufrgs.br/jornal/descobrindo-o-fator-motivacao-e-prazer-com-a-atividade-fisica/"
     },
     {
       "id": 5,
-      "titulo": "Principais ERROS sobre DISCIPLINA e MOTIVAÇÃO | Eslen Delanogare",
-      "descricao": "Video sobre motivação e disciplina do psicologo Eslen Delanogare",
-      "categoria": "video",
-      "imagem": "../public/assets/images/",
-      "link": "https://www.youtube.com/watch?v=as9VwgH5c-A"
+      "titulo": "Como incorporar diferentes exercícios físicos na rotina",
+      "descricao": "Dicas práticas para encaixar atividades físicas na rotina mesmo com pouco tempo disponível.",
+      "categoria": "artigo",
+      "imagem": "https://www.infoescola.com/wp-content/uploads/2010/01/sedentarismo.jpg",
+      "link": "https://www.mackenzie.br/cemapi/noticias/artigo/n/a/i/como-incorporar-diferentes-exercicios-fisicos-na-rotina"
     },
     {
       "id": 6,
-      "titulo": "Rock Balboa - Discurso Inspirador Para o Filho",
-      "descricao": "Discurso motivacional do rock balboa",
-      "categoria": "video",
-      "imagem": "../public/assets/images/",
-      "link": "https://www.youtube.com/watch?v=jF9_7OWogIE"
+      "titulo": "Sedentarismo: o que é, riscos, recomendações da OMS",
+      "descricao": "Conheça os perigos reais de uma vida sedentária e porque agir agora é essencial.",
+      "categoria": "artigo",
+      "imagem": "https://s2.static.brasilescola.uol.com.br/be/2022/04/1-atividade-fisica.jpg",
+      "link": "https://brasilescola.uol.com.br/saude/sedentarismo.htm"
     }
   ],
   "favoritos": [
