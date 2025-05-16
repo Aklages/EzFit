@@ -1,24 +1,28 @@
-// URL do JSON Server
-const URL = 'http://localhost:3000/conteudo/';
+js:
 const container = document.getElementById('card-container');
-// Buscar dados do JSON Server e gerar cards
-fetch(URL)
+
+fetch("http://localhost:3000/conteudo/")
 .then(response => response.json())
 .then(data => {
 data.forEach(conteudo=> {
-const card = document.createElement('div');
-card.classList.add('card');
+        if(conteudo.categoria == "artigo"){
+        const card = document.createElement('div');
+        card.classList.add('card');
 
-card.innerHTML = `
-<img src="${conteudo.imagem}" alt="${conteudo.titulo}">
-<div class="card-content">
-<h2>${conteudo.titulo}</h2>
-<p>${conteudo.descricao}</p>
-</div>
-`;
+        card.innerHTML = `
+        <img src="${conteudo.imagem}" alt="${conteudo.titulo}">
+        <div class="card-content">
+        <h2>${conteudo.titulo}</h2>
+        <p>${conteudo.descricao}</p>
+        </div>
+        `;
 
-container.appendChild(card);
-});
+        container.appendChild(card);
+        }
+        else{
+            console.log("oi");
+        }
+    })
 })
 .catch(error => {
 console.error('Erro ao carregar os conteudo:', error);
