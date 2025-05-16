@@ -12,12 +12,12 @@
     font-family: "Inter", sans-serif;
 }
 
-html, body {
-    height: 100vh;
-}
-
 body {
     background-color: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
 }
 
 header {

@@ -64,22 +64,25 @@
                 <input type="text" class="form-control" id="formStreet">
             </div>
             <div class="mb-3">
-                <label for="formDestaque" class="form-label">Distância limite desejada</label>
-                <select id="formDestaque" name="formDestaque">
-                    <option value="1km">1km</option>
-                    <option value="3km">3km</option>
-                    <option value="5km">5km</option>
+                <label for="formDistancia" class="form-label">Distância limite desejada</label>
+                <select id="formDistancia" name="formDistancia">
+                    <option value="1">1km</option>
+                    <option value="3">3km</option>
+                    <option value="5">5km</option>
+                    <option value="0">Sem limite</option>
                 </select>
             </div>
             <div class="mb-3">
-                <label for="formDestaque" class="form-label">Interesse</label>
-                <select id="formDestaque" name="formDestaque">
+                <label for="formInteresse" class="form-label">Interesse</label>
+                <select id="formInteresse" name="formInteresse">
                     <option value="Academia">Academia</option>
                     <option value="Parque">Parque</option>
                     <option value="Quadra">Quadra</option>
                 </select>
             </div><br>
             <button class="btn btn-primary" onclick="getmap()">Buscar</button>
+        </div>
+        <div id="map">
         </div>
     </main>
     <footer class="d-flex flex-lg-row flex-column justify-content-between py-3 pb-5">
@@ -114,14 +117,11 @@
                 <a href="https://instagram.com" target="_blank"><span class="fa-brands fa-instagram"></span></a><p class="my-0 ms-1">@EzFit</p>
             </div>
         </div>
-        <div id="map">
-            
-        </div>
     </footer>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>    
-    <script src="../../assets/js/login.js"></script>
     <script src="./app.js"></script>
+    <script src="../../assets/js/login.js"></script>
 </body>
 </html>
