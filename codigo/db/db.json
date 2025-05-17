@@ -192,6 +192,7 @@
     {
       "id": 1,
       "id_usuario": 1,
+      "categoria": "basquete",
       "titulo": "Basquete BH",
       "descricao": "Grupo para quem quer praticar basquete em bh no bairro castelo",
       "imagem": "../public/assets/images/",
@@ -200,6 +201,7 @@
     {
       "id": 2,
       "id_usuario": 1,
+      "categoria": "futebol",
       "titulo": "Futebol BH",
       "descricao": "Grupo para quem quer praticar futebol em bh no bairro sion",
       "imagem": "../public/assets/images/",
@@ -208,42 +210,20 @@
     {
       "id": 3,
       "id_usuario": 2,
+      "categoria": "volei",
       "titulo": "Volei BH",
       "descricao": "Grupo para quem quer praticar basquete em bh no bairro floresta",
       "imagem": "../public/assets/images/",
       "link": "link_whatsapp"
     },
     {
-      "id_usuario": 1,
-      "titulo": "aaa",
-      "descricao": "asasasasas",
-      "link": "asasa",
-      "imagem": "",
-      "id": 4
-    },
-    {
-      "id_usuario": 1,
-      "titulo": "aaa",
-      "descricao": "asasasasas",
-      "link": "asasa",
-      "imagem": "",
-      "id": 5
-    },
-    {
-      "id_usuario": 1,
-      "titulo": "andre",
-      "descricao": "123123",
-      "link": "123",
-      "imagem": "",
-      "id": 6
-    },
-    {
-      "id_usuario": 1,
-      "titulo": "andre",
-      "descricao": "123123",
-      "link": "123",
-      "imagem": "",
-      "id": 7
+      "id": 4,
+      "id_usuario": 2,
+      "categoria": "outros",
+      "titulo": "Corrida Mangabeiras",
+      "descricao": "Grupo para quem quer correr no parque mangabeiras !",
+      "imagem": "../public/assets/images/",
+      "link": "link_whatsapp"
     }
   ],
   "conteudo": [

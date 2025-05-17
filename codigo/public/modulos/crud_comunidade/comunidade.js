@@ -5,13 +5,20 @@ document.getElementById('btn_criarGrupo').addEventListener('click', () => {
     const nome = document.getElementById('nomeGrupo').value;
     const link = document.getElementById('linkGrupo').value;
     const descricao = document.getElementById('descricaoGrupo').value;
+    const categoria = document.getElementById('categoriaGrupo').value;
+
+    if (!categoria) {
+        alert('Por favor, selecione uma categoria para o grupo.');
+        return;
+    }
 
     const novoGrupo = {
         id_usuario: 1,
         titulo: nome,
         descricao: descricao,
         link: link,
-        imagem: "" // Caros colegas... depois de pesquisar no google eu descobri que não tem como subir imagem, isso ficará de enfeite, F, obg.
+        categoria: categoria,
+        imagem: ""
     };
 
     fetch('http://localhost:3000/grupos', {
@@ -35,9 +42,15 @@ document.getElementById('btn_alterarGrupo').addEventListener('click', () => {
     const nome = document.getElementById('nomeGrupo').value;
     const link = document.getElementById('linkGrupo').value;
     const descricao = document.getElementById('descricaoGrupo').value;
+    const categoria = document.getElementById('categoriaGrupo').value;
 
     if (idGrupo === '') {
-        alert('Por favor, insira o ID do grupo para alterar!');
+        alert('Insira o ID do grupo para alterar!');
+        return;
+    }
+
+    if (!categoria) {
+        alert('Selecione uma categoria.');
         return;
     }
 
@@ -45,7 +58,8 @@ document.getElementById('btn_alterarGrupo').addEventListener('click', () => {
         titulo: nome,
         descricao: descricao,
         link: link,
-        imagem: ""  
+        categoria: categoria,
+        imagem: ""
     };
 
     fetch(`http://localhost:3000/grupos/${idGrupo}`, {
@@ -58,7 +72,7 @@ document.getElementById('btn_alterarGrupo').addEventListener('click', () => {
         .then(res => {
             if (res.ok) {
                 alert('Grupo alterado com sucesso!');
-                carregarGrupos();  // Recarregar os grupos após a alteração
+                carregarGrupos();
             } else {
                 alert('Erro ao alterar o grupo!');
             }
@@ -70,7 +84,7 @@ document.getElementById('btn_alterarGrupo').addEventListener('click', () => {
 document.getElementById('btn_excluirGrupo').addEventListener('click', () => {
     const idGrupo = document.getElementById('idGrupo').value;
     if (idGrupo === '') {
-        alert('Por favor, insira o ID do grupo para excluir!');
+        alert('Insira o ID do grupo para excluir!');
         return;
     }
 
@@ -88,8 +102,29 @@ document.getElementById('btn_excluirGrupo').addEventListener('click', () => {
         .catch(erro => console.error('Erro ao excluir grupo:', erro));
 });
 
-// Método GET
 
+// Método GET 
+function carregarGrupos() {
+    fetch('http://localhost:3000/grupos')
+        .then(res => res.json())
+        .then(grupos => {
+            listaGrupos.innerHTML = ''; 
+            grupos.forEach(grupo => {
+                const item = document.createElement('li');
+                const textoGrupo = `
+                                ID: ${grupo.id}
+                                - Usuário: ${grupo.id_usuario}
+                                - Título: ${grupo.titulo}
+                                - Descrição: ${grupo.descricao}
+                                - Categoria: ${grupo.categoria}
+                                - Link: ${grupo.link}
+                            `;
+                item.textContent = textoGrupo;
+                listaGrupos.appendChild(item);
+            });
+        })
+        .catch(erro => console.error('Erro ao carregar grupos:', erro));
+}
 
 // Deixei essa linha abaixo p que o evento load seja chamado assim que a pag toda carregar
 window.addEventListener('load', carregarGrupos);
