@@ -7,11 +7,11 @@
 
 #map {
     height: 50vh;
-    width: 70vw;
+    width: 80vw;
 }
 
 .local{
-    width: 8vw;
+    width: 120px;
 }
 
 select {

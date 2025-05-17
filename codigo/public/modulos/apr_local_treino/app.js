@@ -1,22 +1,30 @@
 const key = "pk.eyJ1IjoiYW5kcmVkZWRlIiwiYSI6ImNtYTJmbmVreTJvYzMyaXBzM2Y1ZDRpOXQifQ.hf1smfaEWEXch-aNeJqWtQ"
 
-$("#formPostcode").blur(()=>{
-    fetch(`https://viacep.com.br/ws/${$("#formPostcode").val()}/json/`)
+$("#formPostcode").blur(()=>{viacep($("#formPostcode").val())});
+
+function viacep(cep){
+    fetch(`https://viacep.com.br/ws/${cep}/json/`)
     .then(res => res.json())
     .then(addres => {
-        $("#formRegion").val(`${addres.estado}`);
-        $("#formPlace").val(`${addres.localidade}`);
-        $("#formNeighborhood").val(`${addres.bairro}`);
-        $("#formStreet").val(`${addres.logradouro}`);
+        if(addres.erro == "true"){
+            alert("Cep não encontrado");
+        }
+        else{
+            $("#formRegion").val(`${addres.estado}`);
+            $("#formPlace").val(`${addres.localidade}`);
+            $("#formNeighborhood").val(`${addres.bairro}`);
+            $("#formStreet").val(`${addres.logradouro}`);
+        }
     })
-})
+    .catch(()=>{console.log("oi")})
+}
 
 function getLocalizacao(){
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(success, error);
     }
     else {
-        alert("Seu navegador não possue localização")
+        alert("Seu navegador não possue localização, coloque o CEP e a aplicação completa o resto.")
     }
       
     function success(position) {
@@ -25,15 +33,12 @@ function getLocalizacao(){
         .then(data => data.features[0].properties.context)
         .then(addres => {
             $("#formPostcode").val(`${addres.postcode.name}`);
-            $("#formRegion").val(`${addres.region.name}`);
-            $("#formPlace").val(`${addres.place.name}`);
-            $("#formNeighborhood").val(`${addres.neighborhood.name}`);
-            $("#formStreet").val(`${addres.street.name}`);
+            viacep(addres.postcode.name);
         })
     }
     
     function error() {
-        alert("ocorreu um erro");
+        alert("ocorreu um erro ao pegar sua localização, tente novamente ou coloque o CEP e a aplicação completa o resto.");
     }
 }
 
@@ -44,6 +49,10 @@ function getmap(){
     const Place = $("#formPlace").val();
     const Region = $("#formRegion").val();
     const query = `${Street}, ${Postcode}, ${Place}, ${Region}`;
+
+    if(Street == "" || Postcode == "" || Place == "" || Region == ""){
+        alert("Preencha todos os campos, a falta de valores atrapalha na localização.")
+    }
 
     let ponto_norte, ponto_leste, ponto_sul, ponto_oeste;
 
@@ -117,32 +126,41 @@ function getmap(){
                     locals_id.push(element.id);
                 }
             });
-            generatemap(locals_id, longitude, latitude, zoom);
+            if(locals_id != ""){
+                generatemap(locals_id, longitude, latitude, zoom);
+            }
+            else{
+                $("#quest").html("Nenhuma localização encontrada, tente um raio de distância maior.");
+                $("#map").empty();
+            }
         })
     })
 }
 
 function generatemap(locals_id, longitude, latitude, zoom){
 
-    const centralLatLong = [Number(longitude), Number(latitude)]; // Ponto central do mapa (Belo Horizonte)
+    const centralLatLong = [Number(longitude), Number(latitude)];
 
     let map;
 
     mapboxgl.accessToken = key;
     map = new mapboxgl.Map({
-        container: 'map', // O container do mapa
-        style: 'mapbox://styles/mapbox/streets-v12', // Estilo do mapa
-        center: centralLatLong, // Localização central do mapa
-        zoom: zoom // Zoom inicial
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v12',
+        center: centralLatLong,
+        zoom: zoom
     });
+
+    $("#quest").empty();
+
+    let div = $("#quest");
 
     locals_id.forEach((localId) => {
         fetch(`/locais/?id=${localId}`)
         .then(res => res.json())
         .then(local => {
             local = local[0];
-            console.log(local)
-            console.log(local.coordenadas);
+            div.append(`<div><i class="fa-solid fa-location-dot d-inline" style="color:${local.cor}"></i> <p class="d-inline">${local.nome}</p></div>`);
             let popup = new mapboxgl.Popup({ offset: 25 })
             .setHTML(`<h4>${local.nome}</h4><a href="${local.link}" target="_blank"><h6>Link</h6></a>`);
             const marker = new mapboxgl.Marker({ color: local.cor })
@@ -153,7 +171,7 @@ function generatemap(locals_id, longitude, latitude, zoom){
     })
 
     let popup = new mapboxgl.Popup({ offset: 25 })
-    .setHTML(`<h3> Estou aqui!!! </h3>`);
+    .setHTML(`<h3>Sua localização</h3>`);
     const marker = new mapboxgl.Marker({ color: 'yellow' })
     .setLngLat([longitude, latitude])
     .setPopup(popup)
