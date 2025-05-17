@@ -1,0 +1,20 @@
+:root {
+    --main-color: #AADEAD;
+    --second-color: #053308;
+    --white-color: #fefefe;
+    --bg-color: #F5FFED;
+}
+
+#map {
+    height: 50vh;
+    width: 70vw;
+}
+
+.local{
+    width: 8vw;
+}
+
+select {
+    color: var(--second-color);
+    background-color: var(--main-color);
+}

@@ -70,110 +70,121 @@
       "id": 1,
       "nome": "Academia Smart Fit - Avenida Prudente de Morais",
       "tipo": "Academia",
+      "cor": "red",
       "link": "https://www.smartfit.com.br/academias/avenida-prudente-de-morais",
       "coordenadas": {
-        "latitude":"-19.940607825663637",
-        "longitude":"-43.9478355100661"
+        "latitude": "-19.940607825663637",
+        "longitude": "-43.9478355100661"
       }
     },
     {
       "id": 2,
       "nome": "Academia Smart Fit - Savassi",
       "tipo": "Academia",
+      "cor": "red",
       "link": "https://www.smartfit.com.br/academias/savassi",
       "coordenadas": {
-        "latitude":"-19.938973487355902",
-        "longitude":"-43.93651782134789"
+        "latitude": "-19.938973487355902",
+        "longitude": "-43.93651782134789"
       }
     },
     {
       "id": 3,
       "nome": "Academia Smart Fit - Anchieta",
       "tipo": "Academia",
+      "cor": "red",
       "link": "https://www.smartfit.com.br/academias/anchieta",
       "coordenadas": {
-        "latitude":"-19.951391453064883",
-        "longitude":"-43.92813216202535"
+        "latitude": "-19.951391453064883",
+        "longitude": "-43.92813216202535"
       }
     },
     {
       "id": 4,
       "nome": "Academia Smart Fit - Shopping Cidade",
       "tipo": "Academia",
+      "cor": "red",
       "link": "https://www.smartfit.com.br/academias/shopping-cidade",
       "coordenadas": {
-        "latitude":"-19.920988566235877",
-        "longitude":"-43.94008248371899"
+        "latitude": "-19.920988566235877",
+        "longitude": "-43.94008248371899"
       }
     },
     {
       "id": 5,
       "nome": "Academia Smart Fit - Nova Suissa",
       "tipo": "Academia",
+      "cor": "red",
       "link": "https://www.smartfit.com.br/academias/nova-suissa",
       "coordenadas": {
-        "latitude":"-19.928667451823266",
-        "longitude":"-43.97228479670423"
+        "latitude": "-19.928667451823266",
+        "longitude": "-43.97228479670423"
       }
     },
     {
       "id": 6,
       "nome": "Academia Smart Fit - Shopping Del Rey",
       "tipo": "Academia",
+      "cor": "red",
       "link": "https://www.smartfit.com.br/academias/shopping-del-rey",
       "coordenadas": {
-        "latitude":"-19.889813255136698",
-        "longitude":"-43.96771756778167"
+        "latitude": "-19.889813255136698",
+        "longitude": "-43.96771756778167"
       }
     },
     {
       "id": 7,
       "nome": "Parque Municipal Américo Renné Giannetti",
       "tipo": "Parque",
+      "cor": "green",
       "link": "https://maps.app.goo.gl/pzG6rWZjUosJg2nz6",
       "coordenadas": {
-        "latitude":"-19.92324559610815",
-        "longitude":"-43.934855952102374"
+        "latitude": "-19.92324559610815",
+        "longitude": "-43.934855952102374"
       }
     },
     {
       "id": 8,
       "nome": "Parque Orlando de Carvalho Silveira",
       "tipo": "Parque",
+      "cor": "green",
       "link": "https://maps.app.goo.gl/K2Co89PafUSUvvr9A",
       "coordenadas": {
-        "latitude":"-19.89427150723289",
-        "longitude":"-43.92833283207185"
+        "latitude": "-19.89427150723289",
+        "longitude": "-43.92833283207185"
       }
     },
     {
       "id": 9,
       "nome": "Quadra de Areia - Parque Municipal Juscelino Kubitschek",
       "tipo": "Quadra",
+      "cor": "orange",
       "link": "https://maps.app.goo.gl/odd247etHxw8KsVB7",
       "coordenadas": {
-        "latitude":"-19.95907474261286",
-        "longitude":"-43.929389842704495"
+        "latitude": "-19.95907474261286",
+        "longitude": "-43.929389842704495"
       }
     },
     {
       "id": 10,
       "nome": "Arena Tupinambás",
-      "tipo": "Parque",
+      "tipo": "Quadra",
+      "cor": "orange",
       "link": "https://maps.app.goo.gl/a9LK4B4FqDFZaNg3A",
       "coordenadas": {
-        "latitude":"-19.9179180915731",
-        "longitude":"-43.94540698383852"
+        "latitude": "-19.9179180915731",
+        "longitude": "-43.94540698383852"
       }
     },
     {
       "id": 11,
       "nome": "CELPE",
       "tipo": "Quadra",
+      "cor": "orange",
       "link": "https://maps.app.goo.gl/F8zopAKpmetae8PD8",
       "coordenadas": {
-        "latitude":"-19.91477286825425",
-        "longitude":"-43.981089934634745"
+        "latitude": "-19.91477286825425",
+        "longitude": "-43.981089934634745"
       }
     }
   ],
@@ -201,9 +212,41 @@
       "descricao": "Grupo para quem quer praticar basquete em bh no bairro floresta",
       "imagem": "../public/assets/images/",
       "link": "link_whatsapp"
+    },
+    {
+      "id_usuario": 1,
+      "titulo": "aaa",
+      "descricao": "asasasasas",
+      "link": "asasa",
+      "imagem": "",
+      "id": 4
+    },
+    {
+      "id_usuario": 1,
+      "titulo": "aaa",
+      "descricao": "asasasasas",
+      "link": "asasa",
+      "imagem": "",
+      "id": 5
+    },
+    {
+      "id_usuario": 1,
+      "titulo": "andre",
+      "descricao": "123123",
+      "link": "123",
+      "imagem": "",
+      "id": 6
+    },
+    {
+      "id_usuario": 1,
+      "titulo": "andre",
+      "descricao": "123123",
+      "link": "123",
+      "imagem": "",
+      "id": 7
     }
   ],
-   "conteudo": [
+  "conteudo": [
     {
       "id": 1,
       "titulo": "Qualquer prática de atividade física é benéfica para o corpo humano",
@@ -227,8 +270,8 @@
       "categoria": "artigo",
       "imagem": "https://istoedinheiro.com.br/wp-content/uploads/sites/17/2022/11/pexels-godisable-jacob-956724.jpg?x46096",
       "link": "https://istoedinheiro.com.br/12-dicas-para-vencer-a-preguica-e-comecar-a-se-exercitar/"
-      },
-      {
+    },
+    {
       "id": 4,
       "titulo": "Descobrindo o fator motivação e prazer com a atividade física",
       "descricao": "Exercitar-se não precisa ser um sacrifício. Descubra como encontrar prazer no movimento.",
@@ -275,4 +318,3 @@
   ],
   "informacoes": []
 }
-
