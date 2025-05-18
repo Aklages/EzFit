@@ -1,8 +1,15 @@
+//chave da api mapbox
 const key = "pk.eyJ1IjoiYW5kcmVkZWRlIiwiYSI6ImNtYTJmbmVreTJvYzMyaXBzM2Y1ZDRpOXQifQ.hf1smfaEWEXch-aNeJqWtQ"
 
-$("#formPostcode").blur(()=>{viacep($("#formPostcode").val())});
+//eventos dos objetos exigido pela atividade, onclick, onload, onblur(outras possibilidades)
+$(window).on("load", getLocalizacao());
+$("#GetLocation").click(()=>{alert("Aguarde um pouco,normalmente demora a encontrar sua localização"), getLocalizacao()});
+$("#formPostcode").blur(()=>{viacep($("#formPostcode").val())});//completar as informações via CEP
+$("#Limpar").click(()=>{limpar()});
+$("#Buscar").click(()=>{getmap()});
 
-function viacep(cep){
+
+function viacep(cep){//função que recebe um CEP e devolve um json do endereço pela API do viacep
     fetch(`https://viacep.com.br/ws/${cep}/json/`)
     .then(res => res.json())
     .then(addres => {
@@ -16,11 +23,9 @@ function viacep(cep){
             $("#formStreet").val(`${addres.logradouro}`);
         }
     })
-    .catch(()=>{console.log("oi")})
 }
 
-function getLocalizacao(){
-    alert("Aguarde um pouco,normalmente demora a encontrar sua localização");
+function getLocalizacao(){//função para pegar coordenadas do usuário, mandar para a api do Mapbox para receber o Cep e completar os dados com o viacep
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(success, error);
     }
@@ -43,7 +48,7 @@ function getLocalizacao(){
     }
 }
 
-function getmap(){
+function getmap(){//função com algoritmo que encontra os locais de interesse próximo baseado nas coordenadas e escolhas do usuario
     $("#esperando").hide;
     const Street = $("#formStreet").val();
     const Postcode = $("#formPostcode").val();
@@ -139,7 +144,7 @@ function getmap(){
     })
 }
 
-function generatemap(locals_id, longitude, latitude, zoom){
+function generatemap(locals_id, longitude, latitude, zoom){//função que gera um mapa a partir do mapbox com os locais encontrados
 
     const centralLatLong = [Number(longitude), Number(latitude)];
 
@@ -180,7 +185,7 @@ function generatemap(locals_id, longitude, latitude, zoom){
     .addTo(map);
 }
 
-function limpar(){
+function limpar(){//função para limpar os campos
     $("#formPostcode").val("");
     $("#formRegion").val("");
     $("#formPlace").val("");
