@@ -43,7 +43,7 @@
         <div class="container d-flex flex-column mt-4 mb-3">
             <h3>Encontre locais de interesse perto de você!</h3>
             <h5>Clique no botão para completar com as informações da sua localização atual(baixa precisão no computador)</h5>
-            <button class="btn btn-success local mb-3" onclick="getLocalizacao()">Localização</button>
+            <button class="btn btn-success local mt-1 mb-4" onclick="getLocalizacao()">Localização</button>
             <div class="mb-3">
                 <label for="formPostcode" class="form-label">CEP</label>
                 <input type="text" class="form-control" id="formPostcode">
@@ -82,7 +82,7 @@
                     <option value="10">10km</option>
                 </select>
             </div>
-            <button class="btn btn-success local mb-4" onclick="limpar()">Limpar</button>
+            <button class="btn btn-success local mb-5" onclick="limpar()">Limpar</button>
             <button class="btn btn-success" onclick="getmap()">Buscar</button>
             <h3 class="mt-3">Localizações encontradas: </h3>
             <div id="quest"></div>

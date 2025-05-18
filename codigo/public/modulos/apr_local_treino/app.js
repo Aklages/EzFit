@@ -20,11 +20,12 @@ function viacep(cep){
 }
 
 function getLocalizacao(){
+    alert("Aguarde um pouco,normalmente demora a encontrar sua localização");
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(success, error);
     }
     else {
-        alert("Seu navegador não possue localização, coloque o CEP e a aplicação completa o resto.")
+        alert("Seu navegador não possue localização, coloque o CEP e a aplicação completa o resto.");
     }
       
     function success(position) {
@@ -130,6 +131,7 @@ function getmap(){
                 generatemap(locals_id, longitude, latitude, zoom);
             }
             else{
+                alert("Nenhuma localização encontrada, tente mudar o interesse ou distância.")
                 $("#quest").html("Nenhuma localização encontrada, tente um raio de distância maior.");
                 $("#map").empty();
             }
