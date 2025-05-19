@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EzFit</title>
+    <link rel="icon" type="image/x-icon" href="../../assets/images/Logo.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/4f6d2b1093.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <body>
+    <header class="d-flex justify-content-between align-items-center py-1">
+        <a href="../../hub/user.html"><img src="../../assets/images/Logo.png" alt="Logo" width="80px"></a>
+        <div class="d-flex align-items-center">
+            <span class="icon_user fa-solid fa-circle-user me-3"></span>
+            <h1 class="my-0 d-none d-sm-block"><span id="nomeUsuario" class="nome_user"></span></h1>
+            <button type="button" id="btn_logout" class="logout btn btn-outline ms-3"><i class="fa-solid fa-right-to-bracket"></i></button>
+        </div>
+    </header>
+   <style>
+        :root {
+            --primary-color: #2A5C8D;
+            --secondary-color: #4CAF50;
+            --background: #f8f9fa;
+            --card-border: #e0e0e0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            background: var(--background);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        main {
+            flex: 1;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .header {
+            text-align: center;
+            padding: 30px 0;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            margin-bottom: 25px;
+            font-size: 2.2em;
+        }
+
+        .search-bar {
+            width: 100%;
+            padding: 12px 20px;
+            border: 2px solid var(--card-border);
+            border-radius: 25px;
+            margin-bottom: 30px;
+            font-size: 1em;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        .search-bar:focus {
+            border-color: var(--primary-color);
+        }
+
+        .groups-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+
+        .group-card {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+        }
+
+        .group-card:hover {
+            transform: translateY(-3px);
+        }
+
+        .group-card h2 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-size: 1.4em;
+        }
+
+        .group-link {
+            display: inline-flex;
+            align-items: center;
+            padding: 8px 15px;
+            background: #e3f2fd;
+            border-radius: 20px;
+            color: var(--primary-color);
+            text-decoration: none;
+            margin-top: 10px;
+            transition: background 0.3s;
+        }
+
+        .group-link::before {
+            content: '!';
+            margin-right: 8px;
+            font-size: 1.1em;
+        }
+
+        .group-link:hover {
+            background: #bbdefb;
+        }
+
+        .my-groups {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .btn {
+            padding: 12px 30px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: opacity 0.3s;
+        }
+
+        .btn-secondary {
+            background: var(--secondary-color);
+            color: white;
+        }
+
+        .btn:hover {
+            opacity: 0.9;
+        }
+        @media (max-width: 768px) {
+            .groups-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .button-group {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="header">
+            <h1>Encontre o grupo ideal!</h1>
+            <input type="text" class="search-bar" placeholder="Pesquisar grupos...">
+        </div>
+
+        <div class="groups-container" id="groupsContainer"></div>
+
+        <div class="my-groups">
+            <div class="button-group">
+                <button class="btn btn-secondary">Criar Grupo</button>
+                <button class="btn btn-secondary">Visualizar Meus Grupos</button>
+            </div>
+        </div>
+    </main>
+
+        <footer class="d-flex flex-lg-row flex-column justify-content-between py-3 pb-5">
+        <div class="d-flex flex-column">
+            <h1>EzFit</h1>
+            <p>@ EzFit 2025 | Todos os direitos reservados.</p>
+        </div>
+        <div class="d-flex flex-column justify-content-between">
+            <h4 class="pt-lg-0 pt-4">Sobre</h4>
+            <div class="d-flex align-items-center py-2">
+                <a href="https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2025-1-ti1-0385100-ezfit" target="_blank"><span class="fa-brands fa-github"></span></a><p class="my-0 ms-1">Repositório</p>
+            </div>
+            <div class="py-2">
+                <a href="./index.html"><p class="my-0">Integrantes do Grupo</p></a>
+            </div>
+        </div>
+        <div class="d-flex flex-column justify-content-between">
+            <h4 class="pt-lg-0 pt-4">Contato</h4>
+            <div class="py-2">
+                <a href="mailto:suporte@ezfit.com"><p class="my-0">Suporte@ezfit.com</p></a>
+            </div>
+            <div class="d-flex align-items-center py-2">
+                <a href="https://whatsapp.com" target="_blank"><span class="fa-brands fa-whatsapp"></span></a><p class="my-0 ms-1">(31)94002-8922</p>
+            </div>
+        </div>
+        <div class="d-flex flex-column justify-content-between">
+            <h4 class="pt-lg-0 pt-4">Sociais</h4>
+            <div class="d-flex align-items-center py-2">
+                <a href="https://x.com" target="_blank"><span class="fa-brands fa-x-twitter"></span></a><p class="my-0 ms-1">@EzFit</p>
+            </div>
+            <div class="d-flex align-items-center py-2">
+                <a href="https://instagram.com" target="_blank"><span class="fa-brands fa-instagram"></span></a><p class="my-0 ms-1">@EzFit</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        const gruposDB = {
+            "grupos": [
+                {
+                    "id": 1,
+                    "id_usuario": 1,
+                    "categoria": "basquete",
+                    "titulo": "Basquete BH",
+                    "descricao": "Grupo para quem quer praticar basquete em bh no bairro castelo",
+                    "imagem": "",
+                    "link": "link_whatsapp"
+                },
+                {
+                    "id": 2,
+                    "id_usuario": 1,
+                    "categoria": "futebol",
+                    "titulo": "Futebol BH",
+                    "descricao": "Grupo para quem quer praticar futebol em bh no bairro sion",
+                    "imagem": "",
+                    "link": "link_whatsapp"
+                },
+                {
+                    "id": 3,
+                    "id_usuario": 2,
+                    "categoria": "volei",
+                    "titulo": "Volei BH",
+                    "descricao": "Grupo para quem quer praticar basquete em bh no bairro floresta",
+                    "imagem": "",
+                    "link": "link_whatsapp"
+                },
+                {
+                    "id": 4,
+                    "id_usuario": 2,
+                    "categoria": "outros",
+                    "titulo": "Corrida Mangabeiras",
+                    "descricao": "Grupo para quem quer correr no parque mangabeiras !",
+                    "imagem": "",
+                    "link": "link_whatsapp"
+                }
+            ]
+        };
+
+        class GroupManager {
+            constructor() {
+                this.groupsContainer = document.getElementById('groupsContainer');
+                this.searchInput = document.querySelector('.search-bar');
+                this.init();
+            }
+
+            init() {
+                this.renderGroups();
+                this.initEvents();
+            }
+
+            renderGroups() {
+                this.groupsContainer.innerHTML = gruposDB.grupos.map(group => `
+                    <div class="group-card" data-category="${group.categoria}">
+                        <h2>${group.titulo}</h2>
+                        ${group.imagem ? `<img src="${group.imagem}${group.id}.jpg" alt="${group.titulo}" class="group-image">` : ''}
+                        <p>${group.descricao}</p>
+                        <a href="${group.link}" class="group-link" target="_blank">Participar do Grupo</a>
+                    </div>
+                `).join('');
+            }
+
+            initEvents() {
+                this.searchInput.addEventListener('input', (e) => this.filterGroups(e.target.value));
+            }
+
+            filterGroups(searchTerm) {
+                const term = searchTerm.toLowerCase();
+                const cards = this.groupsContainer.querySelectorAll('.group-card');
+                
+                cards.forEach(card => {
+                    const category = card.dataset.category;
+                    const title = card.querySelector('h2').textContent.toLowerCase();
+                    const matches = category.includes(term) || title.includes(term);
+                    card.style.display = matches ? 'block' : 'none';
+                });
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            new GroupManager();
+            
+
+            document.querySelector('.btn-primary').addEventListener('click', () => {
+
+                window.location.href = '/criar-grupo';
+            });
+            
+            document.querySelector('.btn-secondary').addEventListener('click', () => {
+
+                const userId = 2; 
+                const userGroups = gruposDB.grupos.filter(g => g.id_usuario === userId);
+                console.log('Grupos do usuário:', userGroups);
+            });
+        });
+    </script>
+</body>
+</html>
