@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cadastrar Treinos - EzFit</title>
+  <link rel="stylesheet" href="treinos.css" />
+</head>
+<body>
+  <header>
+    <h1>Cadastrar Treino</h1>
+  </header>
+
+  <main>
+    <section class="form-section">
+      <h2>Preencha os campos abaixo</h2>
+      <form id="treinoForm">
+        <input type="number" id="id" placeholder="ID" required />
+        <input type="text" id="objetivo" placeholder="Objetivo (ex: perder_peso)" required />
+        <input type="number" id="dias" placeholder="Dias por semana" required />
+        <input type="number" id="tempo_livre" placeholder="Tempo livre (minutos)" required />
+        <input type="text" id="local" placeholder="Local (ex: casa)" required />
+
+        <textarea id="exercicios" placeholder='Ex: Agachamento 15, Flexão 10, Abdominal 20'></textarea>
+
+        <div class="buttons">
+          <button type="submit">Criar</button>
+          <button type="button" onclick="atualizarTreino()">Alterar</button>
+          <button type="button" onclick="deletarTreino()">Deletar</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="lista-section">
+      <h2>Treinos Cadastrados</h2>
+      <table id="treinosTable">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Objetivo</th>
+            <th>Dias</th>
+            <th>Tempo Livre</th>
+            <th>Local</th>
+            <th>Exercícios</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer>
+    <p>EzFit © 2025</p>
+  </footer>
+
+  <script src="treinos.js"></script>
+</body>
+</html>
