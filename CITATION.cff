@@ -1,11 +1,11 @@
 cff-version: 1.0.1
 message: Please cite this software using these metadata.
-title: 
+title: EzFit
 authors:
   - family-names: 
     given-names: 
-  - family-names: 
-    given-names: 
+  - family-names: Henrique Figueiredo Pimenta
+    given-names: Bruno
   - family-names: 
     given-names: 
   - family-names: 
@@ -16,15 +16,18 @@ authors:
     given-names:
   - name-suffix: Professor
     affiliation: PUC Minas
-    family-names: 
-    given-names: 
+    family-names: Silva Tavares
+    given-names: Cleiton
   - name-suffix: Professor
     affiliation: PUC Minas
-    family-names: 
-    given-names: 
+    family-names: Vieira Carneiro
+    given-names: Rommel
 keywords:
-  - 
-  - 
+  - Sedentarismo
+  - Exercício Físico
+  - Hipertrofia
+  - Emagrecimento 
+  - Saúde
 repository-code: 
 license: CC-BY-4.0
 version: 1.0.0
