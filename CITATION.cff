@@ -2,8 +2,8 @@ cff-version: 1.0.1
 message: Please cite this software using these metadata.
 title: EzFit
 authors:
-  - family-names: 
-    given-names: 
+  - family-names: Kirst Lages
+    given-names: André
   - family-names: Henrique Figueiredo Pimenta
     given-names: Bruno
   - family-names: 
