@@ -6,14 +6,14 @@ authors:
     given-names: André
   - family-names: Henrique Figueiredo Pimenta
     given-names: Bruno
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
+  - family-names: Lima Volponi
+    given-names: Diego
+  - family-names: Maximo Duarte
+    given-names: Lucca
   - family-names: Henrique Barbosa de Andrade
     given-names: Matheus
-  - family-names: 
-    given-names:
+  - family-names: Amaral Guimarães de Lima Souza
+    given-names: Victor
   - name-suffix: Professor
     affiliation: PUC Minas
     family-names: Silva Tavares
@@ -28,7 +28,7 @@ keywords:
   - Hipertrofia
   - Emagrecimento 
   - Saúde
-repository-code: 
+repository-code: https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2025-1-ti1-0385100-ezfit
 license: CC-BY-4.0
 version: 1.0.0
 date-released: 2022-07-14
