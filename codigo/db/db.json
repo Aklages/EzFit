@@ -5,28 +5,32 @@
       "login": "adm",
       "senha": "123",
       "nome": "Administrador do Sistema",
-      "email": "adm@ezfit.com"
+      "email": "adm@ezfit.com",
+      "treinoId": 0
     },
     {
       "id": 2,
       "login": "felipe",
       "senha": "123",
       "nome": "Felipe",
-      "email": "felipe@gmail.com"
+      "email": "felipe@gmail.com",
+      "treinoId": 2
     },
     {
       "id": 3,
       "login": "rommel",
       "senha": "123",
       "nome": "Rommel",
-      "email": "rommel@gmail.com"
+      "email": "rommel@gmail.com",
+      "treinoId": 0
     },
     {
       "id": 4,
       "login": "andre",
       "senha": "123",
       "nome": "André",
-      "email": "andre@gmail.com"
+      "email": "andre@gmail.com",
+      "treinoId": 1
     }
   ],
   "exercicios": [
@@ -47,6 +51,24 @@
       "nome": "Abdominais",
       "duracao_min": null,
       "repeticoes": 10
+    },
+    {
+      "id": 4,
+      "nome": "Levantar Peso1",
+      "duracao_min": 15,
+      "repeticoes": null
+    },
+    {
+      "id": 5,
+      "nome": "Levantar Peso2",
+      "duracao_min": null,
+      "repeticoes": 10
+    },
+    {
+      "id": 6,
+      "nome": "Levantar Peso3",
+      "duracao_min": null,
+      "repeticoes": 5
     }
   ],
   "treinos": [
@@ -56,13 +78,45 @@
       "dias": 3,
       "tempo_livre_m": 30,
       "local": "casa"
+    },
+    {
+      "id": 2,
+      "objetivo": "ganhar_musculo",
+      "dias": 5,
+      "tempo_livre_m": 60,
+      "local": "academia"
     }
   ],
   "treinos_exercicios": [
     {
       "id": 1,
-      "id_treino": 1,
-      "id_exercicio": 1
+      "treinoId": 1,
+      "exercicioId": 1
+    },
+    {
+      "id": 2,
+      "treinoId": 1,
+      "exercicioId": 2
+    },
+    {
+      "id": 3,
+      "treinoId": 1,
+      "exercicioId": 3
+    },
+    {
+      "id": 4,
+      "treinoId": 2,
+      "exercicioId": 4
+    },
+    {
+      "id": 5,
+      "treinoId": 2,
+      "exercicioId": 5
+    },
+    {
+      "id": 6,
+      "treinoId": 2,
+      "exercicioId": 6
     }
   ],
   "locais": [
@@ -70,7 +124,6 @@
       "id": 1,
       "nome": "Academia Smart Fit - Avenida Prudente de Morais",
       "tipo": "Academia",
-      "cor": "red",
       "link": "https://www.smartfit.com.br/academias/avenida-prudente-de-morais",
       "coordenadas": {
         "latitude": "-19.940607825663637",
@@ -81,7 +134,6 @@
       "id": 2,
       "nome": "Academia Smart Fit - Savassi",
       "tipo": "Academia",
-      "cor": "red",
       "link": "https://www.smartfit.com.br/academias/savassi",
       "coordenadas": {
         "latitude": "-19.938973487355902",
@@ -92,7 +144,6 @@
       "id": 3,
       "nome": "Academia Smart Fit - Anchieta",
       "tipo": "Academia",
-      "cor": "red",
       "link": "https://www.smartfit.com.br/academias/anchieta",
       "coordenadas": {
         "latitude": "-19.951391453064883",
@@ -103,7 +154,6 @@
       "id": 4,
       "nome": "Academia Smart Fit - Shopping Cidade",
       "tipo": "Academia",
-      "cor": "red",
       "link": "https://www.smartfit.com.br/academias/shopping-cidade",
       "coordenadas": {
         "latitude": "-19.920988566235877",
@@ -114,7 +164,6 @@
       "id": 5,
       "nome": "Academia Smart Fit - Nova Suissa",
       "tipo": "Academia",
-      "cor": "red",
       "link": "https://www.smartfit.com.br/academias/nova-suissa",
       "coordenadas": {
         "latitude": "-19.928667451823266",
@@ -125,7 +174,6 @@
       "id": 6,
       "nome": "Academia Smart Fit - Shopping Del Rey",
       "tipo": "Academia",
-      "cor": "red",
       "link": "https://www.smartfit.com.br/academias/shopping-del-rey",
       "coordenadas": {
         "latitude": "-19.889813255136698",
@@ -136,7 +184,6 @@
       "id": 7,
       "nome": "Parque Municipal Américo Renné Giannetti",
       "tipo": "Parque",
-      "cor": "green",
       "link": "https://maps.app.goo.gl/pzG6rWZjUosJg2nz6",
       "coordenadas": {
         "latitude": "-19.92324559610815",
@@ -147,7 +194,6 @@
       "id": 8,
       "nome": "Parque Orlando de Carvalho Silveira",
       "tipo": "Parque",
-      "cor": "green",
       "link": "https://maps.app.goo.gl/K2Co89PafUSUvvr9A",
       "coordenadas": {
         "latitude": "-19.89427150723289",
@@ -158,7 +204,6 @@
       "id": 9,
       "nome": "Quadra de Areia - Parque Municipal Juscelino Kubitschek",
       "tipo": "Quadra",
-      "cor": "orange",
       "link": "https://maps.app.goo.gl/odd247etHxw8KsVB7",
       "coordenadas": {
         "latitude": "-19.95907474261286",
@@ -169,7 +214,6 @@
       "id": 10,
       "nome": "Arena Tupinambás",
       "tipo": "Quadra",
-      "cor": "orange",
       "link": "https://maps.app.goo.gl/a9LK4B4FqDFZaNg3A",
       "coordenadas": {
         "latitude": "-19.9179180915731",
@@ -180,7 +224,6 @@
       "id": 11,
       "nome": "CELPE",
       "tipo": "Quadra",
-      "cor": "orange",
       "link": "https://maps.app.goo.gl/F8zopAKpmetae8PD8",
       "coordenadas": {
         "latitude": "-19.91477286825425",
@@ -274,26 +317,6 @@
       "categoria": "artigo",
       "imagem": "https://s2.static.brasilescola.uol.com.br/be/2022/04/1-atividade-fisica.jpg",
       "link": "https://brasilescola.uol.com.br/saude/sedentarismo.htm"
-    }
-  ],
-  "favoritos": [
-    {
-      "id": 1,
-      "id_usuario": 3,
-      "tipo": "local",
-      "id_item": 1
-    },
-    {
-      "id": 2,
-      "id_usuario": 1,
-      "tipo": "grupo",
-      "id_item": 2
-    },
-    {
-      "id": 3,
-      "id_usuario": 2,
-      "tipo": "conteudo",
-      "id_item": 1
     }
   ],
   "informacoes": []
