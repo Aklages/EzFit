@@ -167,10 +167,25 @@ function generatemap(locals_id, longitude, latitude, zoom){//função que gera u
         .then(res => res.json())
         .then(local => {
             local = local[0];
-            div.append(`<div><i class="fa-solid fa-location-dot d-inline" style="color:${local.cor}"></i> <p class="d-inline">${local.nome}</p></div>`);
+            let cor;
+            switch (local.tipo) {
+                case "Academia":
+                    cor = "red";
+                    break;
+                case "Parque":
+                    cor = "green";
+                    break;
+                case "Quadra":
+                    cor = "orange";
+                    break;
+                default:
+                    cor = "purple";
+                    break;
+            }
+            div.append(`<div><i class="fa-solid fa-location-dot d-inline" style="color:${cor}"></i> <p class="d-inline">${local.nome}</p></div>`);
             let popup = new mapboxgl.Popup({ offset: 25 })
             .setHTML(`<h4>${local.nome}</h4><a href="${local.link}" target="_blank"><h6>Link</h6></a>`);
-            const marker = new mapboxgl.Marker({ color: local.cor })
+            const marker = new mapboxgl.Marker({ color: cor })
             .setLngLat([Number(local.coordenadas.longitude), Number(local.coordenadas.latitude)])
             .setPopup(popup)
             .addTo(map);
