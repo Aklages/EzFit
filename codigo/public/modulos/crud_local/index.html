@@ -101,11 +101,11 @@
         function exibeContatos() {
             tableContatos = document.getElementById("table-contatos");
 
-            // Remove todas as linhas do corpo da tabela
+            
             tableContatos.innerHTML = "";
 
             readContato (dados => {
-                // Popula a tabela com os registros do banco de dados
+               
                 for (i = 0; i < dados.length; i++) {
                     let contato = dados[i];    
                     tableContatos.innerHTML += `<tr><td scope="row">${contato.id}</td>
@@ -120,71 +120,71 @@
         }
 
         function init() {
-            // Define uma variável para o formulário de contato
+            
             formContato = document.getElementById("form-contato");
 
-            // Adiciona funções para tratar os eventos 
+            
             btnInsert = document.getElementById("btnInsert");
             btnInsert.addEventListener ('click', function () {
-                // Verifica se o formulário está preenchido corretamente
+                
                 if (!formContato.checkValidity()) {
                     displayMessage("Preencha o formulário corretamente.");
                     return;
                 }
 
-                // Obtem os valores dos campos do formulário
+                
                 let campoNome = document.getElementById ('inputNome').value;
                 let campotipo = document.getElementById ('inputtipo').value;
                 let campolatitude = document.getElementById ('inputlatitude').value;
                  let campolongetude = document.getElementById ('inputlongetude').value;
                 let campolink = document.getElementById ('inputlink').value;
 
-                // Cria um objeto com os dados do contato
+                
                 let contato = { nome: campoNome, 
                     tipo: campotipo, 
                     latitude: campolatitude,
                     longetude: campolongetude,
                     link: campolink };
 
-                // Cria o contato no banco de dados
+                
                 createContato(contato, exibeContatos);
 
-                // Limpa o formulario
+                
                 formContato.reset()
             });
 
-            // Trata o click do botão Alterar
+            
             btnUpdate = document.getElementById("btnUpdate");
             btnUpdate.addEventListener ('click', function () {
-                // Obtem os valores dos campos do formulário
+                
                 let campoId = document.getElementById("inputId").value;
                 if (campoId == "") {
                     displayMessage("Selecione antes um contato para ser alterado.");
                     return;
                 }
 
-                // Obtem os valores dos campos do formulário
+                
                 let campoNome = document.getElementById('inputNome').value;
                 let campotipo = document.getElementById('inputtipo').value;
                 let campolatitude = document.getElementById('inputlatitude').value;
                 let campolongetude = document.getElementById('inputlongetude').value;
                 let campolink = document.getElementById('inputlink').value;
                 
-                // Cria um objeto com os dados do contato
+                
                 let contato = { nome: campoNome, 
                     tipo: campotipo, 
                     latitude: campolatitude,
                     longetude:campolongetude,
                     link: campolink };
 
-                // Altera o contato no banco de dados
+                
                 updateContato(parseInt(campoId), contato, exibeContatos);
 
-                // Limpa o formulario
+                
                 formContato.reset()
             });
 
-            // Trata o click do botão Excluir
+            
             btnDelete = document.getElementById('btnDelete');
             btnDelete.addEventListener ('click', function () {
                 let campoId = document.getElementById('inputId').value;
@@ -193,20 +193,20 @@
                     return;
                 }
 
-                // Exclui o contato no banco de dados
+                
                 deleteContato(parseInt(campoId), exibeContatos);
 
-                // Limpa o formulario
+                
                 formContato.reset()
             });
 
-            // Trata o click do botão Listar Contatos
+            
             btnClear = document.getElementById('btnClear');
             btnClear.addEventListener ('click', function () {                
                 formContato.reset()
             });
 
-            // Oculta a mensagem de aviso após alguns 5 segundos
+            
             msg = document.getElementById('msg');
             msg.addEventListener ("DOMSubtreeModified", function (e) {
                 if (e.target.innerHTML == "") return;
@@ -216,16 +216,16 @@
                 }, 5000);
             })
 
-            // Preenche o formulário quando o usuario clicar em uma linha da tabela 
+            
             gridContatos = document.getElementById("grid-contatos");
             gridContatos.addEventListener('click', function (e) {
                 if (e.target.tagName == "TD") { 
 
-                    // Obtem as colunas da linha selecionada na tabela
+                    
                     let linhaContato = e.target.parentNode;
                     colunas = linhaContato.querySelectorAll("td");
                     
-                    // Preenche os campos do formulário com os dados da linha selecionada na tabela
+                    
                     document.getElementById ('inputNome').value = colunas[1].innerText;
                     document.getElementById ('inputtipo').value = colunas[2].innerText;
                     document.getElementById ('inputlatitude').value = colunas[3].innerText;
