@@ -1,0 +1,22 @@
+main {
+    padding: 0 10vw 0 10vw;
+}
+
+#div_main {
+    border-radius: 20px;
+    background-color: var(--main-color);
+}
+
+.div_second {
+    margin: 0 10vw 0 10vw;
+}
+
+.div_green {
+    border-radius: 20px;
+    background-color: var(--main-color);
+}
+
+.comece {
+    background-color: var(--second-color);
+    color: var(--white-color);
+}
