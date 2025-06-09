@@ -20,3 +20,28 @@ main {
     background-color: var(--second-color);
     color: var(--white-color);
 }
+
+.tamanho {
+    width: 30vw;
+    height: 40vh;
+}
+
+#logo, #banner {
+    width: 20vw;
+}
+
+.size {
+    width: 15vw;
+}
+
+.btn:hover {
+    border: solid var(--second-color) 1px;
+}
+
+a:hover {
+    color: var(--second-color);
+}
+
+.cards {
+    height: 400px;
+}
