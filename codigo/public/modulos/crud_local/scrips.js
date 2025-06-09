@@ -1,6 +1,6 @@
 // URL da API JSONServer - Substitua pela URL correta da sua API
-const apiUrl = 'https://f8ab6491-6f7e-4d5a-9ed7-a38b046af631-00-24zn8athwrhc4.kirk.replit.dev/contatos';
-//const apiUrl = 'https://jsonserver.rommelpuc.repl.co/contatos'; 
+const apiUrl = 'http://localhost:3000';
+
 
 function displayMessage(mensagem) {
     msg = document.getElementById('msg');

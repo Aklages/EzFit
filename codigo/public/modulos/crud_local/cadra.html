@@ -79,26 +79,26 @@
             ListaContatos()
         });
 
-        // função para listar na tabela os contatos que estão associados aos filtros 
+        
         function ListaContatos() {
             
-            // Obtem os dados informados pelo usuário nos filtros
+            
             let fc = document.getElementById('filtro_cidade').value;
             let fcg = document.getElementById('filtro_categoria').value;
 
-            // limpa a lista de contatos apresentados
+           
             tableContatos = document.getElementById("table-contatos");
             tableContatos.innerHTML = "";
 
-            // Popula a tabela com os registros do banco de dados
+            
             for (let index = 0; index < db.length; index++) {
                 const contato = db[index];
 
-                // Verifica se os dados do contato batem com os filtros
+                
                 if (((contato.cidade == fc) || (fc == '')) &&
                     ((contato.categoria == fcg) || (fcg == ''))) {
                     
-                    // Inclui o contato na tabela    
+                      
                     tableContatos.innerHTML += `<tr><td scope="row">${contato.id}</td>
                                                     <td>${contato.nome}</td>
                                                     <td>${contato.ttpo}</td>
