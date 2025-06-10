@@ -319,5 +319,22 @@
       "link": "https://brasilescola.uol.com.br/saude/sedentarismo.htm"
     }
   ],
-  "informacoes": []
+  "informacoes": [],
+  "motivacionais": [
+    {
+      "id": 1,
+      "titulo": "Shia LaBeouf - Just Do It",
+      "url": "https://www.youtube.com/embed/IIfQS_7GFCg"
+    },
+    {
+      "id": 2,
+      "titulo": "Les Brown - It's Possible",
+      "url": "https://www.youtube.com/embed/oly810w5JdU"
+    },
+    {
+      "id": 3,
+      "titulo": "Motivação com Música Épica",
+      "url": "https://www.youtube.com/embed/alZZ2PQ0SL8"
+    }
+  ]
 }
