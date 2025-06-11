@@ -1,17 +1,36 @@
 // script.js
-fetch('http://localhost:3000/motivacionais')
-  .then(response => response.json())
-  .then(videos => {
-    const container = document.getElementById('video-list');
-    videos.forEach(video => {
-      const iframe = document.createElement('iframe');
-      iframe.src = video.url;
-      iframe.title = video.titulo;
-      iframe.allowFullscreen = true;
-      container.appendChild(iframe);
-    });
-  })
-  .catch(error => {
-    console.error("Erro ao carregar os vídeos motivacionais:", error);
-    document.getElementById('video-list').innerHTML = `<p>Erro ao carregar os vídeos. Tente novamente mais tarde.</p>`;
+const videoList = document.getElementById('video-list');
+const buscaInput = document.getElementById('busca-video');
+
+let videos = [];
+
+// Carrega os vídeos do db.json
+fetch('db.json')
+  .then(res => res.json())
+  .then(data => {
+    videos = data.motivacionais;
+    renderVideos(videos);
   });
+
+function renderVideos(lista) {
+  videoList.innerHTML = '';
+  if (lista.length === 0) {
+    videoList.innerHTML = '<p>Nenhum vídeo encontrado.</p>';
+    return;
+  }
+  lista.forEach(video => {
+    const div = document.createElement('div');
+    div.innerHTML = `
+      <iframe src="${video.url}" frameborder="0" allowfullscreen></iframe>
+      <p style="text-align:center; margin-top:8px;">${video.titulo}</p>
+    `;
+    videoList.appendChild(div);
+  });
+}
+
+// Filtro de busca
+buscaInput.addEventListener('input', function() {
+  const termo = this.value.toLowerCase();
+  const filtrados = videos.filter(v => v.titulo.toLowerCase().includes(termo));
+  renderVideos(filtrados);
+});
