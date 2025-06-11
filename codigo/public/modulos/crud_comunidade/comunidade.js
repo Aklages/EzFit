@@ -1,6 +1,6 @@
 const listaGrupos = document.querySelector('#listaGrupos');
 
-// Método POST - Cria um grupo novo
+// Método POST p/ criar um grupo novo
 document.getElementById('btn_criarGrupo').addEventListener('click', () => {
     const nome = document.getElementById('nomeGrupo').value;
     const link = document.getElementById('linkGrupo').value;
@@ -94,7 +94,7 @@ document.getElementById('btn_excluirGrupo').addEventListener('click', () => {
         .then(res => {
             if (res.ok) {
                 alert('Grupo excluído com sucesso!');
-                carregarGrupos();  // Recarregar os grupos após a exclusão
+                carregarGrupos();
             } else {
                 alert('Erro ao excluir o grupo!');
             }
@@ -102,29 +102,34 @@ document.getElementById('btn_excluirGrupo').addEventListener('click', () => {
         .catch(erro => console.error('Erro ao excluir grupo:', erro));
 });
 
-
-// Método GET 
+// Método GET
 function carregarGrupos() {
     fetch('http://localhost:3000/grupos')
         .then(res => res.json())
         .then(grupos => {
-            listaGrupos.innerHTML = ''; 
+            listaGrupos.innerHTML = '';
+
             grupos.forEach(grupo => {
-                const item = document.createElement('li');
-                const textoGrupo = `
-                                ID: ${grupo.id}
-                                - Usuário: ${grupo.id_usuario}
-                                - Título: ${grupo.titulo}
-                                - Descrição: ${grupo.descricao}
-                                - Categoria: ${grupo.categoria}
-                                - Link: ${grupo.link}
-                            `;
-                item.textContent = textoGrupo;
-                listaGrupos.appendChild(item);
+                const card = document.createElement('div');
+                card.className = 'card shadow-sm rounded-4';
+                card.style.backgroundColor = '#c4eec4';
+                card.style.width = '250px';
+                card.style.flex = '0 0 auto';
+
+                card.innerHTML = `
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">${grupo.titulo}</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Categoria: ${grupo.categoria}</h6>
+                        <p class="card-text">${grupo.descricao}</p>
+                        <a href="${grupo.link}" target="_blank" class="btn btn-outline-success mb-2">Entrar</a>
+                        <p class="card-text"><small class="text-muted">ID: ${grupo.id}</small></p>
+                    </div>
+                `;
+
+                listaGrupos.appendChild(card);
             });
         })
         .catch(erro => console.error('Erro ao carregar grupos:', erro));
 }
 
-// Deixei essa linha abaixo p que o evento load seja chamado assim que a pag toda carregar
 window.addEventListener('load', carregarGrupos);
