@@ -14,6 +14,16 @@
     <link rel="stylesheet" href="../../assets/css/style.css">
     <link rel="stylesheet" href="./style.css">
     <script>
+        window.addEventListener("load", (e) => {
+            if(usuarioCorrente.treino == 0){
+                window.location.href = "http://localhost:3000/modulos/apr_sugerir_treinos/detalhes.html"
+            }
+            else {
+                console.log("Tem treino");
+            }
+        });
+
+
         function initPage() {
             // Associa a função de logout ao botão
             document.getElementById('btn_logout').addEventListener('click', logoutUser);
@@ -38,7 +48,6 @@
     <main>
         <div class="d-flex align-items-center px-3 pt-4">
             <h1 class="mb-0 me-3">Meus treinos</h1>
-            <a href="./detalhes.html" class="btn btn-success py-4" role="button">Sugerir Treino</a>
         </div>
         <div id="treino" class="px-3 pt-3"></div>
     </main>
