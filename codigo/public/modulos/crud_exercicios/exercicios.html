@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cadastrar Exercício</title>
+  <link rel="stylesheet" href="exercicio.css" />
+</head>
+<body>
+  <h1>Cadastrar Exercício</h1>
+  <h2>Preencha os campos abaixo</h2>
+
+  <form id="exercicioForm">
+    <input type="number" id="id" placeholder="ID" required />
+    <input type="text" id="nome" placeholder="Nome do exercício" required />
+    <input type="number" id="duracao" placeholder="Duração (min)" required />
+    <input type="number" id="repeticoes" placeholder="Repetições" required />
+
+    <div class="botoes">
+      <button type="submit">Criar</button>
+      <button type="button" onclick="atualizarExercicio()">Alterar</button>
+      <button type="button" onclick="deletarExercicio()">Deletar</button>
+    </div>
+  </form>
+
+  <h2>Exercícios Cadastrados</h2>
+  <table id="exerciciosTable">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nome</th>
+        <th>Duração</th>
+        <th>Repetições</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <script src="script.js"></script>
+</body>
+</html>
