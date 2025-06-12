@@ -15,14 +15,13 @@
     <link rel="stylesheet" href="./style.css">
     <script>
         window.addEventListener("load", (e) => {
-            if(usuarioCorrente.treino == 0){
+            if(usuarioCorrente.treinoId == 0){
                 window.location.href = "http://localhost:3000/modulos/apr_sugerir_treinos/detalhes.html"
             }
             else {
                 console.log("Tem treino");
             }
         });
-
 
         function initPage() {
             // Associa a função de logout ao botão
@@ -46,10 +45,13 @@
         </div>
     </header>
     <main>
-        <div class="d-flex align-items-center px-3 pt-4">
-            <h1 class="mb-0 me-3">Meus treinos</h1>
+        <div class="d-flex flex-column flex-xl-row align-items-center justify-content-around px-3 py-5">
+            <div class="d-flex flex-column align-items-center justify-content-around">
+                <section id="resumoTreino" class="px-3 pt-3 mb-3"></section>
+                <a id="button" class="btn btn-success" role="button">Mudar treino</a>
+            </div>
+            <section id="diasSemana" class="d-flex flex-wrap px-3 pt-3 gap-3"></section>
         </div>
-        <div id="treino" class="px-3 pt-3"></div>
     </main>
     <footer class="d-flex flex-lg-row flex-column justify-content-between py-3 pb-5">
         <div class="d-flex flex-column">
