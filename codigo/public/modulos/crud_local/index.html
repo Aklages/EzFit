@@ -5,235 +5,223 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Cadastro de Contatos</title>
+    <title>Cadastro de Locais</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background: #f8fafc;
+        }
+        .main-title {
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            color: #AADEAD;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        .form-container {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+            padding: 32px 24px 24px 24px;
+            margin-top: 24px;
+            max-width: 650px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .btn-custom {
+            background: #F5FFED;
+            color: #000000;
+            border-radius: 20px;
+            font-weight: 500;
+            transition: 0.2s;
+            border: none;
+        }
+        .btn-custom:hover {
+            background: #AADEAD;
+            color: #fff;
+        }
+        .btn-secondary {
+            border-radius: 20px;
+        }
+        label {
+            color: #000000;
+            font-weight: 600;
+        }
+        #msg {
+            margin-bottom: 16px;
+        }
+        .logo-top {
+            margin-top: 10px;
+            margin-bottom: 0;
+            text-align: right;
+        }
+    </style>
 </head>
 
 <body onload="init()">
-    <h1>Cadastro de Areas de treino</h1>
-
+    <div class="container-fluid logo-top">
+        <img src="../assets/images/Logo.png" alt="EZFit" style="height: 60px; width: auto;">
+    </div>
+    <h1 class="main-title">Cadastro de Áreas de Treino</h1>
     <div class="container">
         <div class="row">
-            <div id="msg" class="col-sm-10 offset-sm-1 ">
-                <!--<div class="alert alert-warning">Contato não encontrado.</div>-->
+            <div id="msg" class="col-12">
+                <!-- Mensagens de alerta -->
             </div>
         </div>
-
-        <form id="form-contato">
-            <div class="form-group row">
-                <div class="col-sm-8">
-                    <label for="inputNome">Nome (*)</label>
-                    <input type="text" class="form-control" id="inputNome" required placeholder="Informe o nome do contato">
-                </div>
-            </div>
-            <div class="form-group row">
-            </div>
-            <div class="form-group row">
-                <div class="col-sm-6">
-                    <label for="inputCidade">Tipo(*)</label>
-                    <input type="text" class="form-control" id="inputCidade" placeholder="Informe a cidade do contato" >
-                </div>
+        <div class="form-container">
+            <form id="form-local">
+                <input type="hidden" id="inputId">
+                <div class="form-group row">
+                    <div class="col-sm-12">
+                        <label for="inputNome">Nome (*)</label>
+                        <input type="text" class="form-control" id="inputNome" required placeholder="Informe o nome do local">
+                    </div>
                 </div>
                 <div class="form-group row">
                     <div class="col-sm-6">
-                        <label for="inputCidade">Latitude(*)</label>
-                        <input type="text" class="form-control" id="inputCidade" placeholder="Informe a cidade do contato" >
+                        <label for="inputtipo">Tipo(*)</label>
+                        <input type="text" class="form-control" id="inputtipo" placeholder="Informe o tipo do local" >
                     </div>
-                <div class="col-sm-6">
-                    <label for="inputCategoria">Longetude(*)</label>
-                    <input type="text" class="form-control" id="inputCategoria" required placeholder="Informe a categoria do contato">
+                    <div class="col-sm-6">
+                        <label for="inputlink">Link (*)</label>
+                        <input type="text" class="form-control" id="inputlink" required placeholder="Web Site">
+                    </div>
                 </div>
-            </div>
-            <div class="form-group row">    
-                <div class="col-sm-12">
-                    <label for="inputSite">link (*)</label>
-                    <input type="text" class="form-control" id="inputSite" required placeholder="Web Site">
+                <div class="form-group row">
+                    <div class="col-sm-6">
+                        <label for="inputlatitude">Latitude(*)</label>
+                        <input type="text" class="form-control" id="inputlatitude" placeholder="Informe a latitude" >
+                    </div>
+                    <div class="col-sm-6">
+                        <label for="inputlongitude">Longitude(*)</label>
+                        <input type="text" class="form-control" id="inputlongitude" required placeholder="Informe a longitude">
+                    </div>
                 </div>
-            </div>
-            <div class="form-group row">
-                <div class="col-sm-4">
-                    <small>(*) Campos obrigatórios</small>
+                <div class="form-group row">
+                    <div class="col-sm-4">
+                        <small>(*) Campos obrigatórios</small>
+                    </div>
                 </div>
-            </div>
-            <div class="form-group row">
-                <div class="col-sm-12">
-                    <input type="button" class="btn btn-success" id="btnInsert" value="Inserir">
-                    <input type="button" class="btn btn-warning" id="btnUpdate" value="Alterar">
-                    <input type="button" class="btn btn-danger" id="btnDelete" value="Excluir">
-                    <input type="button" class="btn btn-secondary" id="btnClear" value="Limpar Form">
-                    <a href="cadra.html"><input type="button" class="btn btn-warning" id="btnClear" value="Pesquisar Contatos"></a>
+                <div class="form-group row">
+                    <div class="col-sm-12 d-flex flex-wrap gap-2">
+                        <button type="button" class="btn btn-custom mr-2 mb-2" id="btnInsert">Inserir</button>
+                        <button type="button" class="btn btn-warning mr-2 mb-2" id="btnUpdate">Alterar</button>
+                        <button type="button" class="btn btn-danger mr-2 mb-2" id="btnDelete">Excluir</button>
+                        <button type="button" class="btn btn-secondary mr-2 mb-2" id="btnClear">Limpar Form</button>
+                        <a href="cadra.html"><button type="button" class="btn btn-custom mb-2">Pesquisar Locais</button></a>
+                    </div>
                 </div>
-            </div>
-        </form>
-
+            </form>
+        </div>
         <div class="row">
             <div class="col-sm-12">
-                <table id="grid-contatos" class="table table-striped">
+                <table id="grid-locais" class="table table-striped">
                     <thead>
                         <tr>
                             <th scope="col">#</th>
-                            <th scope="col">Nome</th>AAAA
-                            <th scope="col">Latitude</th>
-                            <th scope="col">Longetude</th>
+                            <th scope="col">Nome</th>
                             <th scope="col">Tipo</th>
-                            <th scope="col">link</th>
+                            <th scope="col">Latitude</th>
+                            <th scope="col">Longitude</th>
+                            <th scope="col">Link</th>
                         </tr>
                     </thead>
-                    <tbody id="table-contatos">
-                        <tr>
-                            <td scope="row">1</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
+                    <tbody id="table-locais">
+                        <!-- Linhas serão preenchidas pelo JS -->
                     </tbody>
                 </table>
             </div>
         </div>
     </div>
-
     <script src="scrips.js"></script>
     <script>
-        function exibeContatos() {
-            tableContatos = document.getElementById("table-contatos");
-
-            
-            tableContatos.innerHTML = "";
-
-            readContato (dados => {
-               
-                for (i = 0; i < dados.length; i++) {
-                    let contato = dados[i];    
-                    tableContatos.innerHTML += `<tr><td scope="row">${contato.id}</td>
-                                                    <td>${contato.nome}</td>
-                                                    <td>${contato.tipo}</td>
-                                                    <td>${contato.latitude}</td>
-                                                    <td>${contato.longetude}</td>
-                                                    <td>${contato.like}</td>
-                                                </tr>`;
+        function exibeLocais() {
+            let tableLocais = document.getElementById("table-locais");
+            tableLocais.innerHTML = "";
+            readLocal (dados => {
+                for (let i = 0; i < dados.length; i++) {
+                    let local = dados[i];    
+                    tableLocais.innerHTML += `<tr><td scope="row">${local.id}</td>
+                                                <td>${local.nome}</td>
+                                                <td>${local.tipo}</td>
+                                                <td>${local.latitude}</td>
+                                                <td>${local.longitude}</td>
+                                                <td><a href="${local.link}" target="_blank" class="btn btn-sm btn-outline-primary">Ver Local</a></td>
+                                            </tr>`;
                 }
             })
         }
-
         function init() {
-            
-            formContato = document.getElementById("form-contato");
-
-            
-            btnInsert = document.getElementById("btnInsert");
+            let formLocal = document.getElementById("form-local");
+            let btnInsert = document.getElementById("btnInsert");
             btnInsert.addEventListener ('click', function () {
-                
-                if (!formContato.checkValidity()) {
+                if (!formLocal.checkValidity()) {
                     displayMessage("Preencha o formulário corretamente.");
                     return;
                 }
-
-                
                 let campoNome = document.getElementById ('inputNome').value;
                 let campotipo = document.getElementById ('inputtipo').value;
                 let campolatitude = document.getElementById ('inputlatitude').value;
-                 let campolongetude = document.getElementById ('inputlongetude').value;
+                let campolongitude = document.getElementById ('inputlongitude').value;
                 let campolink = document.getElementById ('inputlink').value;
-
-                
-                let contato = { nome: campoNome, 
-                    tipo: campotipo, 
-                    latitude: campolatitude,
-                    longetude: campolongetude,
-                    link: campolink };
-
-                
-                createContato(contato, exibeContatos);
-
-                
-                formContato.reset()
+                let local = { nome: campoNome, tipo: campotipo, latitude: campolatitude, longitude: campolongitude, link: campolink };
+                createLocal(local, exibeLocais);
+                formLocal.reset()
             });
-
-            
-            btnUpdate = document.getElementById("btnUpdate");
+            let btnUpdate = document.getElementById("btnUpdate");
             btnUpdate.addEventListener ('click', function () {
-                
                 let campoId = document.getElementById("inputId").value;
                 if (campoId == "") {
-                    displayMessage("Selecione antes um contato para ser alterado.");
+                    displayMessage("Selecione antes um local para ser alterado.");
                     return;
                 }
-
-                
                 let campoNome = document.getElementById('inputNome').value;
                 let campotipo = document.getElementById('inputtipo').value;
                 let campolatitude = document.getElementById('inputlatitude').value;
-                let campolongetude = document.getElementById('inputlongetude').value;
+                let campolongitude = document.getElementById('inputlongitude').value;
                 let campolink = document.getElementById('inputlink').value;
-                
-                
-                let contato = { nome: campoNome, 
-                    tipo: campotipo, 
-                    latitude: campolatitude,
-                    longetude:campolongetude,
-                    link: campolink };
-
-                
-                updateContato(parseInt(campoId), contato, exibeContatos);
-
-                
-                formContato.reset()
+                let local = { nome: campoNome, tipo: campotipo, latitude: campolatitude, longitude:campolongitude, link: campolink };
+                updateLocal(parseInt(campoId), local, exibeLocais);
+                formLocal.reset()
             });
-
-            
-            btnDelete = document.getElementById('btnDelete');
+            let btnDelete = document.getElementById('btnDelete');
             btnDelete.addEventListener ('click', function () {
                 let campoId = document.getElementById('inputId').value;
                 if (campoId == "") {
-                    displayMessage("Selecione um contato a ser excluído.");
+                    displayMessage("Selecione um local a ser excluído.");
                     return;
                 }
-
-                
-                deleteContato(parseInt(campoId), exibeContatos);
-
-                
-                formContato.reset()
+                deleteLocal(parseInt(campoId), exibeLocais);
+                formLocal.reset()
             });
-
-            
-            btnClear = document.getElementById('btnClear');
+            let btnClear = document.getElementById('btnClear');
             btnClear.addEventListener ('click', function () {                
-                formContato.reset()
+                formLocal.reset()
             });
-
-            
-            msg = document.getElementById('msg');
+            let msg = document.getElementById('msg');
             msg.addEventListener ("DOMSubtreeModified", function (e) {
                 if (e.target.innerHTML == "") return;
                 setTimeout (function () {
-                    alert = msg.getElementsByClassName("alert");
+                    let alert = msg.getElementsByClassName("alert");
                     alert[0].remove();
                 }, 5000);
             })
-
-            
-            gridContatos = document.getElementById("grid-contatos");
-            gridContatos.addEventListener('click', function (e) {
+            let gridLocais = document.getElementById("grid-locais");
+            gridLocais.addEventListener('click', function (e) {
                 if (e.target.tagName == "TD") { 
-
-                    
-                    let linhaContato = e.target.parentNode;
-                    colunas = linhaContato.querySelectorAll("td");
-                    
-                    
+                    let linhaLocal = e.target.parentNode;
+                    let colunas = linhaLocal.querySelectorAll("td");
                     document.getElementById ('inputNome').value = colunas[1].innerText;
                     document.getElementById ('inputtipo').value = colunas[2].innerText;
                     document.getElementById ('inputlatitude').value = colunas[3].innerText;
-                    document.getElementById ('inputlongetude').value = colunas[4].innerText;
+                    document.getElementById ('inputlongitude').value = colunas[4].innerText;
                     document.getElementById ('inputlink').value = colunas[5].innerText;
                 }
             });
-            exibeContatos();
+            exibeLocais();
         }
     </script>
 </body>

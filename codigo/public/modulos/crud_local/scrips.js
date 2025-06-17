@@ -1,76 +1,81 @@
 // URL da API JSONServer - Substitua pela URL correta da sua API
-const apiUrl = 'http://localhost:3000';
+const apiUrl = 'http://localhost:3000/locais';
 
 
 function displayMessage(mensagem) {
-    msg = document.getElementById('msg');
+    let msg = document.getElementById('msg');
     msg.innerHTML = '<div class="alert alert-warning">' + mensagem + '</div>';
 }
 
-function readContato(processaDados) {
+function readLocal(processaDados) {
     fetch(apiUrl)
         .then(response => response.json())
         .then(data => {
             processaDados(data);
         })
         .catch(error => {
-            console.error('Erro ao ler contatos via API JSONServer:', error);
-            displayMessage("Erro ao ler contatos");
+            console.error('Erro ao ler locais via API JSONServer:', error);
+            displayMessage("Erro ao ler locais");
         });
 }
 
-function createContato(contato, refreshFunction) {
+function createLocal(local, refreshFunction) {
     fetch(apiUrl, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify(contato),
+        body: JSON.stringify(local),
     })
-        .then(response => response.json())
+        .then(response => {
+            if (!response.ok) {
+                return response.text().then(text => { throw new Error(text) });
+            }
+            return response.json();
+        })
         .then(data => {
-            displayMessage("Contato inserido com sucesso");
+            displayMessage("Local inserido com sucesso");
             if (refreshFunction)
                 refreshFunction();
         })
         .catch(error => {
-            console.error('Erro ao inserir contato via API JSONServer:', error);
-            displayMessage("Erro ao inserir contato");
+            console.error('Erro ao inserir local via API JSONServer:', error);
+            displayMessage("Erro ao inserir local: " + error.message);
         });
 }
 
-function updateContato(id, contato, refreshFunction) {
+function updateLocal(id, local, refreshFunction) {
     fetch(`${apiUrl}/${id}`, {
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify(contato),
+        body: JSON.stringify(local),
     })
         .then(response => response.json())
         .then(data => {
-            displayMessage("Contato alterado com sucesso");
+            displayMessage("Local alterado com sucesso");
             if (refreshFunction)
                 refreshFunction();
         })
         .catch(error => {
-            console.error('Erro ao atualizar contato via API JSONServer:', error);
-            displayMessage("Erro ao atualizar contato");
+            console.error('Erro ao atualizar local via API JSONServer:', error);
+            displayMessage("Erro ao atualizar local");
         });
 }
 
-function deleteContato(id, refreshFunction) {
+function deleteLocal(id, refreshFunction) {
     fetch(`${apiUrl}/${id}`, {
         method: 'DELETE',
     })
         .then(response => response.json())
         .then(data => {
-            displayMessage("Contato removido com sucesso");
+            displayMessage("Local removido com sucesso");
             if (refreshFunction)
                 refreshFunction();
         })
         .catch(error => {
-            console.error('Erro ao remover contato via API JSONServer:', error);
-            displayMessage("Erro ao remover contato");
+            console.error('Erro ao remover local via API JSONServer:', error);
+            displayMessage("Erro ao remover local");
         });
 }

@@ -125,110 +125,88 @@
       "nome": "Academia Smart Fit - Avenida Prudente de Morais",
       "tipo": "Academia",
       "link": "https://www.smartfit.com.br/academias/avenida-prudente-de-morais",
-      "coordenadas": {
-        "latitude": "-19.940607825663637",
-        "longitude": "-43.9478355100661"
-      }
+      "latitude": "-19.940607825663637",
+      "longitude": "-43.9478355100661"
     },
     {
       "id": 2,
       "nome": "Academia Smart Fit - Savassi",
       "tipo": "Academia",
       "link": "https://www.smartfit.com.br/academias/savassi",
-      "coordenadas": {
-        "latitude": "-19.938973487355902",
-        "longitude": "-43.93651782134789"
-      }
+      "latitude": "-19.938973487355902",
+      "longitude": "-43.93651782134789"
     },
     {
       "id": 3,
       "nome": "Academia Smart Fit - Anchieta",
       "tipo": "Academia",
       "link": "https://www.smartfit.com.br/academias/anchieta",
-      "coordenadas": {
-        "latitude": "-19.951391453064883",
-        "longitude": "-43.92813216202535"
-      }
+      "latitude": "-19.951391453064883",
+      "longitude": "-43.92813216202535"
     },
     {
       "id": 4,
       "nome": "Academia Smart Fit - Shopping Cidade",
       "tipo": "Academia",
       "link": "https://www.smartfit.com.br/academias/shopping-cidade",
-      "coordenadas": {
-        "latitude": "-19.920988566235877",
-        "longitude": "-43.94008248371899"
-      }
+      "latitude": "-19.920988566235877",
+      "longitude": "-43.94008248371899"
     },
     {
       "id": 5,
       "nome": "Academia Smart Fit - Nova Suissa",
       "tipo": "Academia",
       "link": "https://www.smartfit.com.br/academias/nova-suissa",
-      "coordenadas": {
-        "latitude": "-19.928667451823266",
-        "longitude": "-43.97228479670423"
-      }
+      "latitude": "-19.928667451823266",
+      "longitude": "-43.97228479670423"
     },
     {
       "id": 6,
       "nome": "Academia Smart Fit - Shopping Del Rey",
       "tipo": "Academia",
       "link": "https://www.smartfit.com.br/academias/shopping-del-rey",
-      "coordenadas": {
-        "latitude": "-19.889813255136698",
-        "longitude": "-43.96771756778167"
-      }
+      "latitude": "-19.889813255136698",
+      "longitude": "-43.96771756778167"
     },
     {
       "id": 7,
       "nome": "Parque Municipal Américo Renné Giannetti",
       "tipo": "Parque",
       "link": "https://maps.app.goo.gl/pzG6rWZjUosJg2nz6",
-      "coordenadas": {
-        "latitude": "-19.92324559610815",
-        "longitude": "-43.934855952102374"
-      }
+      "latitude": "-19.92324559610815",
+      "longitude": "-43.934855952102374"
     },
     {
       "id": 8,
       "nome": "Parque Orlando de Carvalho Silveira",
       "tipo": "Parque",
       "link": "https://maps.app.goo.gl/K2Co89PafUSUvvr9A",
-      "coordenadas": {
-        "latitude": "-19.89427150723289",
-        "longitude": "-43.92833283207185"
-      }
+      "latitude": "-19.89427150723289",
+      "longitude": "-43.92833283207185"
     },
     {
       "id": 9,
       "nome": "Quadra de Areia - Parque Municipal Juscelino Kubitschek",
       "tipo": "Quadra",
       "link": "https://maps.app.goo.gl/odd247etHxw8KsVB7",
-      "coordenadas": {
-        "latitude": "-19.95907474261286",
-        "longitude": "-43.929389842704495"
-      }
+      "latitude": "-19.95907474261286",
+      "longitude": "-43.929389842704495"
     },
     {
       "id": 10,
       "nome": "Arena Tupinambás",
       "tipo": "Quadra",
       "link": "https://maps.app.goo.gl/a9LK4B4FqDFZaNg3A",
-      "coordenadas": {
-        "latitude": "-19.9179180915731",
-        "longitude": "-43.94540698383852"
-      }
+      "latitude": "-19.9179180915731",
+      "longitude": "-43.94540698383852"
     },
     {
       "id": 11,
       "nome": "CELPE",
       "tipo": "Quadra",
       "link": "https://maps.app.goo.gl/F8zopAKpmetae8PD8",
-      "coordenadas": {
-        "latitude": "-19.91477286825425",
-        "longitude": "-43.981089934634745"
-      }
+      "latitude": "-19.91477286825425",
+      "longitude": "-43.981089934634745"
     }
   ],
   "grupos": [
