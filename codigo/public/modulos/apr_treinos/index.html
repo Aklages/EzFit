@@ -14,14 +14,21 @@
     <link rel="stylesheet" href="../../assets/css/style.css">
     <link rel="stylesheet" href="./style.css">
     <script>
-        function initPage() {
+        window.addEventListener("load", (e) => {
+            if(usuarioCorrente.treinoId == 0){
+                window.location.href = "http://localhost:3000/modulos/apr_sugerir_treinos/detalhes.html"
+            }
+            else {
+                console.log("Tem treino");
+            }
+        });
 
+        function initPage() {
             // Associa a função de logout ao botão
             document.getElementById('btn_logout').addEventListener('click', logoutUser);
 
             // Informa o nome do usuário logado
             document.getElementById('nomeUsuario').innerHTML = usuarioCorrente.nome;
-
         }
 
         // Associa ao evento de carga da página a função para verificar se o usuário está logado
@@ -30,7 +37,7 @@
 </head>
 <body>
     <header class="d-flex justify-content-between align-items-center py-1">
-        <a href="../../hub/user.html""><img src="../../assets/images/Logo.png" alt="Logo" width="80px"></a>
+        <a href="../../hub/user.html"><img src="../../assets/images/Logo.png" alt="Logo" width="80px"></a>
         <div class="d-flex align-items-center">
             <span class="icon_user fa-solid fa-circle-user me-3"></span>
             <h1 class="my-0 d-none d-sm-block"><span id="nomeUsuario" class="nome_user"></span></h1>
@@ -38,8 +45,13 @@
         </div>
     </header>
     <main>
-       <h1>Meus treinos</h1>
-       <div id="treino"></div>
+        <div class="d-flex flex-column flex-xl-row align-items-center justify-content-around px-3 py-5">
+            <div class="d-flex flex-column align-items-center justify-content-around">
+                <section id="resumoTreino" class="px-3 pt-3 mb-3"></section>
+                <a id="button" class="btn btn-success" role="button">Mudar treino</a>
+            </div>
+            <section id="diasSemana" class="d-flex flex-wrap px-3 pt-3 gap-3"></section>
+        </div>
     </main>
     <footer class="d-flex flex-lg-row flex-column justify-content-between py-3 pb-5">
         <div class="d-flex flex-column">

@@ -82,7 +82,7 @@ function loginUser (login, senha) {
             usuarioCorrente.login = usuario.login;
             usuarioCorrente.email = usuario.email;
             usuarioCorrente.nome = usuario.nome;
-            usuarioCorrente.treino = usuario.treinoId;
+            usuarioCorrente.treinoId = usuario.treinoId;
 
             // Salva os dados do usuário corrente no Session Storage, mas antes converte para string
             sessionStorage.setItem ('usuarioCorrente', JSON.stringify (usuarioCorrente));
