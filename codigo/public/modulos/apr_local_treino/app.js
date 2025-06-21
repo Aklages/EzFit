@@ -123,8 +123,8 @@ function getmap(){//função com algoritmo que encontra os locais de interesse p
         .then(local => {
             let locals_id = [];
             local.forEach(element => {
-                let lat = Number(element.coordenadas.latitude);
-                let long = Number(element.coordenadas.longitude);
+                let lat = Number(element.latitude);
+                let long = Number(element.longitude);
                 if(lat <= ponto_norte &&
                     long <= ponto_leste &&
                     lat >= ponto_sul &&
@@ -186,7 +186,7 @@ function generatemap(locals_id, longitude, latitude, zoom){//função que gera u
             let popup = new mapboxgl.Popup({ offset: 25 })
             .setHTML(`<h4>${local.nome}</h4><a href="${local.link}" target="_blank"><h6>Link</h6></a>`);
             const marker = new mapboxgl.Marker({ color: cor })
-            .setLngLat([Number(local.coordenadas.longitude), Number(local.coordenadas.latitude)])
+            .setLngLat([Number(local.longitude), Number(local.latitude)])
             .setPopup(popup)
             .addTo(map);
         })
