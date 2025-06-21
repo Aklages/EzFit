@@ -137,12 +137,13 @@ function processaFormLogin(event) {
     // Valida login e se estiver ok, redireciona para tela inicial da aplicação
     resultadoLogin = loginUser(username, password);
     if (resultadoLogin) {
-    if(username == "adm"){
-        window.location.href = "http://localhost:3000/hub/adm.html";
-    }
-    else{
-        window.location.href = "http://localhost:3000/hub/user.html";
-    }
+        const permissao = JSON.parse(sessionStorage.getItem('usuarioCorrente')).adm;
+        if(permissao == true){
+            window.location.href = "http://localhost:3000/hub/adm.html";
+        }
+        else{
+            window.location.href = "http://localhost:3000/hub/user.html";
+        }
     }
     else { // Se login falhou, avisa ao usuário
     alert('Usuário ou senha incorretos');
@@ -160,8 +161,8 @@ function salvaLogin(event) {
     let senha = document.getElementById('txt_senha').value;
     let senha2 = document.getElementById('txt_senha2').value;
     if (senha != senha2) {
-    alert('As senhas informadas não conferem.');
-    return
+        alert('As senhas informadas não conferem.');
+        return
     }
 
     // Adiciona o usuário no banco de dados

@@ -13,6 +13,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/4f6d2b1093.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/login.css">
     <script>
         function exibeUsuarios() {
             // Popula a tabela com os registros do banco de dados
@@ -45,8 +46,8 @@
 
 </head>
 
-<body>
-    <header class="d-flex justify-content-between align-items-center py-1">
+<body class="bg-white">
+    <header class="d-flex justify-content-between align-items-center py-1 bg-black">
         <a href="./adm.html"><img src="../../assets/images/Logo.png" alt="Logo" width="80px"></a>
         <div class="d-flex align-items-center">
             <span class="icon_user fa-solid fa-circle-user me-3"></span>
@@ -57,7 +58,7 @@
     <a href="../modulos/crud_inf_cientificos/index.html">Cadastrar conteudos</a><br> <!--Alterar para conteudos o modulo-->
     <a href="../modulos/crud_treinos/index.html">Cadastrar treinos</a><br>
     <a href="../modulos/crud_exercicios/index.html">Cadastrar exercicios</a><br>
-    <a href="../modulos/crud_local/index.html">Cadastrar locais</a>
+    <a href="../modulos/crud_local/index.html">Cadastrar locais</a><br>
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
@@ -80,38 +81,8 @@
             </div>
         </div>
     </div>
-    <footer class="d-flex flex-lg-row flex-column justify-content-between py-3 pb-5">
-        <div class="d-flex flex-column">
-            <h1>EzFit</h1>
-            <p>@ EzFit 2025 | Todos os direitos reservados.</p>
-        </div>
-        <div class="d-flex flex-column justify-content-between">
-            <h4 class="pt-lg-0 pt-4">Sobre</h4>
-            <div class="d-flex align-items-center py-2">
-                <a href="https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2025-1-ti1-0385100-ezfit" target="_blank"><span class="fa-brands fa-github"></span></a><p class="my-0 ms-1">Repositório</p>
-            </div>
-            <div class="py-2">
-                <a href="./index.html"><p class="my-0">Integrantes do Grupo</p></a>
-            </div>
-        </div>
-        <div class="d-flex flex-column justify-content-between">
-            <h4 class="pt-lg-0 pt-4">Contato</h4>
-            <div class="py-2">
-                <a href="mailto:suporte@ezfit.com"><p class="my-0">Suporte@ezfit.com</p></a>
-            </div>
-            <div class="d-flex align-items-center py-2">
-                <a href="https://whatsapp.com" target="_blank"><span class="fa-brands fa-whatsapp"></span></a><p class="my-0 ms-1">(31)94002-8922</p>
-            </div>
-        </div>
-        <div class="d-flex flex-column justify-content-between">
-            <h4 class="pt-lg-0 pt-4">Sociais</h4>
-            <div class="d-flex align-items-center py-2">
-                <a href="https://x.com" target="_blank"><span class="fa-brands fa-x-twitter"></span></a><p class="my-0 ms-1">@EzFit</p>
-            </div>
-            <div class="d-flex align-items-center py-2">
-                <a href="https://instagram.com" target="_blank"><span class="fa-brands fa-instagram"></span></a><p class="my-0 ms-1">@EzFit</p>
-            </div>
-        </div>
+    <footer class="d-flex flex-lg-row flex-column justify-content-between py-3 pb-5 bg-black">
+        <p>Visualização do administrador</p>
     </footer>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
