@@ -6,7 +6,7 @@
       "senha": "123",
       "nome": "Administrador do Sistema",
       "email": "adm@ezfit.com",
-      "treinoId": 0,
+      "treino": 0,
       "adm": true
     },
     {
@@ -15,7 +15,7 @@
       "senha": "123",
       "nome": "Felipe",
       "email": "felipe@gmail.com",
-      "treinoId": 2,
+      "treino": 2,
       "adm": false
     },
     {
@@ -24,7 +24,7 @@
       "senha": "123",
       "nome": "Rommel",
       "email": "rommel@gmail.com",
-      "treinoId": 0,
+      "treino": 0,
       "adm": false
     },
     {
@@ -33,7 +33,7 @@
       "senha": "123",
       "nome": "André",
       "email": "andre@gmail.com",
-      "treinoId": 1,
+      "treino": 1,
       "adm": false
     }
   ],

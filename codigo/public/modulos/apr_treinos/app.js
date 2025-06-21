@@ -1,7 +1,7 @@
 const treinoDiv = $("#resumoTreino");
 const diasSemanaDiv = $("#diasSemana");
 const diasNomes = ["Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sáb"];
-const treinoId = JSON.parse(sessionStorage.getItem('usuarioCorrente')).treinoId;
+const treinoId = JSON.parse(sessionStorage.getItem('usuarioCorrente')).treino;
 
 $("#button").on("click", function () {
     let usuario = JSON.parse(sessionStorage.getItem('usuarioCorrente'));
@@ -10,7 +10,7 @@ $("#button").on("click", function () {
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ treinoId: 0 })
+        body: JSON.stringify({ treino: 0 })
     })
     .then(res => res.json())
     .then(usuarioAtualizado => {
