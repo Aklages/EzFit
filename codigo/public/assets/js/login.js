@@ -82,7 +82,7 @@ function loginUser (login, senha) {
             usuarioCorrente.login = usuario.login;
             usuarioCorrente.email = usuario.email;
             usuarioCorrente.nome = usuario.nome;
-            usuarioCorrente.treinoId = usuario.treinoId;
+            usuarioCorrente.treino = usuario.treino;
             usuarioCorrente.adm = usuario.adm;
 
             // Salva os dados do usuário corrente no Session Storage, mas antes converte para string
@@ -106,7 +106,7 @@ function logoutUser () {
 function addUser (nome, login, senha, email) {
 
     // Cria um objeto de usuario para o novo usuario 
-    let usuario = { "login": login, "senha": senha, "nome": nome, "email": email, "treinoId": 0, "adm": false};
+    let usuario = { "login": login, "senha": senha, "nome": nome, "email": email, "treino": 0, "adm": false};
 
     // Envia dados do novo usuário para ser inserido no JSON Server
     fetch(API_URL, {
