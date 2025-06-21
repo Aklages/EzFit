@@ -72,7 +72,7 @@
       "id": 6,
       "nome": "Levantar Peso3",
       "duracao_min": null,
-      "repeticoes": 5
+      "repeticoes": "5"
     }
   ],
   "treinos": [
