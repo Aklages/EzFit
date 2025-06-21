@@ -1,229 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Cadastro de Locais</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
-    <style>
-        body {
-            background: #f8fafc;
-        }
-        .main-title {
-            text-align: center;
-            margin-top: 30px;
-            margin-bottom: 30px;
-            color: #AADEAD;
-            font-weight: bold;
-            letter-spacing: 1px;
-        }
-        .form-container {
-            background: #fff;
-            border-radius: 12px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-            padding: 32px 24px 24px 24px;
-            margin-top: 24px;
-            max-width: 650px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .btn-custom {
-            background: #F5FFED;
-            color: #000000;
-            border-radius: 20px;
-            font-weight: 500;
-            transition: 0.2s;
-            border: none;
-        }
-        .btn-custom:hover {
-            background: #AADEAD;
-            color: #fff;
-        }
-        .btn-secondary {
-            border-radius: 20px;
-        }
-        label {
-            color: #000000;
-            font-weight: 600;
-        }
-        #msg {
-            margin-bottom: 16px;
-        }
-        .logo-top {
-            margin-top: 10px;
-            margin-bottom: 0;
-            text-align: right;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EzFit</title>
+  <link rel="icon" type="image/x-icon" href="../../assets/images/Logo.ico"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous"/>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/4f6d2b1093.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../../assets/css/style.css" />
+  <script>
+    function initPage() {
+      document.getElementById('btn_logout').addEventListener('click', logoutUser);
+      document.getElementById('nomeUsuario').innerHTML = usuarioCorrente.nome;
+    }
+    window.addEventListener('load', initPage);
+  </script>
 </head>
 
-<body onload="init()">
-    <div class="container-fluid logo-top">
-        <img src="../assets/images/Logo.png" alt="EZFit" style="height: 60px; width: auto;">
+<body>
+  <header class="d-flex justify-content-between align-items-center py-1">
+    <a href="../../hub/user.html"><img src="../../assets/images/Logo.png" alt="Logo" width="80px"/></a>
+    <div class="d-flex align-items-center">
+      <span class="icon_user fa-solid fa-circle-user me-3"></span>
+      <h1 class="my-0 d-none d-sm-block"><span id="nomeUsuario" class="nome_user"></span></h1>
+      <button type="button" id="btn_logout" class="logout btn btn-outline ms-3">
+        <i class="fa-solid fa-right-to-bracket"></i>
+      </button>
     </div>
-    <h1 class="main-title">Cadastro de Áreas de Treino</h1>
-    <div class="container">
-        <div class="row">
-            <div id="msg" class="col-12">
-                <!-- Mensagens de alerta -->
-            </div>
-        </div>
-        <div class="form-container">
-            <form id="form-local">
-                <input type="hidden" id="inputId">
-                <div class="form-group row">
-                    <div class="col-sm-12">
-                        <label for="inputNome">Nome (*)</label>
-                        <input type="text" class="form-control" id="inputNome" required placeholder="Informe o nome do local">
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <div class="col-sm-6">
-                        <label for="inputtipo">Tipo(*)</label>
-                        <input type="text" class="form-control" id="inputtipo" placeholder="Informe o tipo do local" >
-                    </div>
-                    <div class="col-sm-6">
-                        <label for="inputlink">Link (*)</label>
-                        <input type="text" class="form-control" id="inputlink" required placeholder="Web Site">
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <div class="col-sm-6">
-                        <label for="inputlatitude">Latitude(*)</label>
-                        <input type="text" class="form-control" id="inputlatitude" placeholder="Informe a latitude" >
-                    </div>
-                    <div class="col-sm-6">
-                        <label for="inputlongitude">Longitude(*)</label>
-                        <input type="text" class="form-control" id="inputlongitude" required placeholder="Informe a longitude">
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <div class="col-sm-4">
-                        <small>(*) Campos obrigatórios</small>
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <div class="col-sm-12 d-flex flex-wrap gap-2">
-                        <button type="button" class="btn btn-custom mr-2 mb-2" id="btnInsert">Inserir</button>
-                        <button type="button" class="btn btn-warning mr-2 mb-2" id="btnUpdate">Alterar</button>
-                        <button type="button" class="btn btn-danger mr-2 mb-2" id="btnDelete">Excluir</button>
-                        <button type="button" class="btn btn-secondary mr-2 mb-2" id="btnClear">Limpar Form</button>
-                        <a href="cadra.html"><button type="button" class="btn btn-custom mb-2">Pesquisar Locais</button></a>
-                    </div>
-                </div>
-            </form>
-        </div>
-        <div class="row">
-            <div class="col-sm-12">
-                <table id="grid-locais" class="table table-striped">
-                    <thead>
-                        <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">Nome</th>
-                            <th scope="col">Tipo</th>
-                            <th scope="col">Latitude</th>
-                            <th scope="col">Longitude</th>
-                            <th scope="col">Link</th>
-                        </tr>
-                    </thead>
-                    <tbody id="table-locais">
-                        <!-- Linhas serão preenchidas pelo JS -->
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
-    <script src="scrips.js"></script>
-    <script>
-        function exibeLocais() {
-            let tableLocais = document.getElementById("table-locais");
-            tableLocais.innerHTML = "";
-            readLocal (dados => {
-                for (let i = 0; i < dados.length; i++) {
-                    let local = dados[i];    
-                    tableLocais.innerHTML += `<tr><td scope="row">${local.id}</td>
-                                                <td>${local.nome}</td>
-                                                <td>${local.tipo}</td>
-                                                <td>${local.latitude}</td>
-                                                <td>${local.longitude}</td>
-                                                <td><a href="${local.link}" target="_blank" class="btn btn-sm btn-outline-primary">Ver Local</a></td>
-                                            </tr>`;
-                }
-            })
-        }
-        function init() {
-            let formLocal = document.getElementById("form-local");
-            let btnInsert = document.getElementById("btnInsert");
-            btnInsert.addEventListener ('click', function () {
-                if (!formLocal.checkValidity()) {
-                    displayMessage("Preencha o formulário corretamente.");
-                    return;
-                }
-                let campoNome = document.getElementById ('inputNome').value;
-                let campotipo = document.getElementById ('inputtipo').value;
-                let campolatitude = document.getElementById ('inputlatitude').value;
-                let campolongitude = document.getElementById ('inputlongitude').value;
-                let campolink = document.getElementById ('inputlink').value;
-                let local = { nome: campoNome, tipo: campotipo, latitude: campolatitude, longitude: campolongitude, link: campolink };
-                createLocal(local, exibeLocais);
-                formLocal.reset()
-            });
-            let btnUpdate = document.getElementById("btnUpdate");
-            btnUpdate.addEventListener ('click', function () {
-                let campoId = document.getElementById("inputId").value;
-                if (campoId == "") {
-                    displayMessage("Selecione antes um local para ser alterado.");
-                    return;
-                }
-                let campoNome = document.getElementById('inputNome').value;
-                let campotipo = document.getElementById('inputtipo').value;
-                let campolatitude = document.getElementById('inputlatitude').value;
-                let campolongitude = document.getElementById('inputlongitude').value;
-                let campolink = document.getElementById('inputlink').value;
-                let local = { nome: campoNome, tipo: campotipo, latitude: campolatitude, longitude:campolongitude, link: campolink };
-                updateLocal(parseInt(campoId), local, exibeLocais);
-                formLocal.reset()
-            });
-            let btnDelete = document.getElementById('btnDelete');
-            btnDelete.addEventListener ('click', function () {
-                let campoId = document.getElementById('inputId').value;
-                if (campoId == "") {
-                    displayMessage("Selecione um local a ser excluído.");
-                    return;
-                }
-                deleteLocal(parseInt(campoId), exibeLocais);
-                formLocal.reset()
-            });
-            let btnClear = document.getElementById('btnClear');
-            btnClear.addEventListener ('click', function () {                
-                formLocal.reset()
-            });
-            let msg = document.getElementById('msg');
-            msg.addEventListener ("DOMSubtreeModified", function (e) {
-                if (e.target.innerHTML == "") return;
-                setTimeout (function () {
-                    let alert = msg.getElementsByClassName("alert");
-                    alert[0].remove();
-                }, 5000);
-            })
-            let gridLocais = document.getElementById("grid-locais");
-            gridLocais.addEventListener('click', function (e) {
-                if (e.target.tagName == "TD") { 
-                    let linhaLocal = e.target.parentNode;
-                    let colunas = linhaLocal.querySelectorAll("td");
-                    document.getElementById ('inputNome').value = colunas[1].innerText;
-                    document.getElementById ('inputtipo').value = colunas[2].innerText;
-                    document.getElementById ('inputlatitude').value = colunas[3].innerText;
-                    document.getElementById ('inputlongitude').value = colunas[4].innerText;
-                    document.getElementById ('inputlink').value = colunas[5].innerText;
-                }
-            });
-            exibeLocais();
-        }
-    </script>
-</body>
+  </header>
 
+  <main class="container my-4">
+    <h2>Cadastro de Exercícios</h2>
+    <div id="msg"></div>
+    <form id="form-info">
+    <div class="row">
+        <div class="col-md-2">
+        <label for="inputId" class="form-label">ID</label>
+        <input type="text" id="inputId" class="form-control" disabled>
+        </div>
+
+        <div class="col-md-5">
+        <label for="inputNome" class="form-label">Nome *</label>
+        <input type="text" id="inputNome" class="form-control" required placeholder="Nome do local">
+        </div>
+
+        <div class="col-md-5">
+        <label for="inputTipo" class="form-label">Tipo *</label>
+        <select id="inputTipo" class="form-select" required>
+            <option value="">Selecione o tipo</option>
+            <option value="Academia">Academia</option>
+            <option value="Parque">Parque</option>
+            <option value="Quadra">Quadra</option>
+        </select>
+        </div>
+    </div>
+
+    <div class="row mt-3">
+        <div class="col-md-6">
+        <label for="inputLink" class="form-label">Link</label>
+        <input type="url" id="inputLink" class="form-control" placeholder="https://...">
+        </div>
+        <div class="col-md-3">
+        <label for="inputLatitude" class="form-label">Latitude *</label>
+        <input type="text" id="inputLatitude" class="form-control" required placeholder="-19.94...">
+        </div>
+        <div class="col-md-3">
+        <label for="inputLongitude" class="form-label">Longitude *</label>
+        <input type="text" id="inputLongitude" class="form-control" required placeholder="-43.94...">
+        </div>
+    </div>
+
+    <div class="mt-4">
+        <button type="button" class="btn btn-success" id="btnInsert">Inserir</button>
+        <button type="button" class="btn btn-warning" id="btnUpdate">Alterar</button>
+        <button type="button" class="btn btn-danger" id="btnDelete">Excluir</button>
+        <button type="button" class="btn btn-secondary" id="btnClear">Limpar</button>
+    </div>
+    </form>
+
+    <hr />
+    <h3>Locais Cadastrados</h3>
+    <table class="table table-striped mt-2" id="grid-info">
+    <thead>
+        <tr>
+        <th>ID</th>
+        <th>Nome</th>
+        <th>Tipo</th>
+        <th>Link</th>
+        <th>Latitude</th>
+        <th>Longitude</th>
+        </tr>
+    </thead>
+    <tbody id="table-info"></tbody>
+    </table>
+
+  </main>
+
+  <footer class="d-flex flex-lg-row flex-column justify-content-between py-3 pb-5">
+    <div class="d-flex flex-column">
+      <h1>EzFit</h1>
+      <p>@ EzFit 2025 | Todos os direitos reservados.</p>
+    </div>
+    <div class="d-flex flex-column justify-content-between">
+      <h4>Sobre</h4>
+      <div class="d-flex align-items-center py-2">
+        <a href="https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2025-1-ti1-0385100-ezfit" target="_blank">
+          <span class="fa-brands fa-github"></span>
+        </a>
+        <p class="my-0 ms-1">Repositório</p>
+      </div>
+      <div class="py-2">
+        <a href="./index.html"><p class="my-0">Integrantes do Grupo</p></a>
+      </div>
+    </div>
+    <div class="d-flex flex-column justify-content-between">
+      <h4>Contato</h4>
+      <div class="py-2">
+        <a href="mailto:suporte@ezfit.com"><p class="my-0">Suporte@ezfit.com</p></a>
+      </div>
+      <div class="d-flex align-items-center py-2">
+        <a href="https://whatsapp.com" target="_blank"><span class="fa-brands fa-whatsapp"></span></a>
+        <p class="my-0 ms-1">(31)94002-8922</p>
+      </div>
+    </div>
+    <div class="d-flex flex-column justify-content-between">
+      <h4>Sociais</h4>
+      <div class="d-flex align-items-center py-2">
+        <a href="https://x.com" target="_blank"><span class="fa-brands fa-x-twitter"></span></a>
+        <p class="my-0 ms-1">@EzFit</p>
+      </div>
+      <div class="d-flex align-items-center py-2">
+        <a href="https://instagram.com" target="_blank"><span class="fa-brands fa-instagram"></span></a>
+        <p class="my-0 ms-1">@EzFit</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" crossorigin="anonymous"></script>
+  <script src="./scrips.js"></script>
+  <script src="../../assets/js/login.js"></script>
+</body>
 </html>
