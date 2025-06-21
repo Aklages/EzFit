@@ -251,7 +251,7 @@
       "link": "link_whatsapp"
     }
   ],
-  "conteudo": [
+  "conteudos": [
     {
       "id": 1,
       "titulo": "Qualquer prática de atividade física é benéfica para o corpo humano",
@@ -299,24 +299,30 @@
       "categoria": "artigo",
       "imagem": "https://s2.static.brasilescola.uol.com.br/be/2022/04/1-atividade-fisica.jpg",
       "link": "https://brasilescola.uol.com.br/saude/sedentarismo.htm"
-    }
-  ],
-  "informacoes": [],
-  "motivacionais": [
+    },
     {
-      "id": 1,
+      "id": 7,
       "titulo": "Shia LaBeouf - Just Do It",
-      "url": "https://www.youtube.com/embed/IIfQS_7GFCg"
+      "descricao": "",
+      "categoria": "video",
+      "imagem": "",
+      "link": "https://www.youtube.com/embed/IIfQS_7GFCg"
     },
     {
-      "id": 2,
+      "id": 8,
       "titulo": "Les Brown - It's Possible",
-      "url": "https://www.youtube.com/embed/oly810w5JdU"
+      "descricao": "",
+      "categoria": "video",
+      "imagem": "",
+      "link": "https://www.youtube.com/embed/oly810w5JdU"
     },
     {
-      "id": 3,
+      "id": 9,
       "titulo": "Motivação com Música Épica",
-      "url": "https://www.youtube.com/embed/alZZ2PQ0SL8"
+      "descricao": "",
+      "categoria": "video",
+      "imagem": "",
+      "link": "https://www.youtube.com/embed/alZZ2PQ0SL8"
     }
   ]
 }

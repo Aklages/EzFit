@@ -1,5 +1,5 @@
 // URL do JSON Server
-const URL = 'http://localhost:3000/conteudo/';
+const URL = 'http://localhost:3000/conteudos/';
 const container = document.getElementById('card-container');
 // Buscar dados do JSON Server e gerar cards
 fetch(URL)
