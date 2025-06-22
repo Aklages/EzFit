@@ -5,10 +5,10 @@ const buscaInput = document.getElementById('busca-video');
 let videos = [];
 
 // Carrega os vídeos do db.json
-fetch('db.json')
+fetch('/conteudos?categoria=video')
   .then(res => res.json())
   .then(data => {
-    videos = data.motivacionais;
+    videos = data;
     renderVideos(videos);
   });
 
@@ -21,7 +21,7 @@ function renderVideos(lista) {
   lista.forEach(video => {
     const div = document.createElement('div');
     div.innerHTML = `
-      <iframe src="${video.url}" frameborder="0" allowfullscreen></iframe>
+      <iframe src="${video.link}" frameborder="0" allowfullscreen></iframe>
       <p style="text-align:center; margin-top:8px;">${video.titulo}</p>
     `;
     videoList.appendChild(div);
