@@ -1,0 +1,27 @@
+header {
+    background-color: black;
+}
+
+.icon_user {
+    color: white;
+}
+
+.nome_user {
+    color: white;
+}
+
+.logout {
+    background-color: white;
+}
+
+.fa-right-to-bracket {
+    color: black;
+}
+
+body {
+    background-color: white;
+}
+
+footer {
+    background-color: black;
+}

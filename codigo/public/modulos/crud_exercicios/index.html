@@ -12,8 +12,14 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
   <script src="https://kit.fontawesome.com/4f6d2b1093.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="../../assets/css/style.css" />
+    <link rel="stylesheet" href="../../assets/css/adm.css">
   <script>
     function initPage() {
+
+      if(usuarioCorrente.adm == false){
+          window.location = "http://localhost:3000/hub/user.html";
+      }
+
       document.getElementById('btn_logout').addEventListener('click', logoutUser);
       document.getElementById('nomeUsuario').innerHTML = usuarioCorrente.nome;
     }
@@ -23,7 +29,7 @@
 
 <body>
   <header class="d-flex justify-content-between align-items-center py-1">
-    <a href="../../hub/user.html"><img src="../../assets/images/Logo.png" alt="Logo" width="80px"/></a>
+    <a href="../../hub/adm.html"><img src="../../assets/images/Logo.png" alt="Logo" width="80px"/></a>
     <div class="d-flex align-items-center">
       <span class="icon_user fa-solid fa-circle-user me-3"></span>
       <h1 class="my-0 d-none d-sm-block"><span id="nomeUsuario" class="nome_user"></span></h1>
