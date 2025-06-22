@@ -1,127 +1,201 @@
-const baseUrl = "https://8c1a12b8-f84f-48f6-9b1e-c9af42686c2c-00-3l7cwykkjqkvx.worf.replit.dev";
+const baseTreinos = '/treinos';
+const baseExercicios = '/exercicios';
+const baseRelacionamento = '/treinos_exercicios';
 
-document.addEventListener("DOMContentLoaded", () => {
-  listarTreinos();
-
-  const form = document.getElementById("treinoForm");
-  form.addEventListener("submit", async (e) => {
-    e.preventDefault();
-
-    const treino = getDadosFormulario();
-    console.log("Dados para enviar:", treino); // debug dos dados enviados
-
-    try {
-      const response = await fetch(`${baseUrl}/treinos`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(treino)
-      });
-
-      if (!response.ok) {
-        const errorText = await response.text(); // tenta extrair mensagem de erro do backend
-        throw new Error(`Erro ao criar treino: ${response.status} - ${errorText}`);
-      }
-
-      listarTreinos();
-      form.reset();
-    } catch (error) {
-      console.error("Erro ao criar treino:", error);
-      alert("Erro ao criar treino: " + (error.message || JSON.stringify(error)));
-    }
-  });
-});
-
-function getDadosFormulario() {
-  return {
-    id: Number(document.getElementById("id").value),
-    objetivo: document.getElementById("objetivo").value,
-    dias: Number(document.getElementById("dias").value),
-    tempo_livre: Number(document.getElementById("tempo_livre").value),
-    local: document.getElementById("local").value,
-    exercicios: parseExercicios(document.getElementById("exercicios").value)
-  };
+function displayMessage(msg, type = 'warning') {
+  const container = document.getElementById('msg');
+  container.innerHTML = `<div class="alert alert-${type}" role="alert">${msg}</div>`;
+  setTimeout(() => container.innerHTML = '', 4000);
 }
 
-async function listarTreinos() {
-  try {
-    const response = await fetch(`${baseUrl}/treinos`);
-    if (!response.ok) throw new Error(`Erro ao buscar treinos: ${response.status}`);
+function fetchExercicios(callback) {
+  fetch(baseExercicios)
+    .then(res => res.json())
+    .then(callback);
+}
 
-    const treinos = await response.json();
-    const tbody = document.querySelector("#treinosTable tbody");
-    tbody.innerHTML = "";
+function fetchRelacionamentos(callback) {
+  fetch(baseRelacionamento)
+    .then(res => res.json())
+    .then(callback);
+}
 
-    treinos.forEach((t) => {
-      const tr = document.createElement("tr");
-      tr.innerHTML = `
-        <td>${t.id}</td>
-        <td>${t.objetivo}</td>
-        <td>${t.dias}</td>
-        <td>${t.tempo_livre}</td>
-        <td>${t.local}</td>
-        <td>
-          <ul>
-            ${t.exercicios.map(e => `<li>${e.nome} - ${e.repeticoes} repetições</li>`).join('')}
-          </ul>
-        </td>
-      `;
-      tbody.appendChild(tr);
+function createTreino(treino, exercicios, callback) {
+  fetch(baseTreinos, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(treino)
+  })
+    .then(res => res.json())
+    .then(novoTreino => {
+      const promessas = exercicios.map(eid =>
+        fetch(baseRelacionamento, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ treinoId: novoTreino.id, exercicioId: parseInt(eid) })
+        })
+      );
+      Promise.all(promessas).then(callback);
     });
-
-  } catch (error) {
-    console.error("Erro ao buscar treinos:", error);
-  }
 }
 
-async function atualizarTreino() {
-  const treino = getDadosFormulario();
-
-  try {
-    const response = await fetch(`${baseUrl}/treinos/${treino.id}`, {
-      method: "PUT",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(treino)
+function updateTreino(id, treino, exercicios, callback) {
+  fetch(`${baseTreinos}/${id}`, {
+    method: 'PATCH',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(treino)
+  })
+    .then(() => {
+      // Remove todos relacionamentos anteriores
+      fetch(`${baseRelacionamento}?treinoId=${id}`)
+        .then(res => res.json())
+        .then(rel => {
+          const deletions = rel.map(r =>
+            fetch(`${baseRelacionamento}/${r.id}`, { method: 'DELETE' })
+          );
+          Promise.all(deletions).then(() => {
+            const additions = exercicios.map(eid =>
+              fetch(baseRelacionamento, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ treinoId: parseInt(id), exercicioId: parseInt(eid) })
+              })
+            );
+            Promise.all(additions).then(callback);
+          });
+        });
     });
-
-    if (!response.ok) {
-      const errorText = await response.text();
-      throw new Error(`Erro HTTP ${response.status}: ${errorText}`);
-    }
-
-    alert("Treino atualizado com sucesso!");
-    listarTreinos();
-  } catch (error) {
-    console.error("Erro ao atualizar treino:", error.message);
-    alert("Erro ao atualizar treino: " + error.message);
-  }
 }
 
-async function deletarTreino() {
-  const id = document.getElementById("id").value;
-  if (!id) return alert("Informe o ID para deletar");
-
-  try {
-    const response = await fetch(`${baseUrl}/treinos/${id}`, {
-      method: "DELETE"
+function deleteTreino(id, callback) {
+  fetch(`${baseTreinos}/${id}`, { method: 'DELETE' })
+    .then(() => {
+      fetch(`${baseRelacionamento}?treinoId=${id}`)
+        .then(res => res.json())
+        .then(rel => {
+          const deletions = rel.map(r =>
+            fetch(`${baseRelacionamento}/${r.id}`, { method: 'DELETE' })
+          );
+          Promise.all(deletions).then(callback);
+        });
     });
-
-    if (!response.ok) throw new Error(`Erro ao deletar treino: ${response.status}`);
-    listarTreinos();
-  } catch (error) {
-    console.error("Erro ao deletar treino:", error);
-    alert("Erro ao deletar treino: " + error.message);
-  }
 }
 
-function parseExercicios(texto) {
-  if (!texto.trim()) return [];
-
-  return texto.split(',').map(item => {
-    const partes = item.trim().split(' ');
-    const repeticoes = Number(partes.pop());
-    const nome = partes.join(' ');
-    return { nome, repeticoes };
+function readTreinos(callback) {
+  Promise.all([
+    fetch(baseTreinos).then(res => res.json()),
+    fetch(baseRelacionamento).then(res => res.json()),
+    fetch(baseExercicios).then(res => res.json())
+  ]).then(([treinos, rels, exercicios]) => {
+    callback(treinos.map(treino => {
+      const exs = rels.filter(r => r.treinoId === treino.id).map(r => {
+        return exercicios.find(e => e.id === r.exercicioId)?.nome;
+      }).filter(Boolean);
+      return { ...treino, exercicios: exs };
+    }));
   });
 }
+
+function populateTable(data) {
+  const tbody = document.getElementById('table-treinos');
+  tbody.innerHTML = '';
+  data.forEach(item => {
+    tbody.innerHTML += `
+      <tr data-id="${item.id}" data-exercicios='${JSON.stringify(item.exercicios)}'>
+        <td>${item.id}</td>
+        <td>${item.objetivo}</td>
+        <td>${item.dias}</td>
+        <td>${item.tempo_livre_m} min</td>
+        <td>${item.local}</td>
+        <td>${item.exercicios.join(', ')}</td>
+      </tr>`;
+  });
+}
+
+function initTreinoPage() {
+  const form = document.getElementById('form-treino');
+  const btnInsert = document.getElementById('btnInsert');
+  const btnUpdate = document.getElementById('btnUpdate');
+  const btnDelete = document.getElementById('btnDelete');
+  const btnClear  = document.getElementById('btnClear');
+  const selectExercicios = document.getElementById('selectExercicios');
+
+  fetchExercicios(exs => {
+    exs.forEach(e => {
+      const option = document.createElement('option');
+      option.value = e.id;
+      option.textContent = e.nome;
+      selectExercicios.appendChild(option);
+    });
+  });
+
+  function getSelectedExercicios() {
+    return Array.from(selectExercicios.selectedOptions).map(opt => opt.value);
+  }
+
+  btnInsert.addEventListener('click', () => {
+    const treino = {
+      objetivo: document.getElementById('inputObjetivo').value,
+      dias: parseInt(document.getElementById('inputDias').value),
+      tempo_livre_m: parseInt(document.getElementById('inputTempoLivre').value),
+      local: document.getElementById('inputLocal').value
+    };
+    const exercicios = getSelectedExercicios();
+    createTreino(treino, exercicios, () => {
+      displayMessage('Inserido com sucesso!', 'success');
+      refresh();
+    });
+  });
+
+  btnUpdate.addEventListener('click', () => {
+    const id = document.getElementById('inputId').value;
+    if (!id) return displayMessage('Selecione um item para alterar.', 'info');
+    const treino = {
+      objetivo: document.getElementById('inputObjetivo').value,
+      dias: parseInt(document.getElementById('inputDias').value),
+      tempo_livre_m: parseInt(document.getElementById('inputTempoLivre').value),
+      local: document.getElementById('inputLocal').value
+    };
+    const exercicios = getSelectedExercicios();
+    updateTreino(id, treino, exercicios, () => {
+      displayMessage('Alterado com sucesso!', 'success');
+      refresh();
+    });
+  });
+
+  btnDelete.addEventListener('click', () => {
+    const id = document.getElementById('inputId').value;
+    if (!id) return displayMessage('Selecione um item para excluir.', 'info');
+    deleteTreino(id, () => {
+      displayMessage('Excluído com sucesso!', 'success');
+      refresh();
+    });
+  });
+
+  btnClear.addEventListener('click', () => form.reset());
+
+  document.getElementById('grid-treinos').addEventListener('click', e => {
+    const row = e.target.closest('tr');
+    if (!row) return;
+    const cols = row.children;
+    document.getElementById('inputId').value = cols[0].innerText;
+    document.getElementById('inputObjetivo').value = cols[1].innerText;
+    document.getElementById('inputDias').value = cols[2].innerText;
+    document.getElementById('inputTempoLivre').value = parseInt(cols[3].innerText);
+    document.getElementById('inputLocal').value = cols[4].innerText;
+    
+    const exNomes = row.dataset.exercicios ? JSON.parse(row.dataset.exercicios) : [];
+    Array.from(selectExercicios.options).forEach(opt => {
+      opt.selected = exNomes.includes(opt.textContent);
+    });
+  });
+
+  function refresh() {
+    form.reset();
+    readTreinos(populateTable);
+  }
+
+  refresh();
+}
+
+window.addEventListener('load', initTreinoPage);

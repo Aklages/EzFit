@@ -89,6 +89,20 @@
       "dias": 5,
       "tempo_livre_m": 60,
       "local": "academia"
+    },
+    {
+      "objetivo": "aumentar_resistencia",
+      "dias": 2,
+      "tempo_livre_m": 120,
+      "local": "parque",
+      "id": 3
+    },
+    {
+      "objetivo": "tudo",
+      "dias": 4,
+      "tempo_livre_m": 200,
+      "local": "academia",
+      "id": 4
     }
   ],
   "treinos_exercicios": [
@@ -121,6 +135,51 @@
       "id": 6,
       "treinoId": 2,
       "exercicioId": 6
+    },
+    {
+      "treinoId": 3,
+      "exercicioId": 1,
+      "id": 7
+    },
+    {
+      "treinoId": 3,
+      "exercicioId": 2,
+      "id": 8
+    },
+    {
+      "treinoId": 3,
+      "exercicioId": 3,
+      "id": 9
+    },
+    {
+      "treinoId": 4,
+      "exercicioId": 1,
+      "id": 10
+    },
+    {
+      "treinoId": 4,
+      "exercicioId": 2,
+      "id": 11
+    },
+    {
+      "treinoId": 4,
+      "exercicioId": 3,
+      "id": 12
+    },
+    {
+      "treinoId": 4,
+      "exercicioId": 4,
+      "id": 13
+    },
+    {
+      "treinoId": 4,
+      "exercicioId": 5,
+      "id": 14
+    },
+    {
+      "treinoId": 4,
+      "exercicioId": 6,
+      "id": 15
     }
   ],
   "locais": [
