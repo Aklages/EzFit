@@ -383,5 +383,37 @@
       "imagem": "",
       "link": "https://www.youtube.com/embed/alZZ2PQ0SL8"
     }
+  ],
+  "favoritos": [
+    {
+      "usuarioId": 4,
+      "favorito": 1,
+      "categoria": "local",
+      "id": 1
+    },
+    {
+      "usuarioId": 4,
+      "favorito": 2,
+      "categoria": "local",
+      "id": 2
+    },
+    {
+      "usuarioId": 4,
+      "favorito": 3,
+      "categoria": "local",
+      "id": 3
+    },
+    {
+      "usuarioId": 4,
+      "favorito": 1,
+      "categoria": "artigo",
+      "id": 4
+    },
+    {
+      "usuarioId": 4,
+      "favorito": 7,
+      "categoria": "video",
+      "id": 5
+    }
   ]
 }

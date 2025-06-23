@@ -1,0 +1,39 @@
+.card {
+  background-color: var(--main-color);
+  border: 1px solid var(--second-color);
+  border-radius: 8px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+}
+
+.card-title,
+.card-text {
+  color: var(--second-color);
+}
+
+.card-footer {
+  background-color: transparent;
+  border-top: none;
+}
+
+.btn-ver {
+  background-color: var(--second-color);
+  color: var(--white-color);
+  border-radius: 4px;
+  transition: 0.3s;
+}
+
+.btn-ver:hover {
+  background-color: #042803;
+  color: var(--white-color);
+}
+
+.btn-remover {
+  background-color: #dc3545;
+  color: var(--white-color);
+  border-radius: 4px;
+  transition: 0.3s;
+}
+
+.btn-remover:hover {
+  background-color: #a71d2a;
+}

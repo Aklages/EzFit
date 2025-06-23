@@ -3,6 +3,21 @@ const buscaInput = document.getElementById('busca-artigo');
 
 let artigos = [];
 
+function checarfavorito(endpoint, id){
+    const id_usuario = usuarioCorrente.id;
+    const query = `/favoritos?categoria=${endpoint}&favorito=${id}&usuarioId=${id_usuario}`;
+
+    return fetch(query)
+        .then(res => res.json())
+        .then(data => {
+            if (data.length > 0) {
+                return { classe: "fa-solid", idFavorito: data[0].id };
+            } else {
+                return { classe: "fa-regular", idFavorito: null };
+            }
+        });
+}
+
 // Carrega os artigos da categoria "artigo"
 fetch('/conteudos?categoria=artigo')
   .then(res => res.json())
@@ -20,23 +35,68 @@ function renderArtigos(lista) {
   }
 
   lista.forEach(artigo => {
-    const div = document.createElement('div');
-    div.classList.add('artigo-card');
-    div.style.cursor = 'pointer';
-    div.style.textAlign = 'center';
-    div.style.marginBottom = '20px';
+    checarfavorito("artigo", artigo.id)
+    .then(favData => {
+      const div = document.createElement('div');
+      div.classList.add('artigo-card');
+      div.style.cursor = 'pointer';
+      div.style.textAlign = 'center';
+      div.style.marginBottom = '20px';
+      div.style.position = 'relative';
 
-    div.innerHTML = `
-      <img src="${artigo.imagem}" alt="${artigo.titulo}" style="max-width:100%; border-radius:8px;" />
-      <p style="margin-top:8px;">${artigo.titulo}</p>
-    `;
+      div.innerHTML = `
+        <div class="d-flex justify-content-end" style="position: absolute; right: 10px; top: 10px;">
+          <i id="fav-artigo-${artigo.id}" class="${favData.classe} fa-heart heart-icon" style="font-size: 1.5rem; color: #e74c3c; transition: transform 0.2s;"></i>
+        </div>
+        <img src="${artigo.imagem}" alt="${artigo.titulo}" style="max-width:100%; border-radius:8px;" />
+        <p style="margin-top:8px;">${artigo.titulo}</p>
+      `;
 
-    // Redireciona para o link ao clicar
-    div.addEventListener('click', () => {
-      window.open(artigo.link, '_blank');
+      const heartIcon = div.querySelector(`#fav-artigo-${artigo.id}`);
+      heartIcon.addEventListener('click', (e) => {
+        e.stopPropagation(); // Impede o clique de abrir o link
+
+        heartIcon.style.transform = 'scale(1.3)';
+        setTimeout(() => heartIcon.style.transform = 'scale(1)', 150);
+
+        if (heartIcon.classList.contains("fa-regular")) {
+          // Adiciona favorito
+          fetch("/favoritos", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ 
+              usuarioId: usuarioCorrente.id,
+              favorito: artigo.id,
+              categoria: "artigo"
+            })
+          }).then(() => {
+            heartIcon.classList.remove("fa-regular");
+            heartIcon.classList.add("fa-solid");
+          });
+        } else {
+          // Remove favorito
+          fetch(`/favoritos?usuarioId=${usuarioCorrente.id}&favorito=${artigo.id}&categoria=artigo`)
+            .then(res => res.json())
+            .then(data => {
+              if (data.length > 0) {
+                fetch(`/favoritos/${data[0].id}`, {
+                  method: "DELETE"
+                }).then(() => {
+                  heartIcon.classList.remove("fa-solid");
+                  heartIcon.classList.add("fa-regular");
+                });
+              }
+            });
+        }
+      });
+
+      // Clique no restante do card abre o link
+      div.addEventListener('click', () => {
+        window.open(artigo.link, '_blank');
+      });
+
+      artigoList.appendChild(div);
     });
-
-    artigoList.appendChild(div);
   });
 }
 

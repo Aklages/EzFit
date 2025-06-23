@@ -144,6 +144,22 @@ function getmap(){//função com algoritmo que encontra os locais de interesse p
     })
 }
 
+function checarfavorito(endpoint, id){
+    id_usuario = usuarioCorrente.id;
+    query = `/favoritos?categoria=${endpoint}&favorito=${id}&usuarioId=${id_usuario}`;
+
+    return fetch(query)
+    .then(res => res.json())
+    .then(data => {
+        if(data.length > 0){
+            return "fa-solid";
+        }
+        else{
+            return "fa-regular"
+        }
+    })
+}
+
 function generatemap(locals_id, longitude, latitude, zoom){//função que gera um mapa a partir do mapbox com os locais encontrados
 
     const centralLatLong = [Number(longitude), Number(latitude)];
@@ -182,13 +198,42 @@ function generatemap(locals_id, longitude, latitude, zoom){//função que gera u
                     cor = "purple";
                     break;
             }
-            div.append(`<div><i class="fa-solid fa-location-dot d-inline" style="color:${cor}"></i> <p class="d-inline">${local.nome}</p></div>`);
-            let popup = new mapboxgl.Popup({ offset: 25 })
-            .setHTML(`<h4>${local.nome}</h4><a href="${local.link}" target="_blank"><h6>Link</h6></a>`);
-            const marker = new mapboxgl.Marker({ color: cor })
-            .setLngLat([Number(local.longitude), Number(local.latitude)])
-            .setPopup(popup)
-            .addTo(map);
+            checarfavorito("local", local.id)
+            .then(element => {
+                div.append(`<div><i id="${local.id}" class="${element} fa-heart"></i> <i class="fa-solid fa-location-dot d-inline" style="color:${cor}"></i> <p class="d-inline">${local.nome}</p></div>`);
+                let popup = new mapboxgl.Popup({ offset: 25 })
+                .setHTML(`<h4>${local.nome}</h4><a href="${local.link}" target="_blank"><h6>Link</h6></a>`);
+                const marker = new mapboxgl.Marker({ color: cor })
+                .setLngLat([Number(local.longitude), Number(local.latitude)])
+                .setPopup(popup)
+                .addTo(map);
+                $(`#${local.id}`).click(() => {
+                    console.log(local.id);
+                    let icon = $(`#${local.id}`);
+                    if (icon.hasClass("fa-regular")){
+                        icon.removeClass("fa-regular").addClass("fa-solid");
+                        fetch("/favoritos", {
+                            method: "POST",
+                            headers: { "Content-Type": "application/json" },
+                            body: JSON.stringify({ 
+                                usuarioId: usuarioCorrente.id,
+                                favorito: local.id,
+                                categoria: "local"
+                            })
+                        })
+                    }
+                    else{
+                        icon.removeClass("fa-solid").addClass("fa-regular");
+                        fetch(`/favoritos?usuarioId=${usuarioCorrente.id}&favorito=${local.id}&categoria=local`)
+                        .then(res => res.json())
+                        .then(data => {
+                            fetch(`/favoritos/${data[0].id}`, {
+                                method: "DELETE"
+                            })
+                        })
+                    }
+                })
+            })
         })
     })
 
