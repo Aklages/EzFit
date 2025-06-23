@@ -33,7 +33,7 @@
       "senha": "123",
       "nome": "André",
       "email": "andre@gmail.com",
-      "treino": 1,
+      "treino": 0,
       "adm": false
     }
   ],
@@ -308,6 +308,48 @@
       "descricao": "Grupo para quem quer correr no parque mangabeiras !",
       "imagem": "../public/assets/images/",
       "link": "link_whatsapp"
+    },
+    {
+      "titulo": "aaa",
+      "descricao": "aaaaaaaaaaaaaaaaaaaaaaaaa",
+      "link": "aaaaaaaaaa",
+      "categoria": "volei",
+      "imagem": "",
+      "id": 5
+    },
+    {
+      "titulo": "Teste",
+      "descricao": "wdfwwwwwwwwww",
+      "link": "testeteee",
+      "categoria": "basquete",
+      "imagem": "",
+      "id": 6
+    },
+    {
+      "titulo": "aaa",
+      "descricao": "aaaaaaaaaaaaaaaaaaaaaaaaa",
+      "link": "aaaaaaaaaa",
+      "categoria": "volei",
+      "imagem": "",
+      "id": 7
+    },
+    {
+      "id_usuario": 4,
+      "titulo": "aaa",
+      "descricao": "aaaaaaaaaaaaaa",
+      "link": "aaaaa",
+      "categoria": "futebol",
+      "imagem": "",
+      "id": 8
+    },
+    {
+      "id_usuario": 4,
+      "titulo": "Basquete Anchieta",
+      "descricao": "Teste sim basquete no ancheita",
+      "link": "whatsapp",
+      "categoria": "basquete",
+      "imagem": "",
+      "id": 9
     }
   ],
   "conteudos": [
