@@ -7,13 +7,22 @@ document.getElementById('btn_criarGrupo').addEventListener('click', () => {
     const descricao = document.getElementById('descricaoGrupo').value;
     const categoria = document.getElementById('categoriaGrupo').value;
 
+    // Pega o ID do usuário do sessionStorage
+    const usuarioLogado = JSON.parse(sessionStorage.getItem('usuarioCorrente'));
+    const idUsuarioLogado = usuarioLogado ? usuarioLogado.id : null;
+
+    if (!idUsuarioLogado) {
+        alert('Usuário não logado. Por favor, faça login para criar um grupo.');
+        return;
+    }
+
     if (!categoria) {
         alert('Por favor, selecione uma categoria para o grupo.');
         return;
     }
 
     const novoGrupo = {
-        id_usuario: 1,
+        id_usuario: idUsuarioLogado, // Usa o ID do usuário logado
         titulo: nome,
         descricao: descricao,
         link: link,
@@ -109,7 +118,27 @@ function carregarGrupos() {
         .then(grupos => {
             listaGrupos.innerHTML = '';
 
-            grupos.forEach(grupo => {
+            
+            const usuarioLogado = JSON.parse(sessionStorage.getItem('usuarioCorrente'));
+            const idUsuarioLogado = usuarioLogado ? usuarioLogado.id : null;
+
+            if (!idUsuarioLogado) {
+                console.warn('Usuário não logado. Nenhum grupo será exibido.');
+                return; 
+            }
+
+            
+            const gruposDoUsuario = grupos.filter(grupo => grupo.id_usuario === idUsuarioLogado);
+
+            if (gruposDoUsuario.length === 0) {
+                const noGroupsMessage = document.createElement('p');
+                noGroupsMessage.textContent = 'Você ainda não possui nenhum grupo criado.';
+                noGroupsMessage.className = 'text-center text-muted mt-3';
+                listaGrupos.appendChild(noGroupsMessage);
+                return;
+            }
+
+            gruposDoUsuario.forEach(grupo => {
                 const card = document.createElement('div');
                 card.className = 'card shadow-sm rounded-4';
                 card.style.backgroundColor = '#c4eec4';
@@ -121,7 +150,6 @@ function carregarGrupos() {
                         <h5 class="card-title fw-bold">${grupo.titulo}</h5>
                         <h6 class="card-subtitle mb-2 text-muted">Categoria: ${grupo.categoria}</h6>
                         <p class="card-text">${grupo.descricao}</p>
-                        <a href="${grupo.link}" target="_blank" class="btn btn-outline-success mb-2">Entrar</a>
                         <p class="card-text"><small class="text-muted">ID: ${grupo.id}</small></p>
                     </div>
                 `;
