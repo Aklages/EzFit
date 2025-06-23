@@ -1,26 +1,48 @@
-// URL do JSON Server
-const URL = 'http://localhost:3000/conteudos/';
-const container = document.getElementById('card-container');
-// Buscar dados do JSON Server e gerar cards
-fetch(URL)
-.then(response => response.json())
-.then(data => {
-data.forEach(conteudo=> {
-const card = document.createElement('div');
-card.classList.add('card');
+const artigoList = document.getElementById('artigo-list');
+const buscaInput = document.getElementById('busca-artigo');
 
-card.innerHTML = `
-<img src="${conteudo.imagem}" alt="${conteudo.titulo}">
-<div class="card-content">
-<h2>${conteudo.titulo}</h2>
-<p>${conteudo.descricao}</p>
-</div>
-`;
+let artigos = [];
 
-container.appendChild(card);
-});
-})
-.catch(error => {
-console.error('Erro ao carregar os conteudo:', error);
-container.innerHTML = "<p>Erro ao carregar conteudo. Verifique o servidor.</p>";
+// Carrega os artigos da categoria "artigo"
+fetch('/conteudos?categoria=artigo')
+  .then(res => res.json())
+  .then(data => {
+    artigos = data;
+    renderArtigos(artigos);
+  });
+
+function renderArtigos(lista) {
+  artigoList.innerHTML = '';
+
+  if (lista.length === 0) {
+    artigoList.innerHTML = '<p>Nenhum artigo encontrado.</p>';
+    return;
+  }
+
+  lista.forEach(artigo => {
+    const div = document.createElement('div');
+    div.classList.add('artigo-card');
+    div.style.cursor = 'pointer';
+    div.style.textAlign = 'center';
+    div.style.marginBottom = '20px';
+
+    div.innerHTML = `
+      <img src="${artigo.imagem}" alt="${artigo.titulo}" style="max-width:100%; border-radius:8px;" />
+      <p style="margin-top:8px;">${artigo.titulo}</p>
+    `;
+
+    // Redireciona para o link ao clicar
+    div.addEventListener('click', () => {
+      window.open(artigo.link, '_blank');
+    });
+
+    artigoList.appendChild(div);
+  });
+}
+
+// Filtro de busca
+buscaInput.addEventListener('input', function() {
+  const termo = this.value.toLowerCase();
+  const filtrados = artigos.filter(a => a.titulo.toLowerCase().includes(termo));
+  renderArtigos(filtrados);
 });
