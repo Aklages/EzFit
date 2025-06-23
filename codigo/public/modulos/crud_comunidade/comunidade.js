@@ -53,6 +53,10 @@ document.getElementById('btn_alterarGrupo').addEventListener('click', () => {
     const descricao = document.getElementById('descricaoGrupo').value;
     const categoria = document.getElementById('categoriaGrupo').value;
 
+    // Pega o ID do usuário do sessionStorage - NECESSÁRIO TAMBÉM PARA O UPDATE!
+    const usuarioLogado = JSON.parse(sessionStorage.getItem('usuarioCorrente'));
+    const idUsuarioLogado = usuarioLogado ? usuarioLogado.id : null;
+
     if (idGrupo === '') {
         alert('Insira o ID do grupo para alterar!');
         return;
@@ -63,7 +67,9 @@ document.getElementById('btn_alterarGrupo').addEventListener('click', () => {
         return;
     }
 
+    // AQUI ESTÁ A CORREÇÃO: Inclua id_usuario no objeto grupoAlterado
     const grupoAlterado = {
+        id_usuario: idUsuarioLogado, // Adicione esta linha
         titulo: nome,
         descricao: descricao,
         link: link,
@@ -118,16 +124,14 @@ function carregarGrupos() {
         .then(grupos => {
             listaGrupos.innerHTML = '';
 
-            
             const usuarioLogado = JSON.parse(sessionStorage.getItem('usuarioCorrente'));
             const idUsuarioLogado = usuarioLogado ? usuarioLogado.id : null;
 
             if (!idUsuarioLogado) {
                 console.warn('Usuário não logado. Nenhum grupo será exibido.');
-                return; 
+                return;
             }
 
-            
             const gruposDoUsuario = grupos.filter(grupo => grupo.id_usuario === idUsuarioLogado);
 
             if (gruposDoUsuario.length === 0) {
@@ -145,6 +149,7 @@ function carregarGrupos() {
                 card.style.width = '250px';
                 card.style.flex = '0 0 auto';
 
+                // Adicionado link de entrar no card, como estava na versão original
                 card.innerHTML = `
                     <div class="card-body">
                         <h5 class="card-title fw-bold">${grupo.titulo}</h5>
