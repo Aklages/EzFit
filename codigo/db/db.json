@@ -33,7 +33,7 @@
       "senha": "123",
       "nome": "André",
       "email": "andre@gmail.com",
-      "treino": 1,
+      "treino": 0,
       "adm": false
     }
   ],
@@ -42,67 +42,214 @@
       "id": 1,
       "nome": "Polichinelo",
       "duracao_min": 5,
-      "repeticoes": null
+      "repeticoes": 20
     },
     {
       "id": 2,
       "nome": "Agachamento",
-      "duracao_min": null,
+      "duracao_min": 20,
       "repeticoes": 15
     },
     {
       "id": 3,
       "nome": "Abdominais",
-      "duracao_min": null,
+      "duracao_min": 15,
       "repeticoes": 10
     },
     {
       "id": 4,
       "nome": "Levantar Peso1",
       "duracao_min": 15,
-      "repeticoes": null
+      "repeticoes": 7
     },
     {
       "id": 5,
       "nome": "Levantar Peso2",
-      "duracao_min": null,
+      "duracao_min": 10,
       "repeticoes": 10
     },
     {
       "id": 6,
       "nome": "Levantar Peso3",
-      "duracao_min": null,
+      "duracao_min": 10,
       "repeticoes": "5"
     }
   ],
   "treinos": [
     {
       "id": 1,
-      "objetivo": "perder_peso",
+      "objetivo": "cardio",
       "dias": 3,
       "tempo_livre_m": 30,
       "local": "casa"
     },
     {
       "id": 2,
-      "objetivo": "ganhar_musculo",
+      "objetivo": "hipertrofia",
       "dias": 5,
       "tempo_livre_m": 60,
       "local": "academia"
     },
     {
-      "objetivo": "aumentar_resistencia",
+      "id": 3,
+      "objetivo": "cardio",
       "dias": 2,
       "tempo_livre_m": 120,
-      "local": "parque",
-      "id": 3
+      "local": "parque"
     },
     {
-      "objetivo": "tudo",
+      "id": 4,
+      "objetivo": "cardio",
       "dias": 4,
       "tempo_livre_m": 200,
-      "local": "academia",
-      "id": 4
+      "local": "academia"
+    },
+    {
+      "id": 5,
+      "objetivo": "cardio",
+      "dias": 1,
+      "tempo_livre_m": 20,
+      "local": "casa"
+    },
+    {
+      "id": 6,
+      "objetivo": "cardio",
+      "dias": 2,
+      "tempo_livre_m": 40,
+      "local": "parque"
+    },
+    {
+      "id": 7,
+      "objetivo": "cardio",
+      "dias": 3,
+      "tempo_livre_m": 45,
+      "local": "casa"
+    },
+    {
+      "id": 8,
+      "objetivo": "hipertrofia",
+      "dias": 6,
+      "tempo_livre_m": 90,
+      "local": "academia"
+    },
+    {
+      "id": 9,
+      "objetivo": "cardio",
+      "dias": 4,
+      "tempo_livre_m": 60,
+      "local": "parque"
+    },
+    {
+      "id": 10,
+      "objetivo": "hipertrofia",
+      "dias": 7,
+      "tempo_livre_m": 120,
+      "local": "academia"
+    },
+    {
+      "id": 11,
+      "objetivo": "cardio",
+      "dias": 7,
+      "tempo_livre_m": 30,
+      "local": "casa"
+    },
+    {
+      "id": 12,
+      "objetivo": "hipertrofia",
+      "dias": 3,
+      "tempo_livre_m": 45,
+      "local": "academia"
+    },
+    {
+      "id": 13,
+      "objetivo": "cardio",
+      "dias": 5,
+      "tempo_livre_m": 75,
+      "local": "parque"
+    },
+    {
+      "id": 14,
+      "objetivo": "hipertrofia",
+      "dias": 4,
+      "tempo_livre_m": 50,
+      "local": "casa"
+    },
+    {
+      "id": 15,
+      "objetivo": "cardio",
+      "dias": 6,
+      "tempo_livre_m": 90,
+      "local": "outros"
+    },
+    {
+      "id": 16,
+      "objetivo": "hipertrofia",
+      "dias": 2,
+      "tempo_livre_m": 30,
+      "local": "academia"
+    },
+    {
+      "id": 17,
+      "objetivo": "cardio",
+      "dias": 7,
+      "tempo_livre_m": 45,
+      "local": "casa"
+    },
+    {
+      "id": 18,
+      "objetivo": "hipertrofia",
+      "dias": 5,
+      "tempo_livre_m": 70,
+      "local": "academia"
+    },
+    {
+      "id": 19,
+      "objetivo": "cardio",
+      "dias": 3,
+      "tempo_livre_m": 60,
+      "local": "parque"
+    },
+    {
+      "id": 20,
+      "objetivo": "hipertrofia",
+      "dias": 1,
+      "tempo_livre_m": 25,
+      "local": "casa"
+    },
+    {
+      "id": 21,
+      "objetivo": "cardio",
+      "dias": 4,
+      "tempo_livre_m": 80,
+      "local": "academia"
+    },
+    {
+      "id": 22,
+      "objetivo": "hipertrofia",
+      "dias": 6,
+      "tempo_livre_m": 100,
+      "local": "outros"
+    },
+    {
+      "id": 23,
+      "objetivo": "cardio",
+      "dias": 2,
+      "tempo_livre_m": 35,
+      "local": "casa"
+    },
+    {
+      "id": 24,
+      "objetivo": "hipertrofia",
+      "dias": 7,
+      "tempo_livre_m": 55,
+      "local": "academia"
+    },
+    {
+      "id": 25,
+      "objetivo": "cardio",
+      "dias": 5,
+      "tempo_livre_m": 65,
+      "local": "parque"
     }
   ],
   "treinos_exercicios": [
@@ -137,49 +284,359 @@
       "exercicioId": 6
     },
     {
+      "id": 7,
       "treinoId": 3,
-      "exercicioId": 1,
-      "id": 7
+      "exercicioId": 1
     },
     {
+      "id": 8,
       "treinoId": 3,
-      "exercicioId": 2,
-      "id": 8
+      "exercicioId": 2
     },
     {
+      "id": 9,
       "treinoId": 3,
-      "exercicioId": 3,
-      "id": 9
+      "exercicioId": 3
     },
     {
+      "id": 10,
       "treinoId": 4,
-      "exercicioId": 1,
-      "id": 10
+      "exercicioId": 1
     },
     {
+      "id": 11,
       "treinoId": 4,
-      "exercicioId": 2,
-      "id": 11
+      "exercicioId": 2
     },
     {
+      "id": 12,
       "treinoId": 4,
-      "exercicioId": 3,
-      "id": 12
+      "exercicioId": 3
     },
     {
+      "id": 13,
       "treinoId": 4,
-      "exercicioId": 4,
-      "id": 13
+      "exercicioId": 4
     },
     {
+      "id": 14,
       "treinoId": 4,
-      "exercicioId": 5,
-      "id": 14
+      "exercicioId": 5
     },
     {
+      "id": 15,
       "treinoId": 4,
-      "exercicioId": 6,
-      "id": 15
+      "exercicioId": 6
+    },
+    {
+      "id": 16,
+      "treinoId": 5,
+      "exercicioId": 1
+    },
+    {
+      "id": 17,
+      "treinoId": 5,
+      "exercicioId": 2
+    },
+    {
+      "id": 18,
+      "treinoId": 6,
+      "exercicioId": 1
+    },
+    {
+      "id": 19,
+      "treinoId": 6,
+      "exercicioId": 2
+    },
+    {
+      "id": 20,
+      "treinoId": 6,
+      "exercicioId": 3
+    },
+    {
+      "id": 21,
+      "treinoId": 7,
+      "exercicioId": 1
+    },
+    {
+      "id": 22,
+      "treinoId": 7,
+      "exercicioId": 2
+    },
+    {
+      "id": 23,
+      "treinoId": 7,
+      "exercicioId": 3
+    },
+    {
+      "id": 24,
+      "treinoId": 8,
+      "exercicioId": 4
+    },
+    {
+      "id": 25,
+      "treinoId": 8,
+      "exercicioId": 5
+    },
+    {
+      "id": 26,
+      "treinoId": 8,
+      "exercicioId": 6
+    },
+    {
+      "id": 27,
+      "treinoId": 9,
+      "exercicioId": 1
+    },
+    {
+      "id": 28,
+      "treinoId": 9,
+      "exercicioId": 2
+    },
+    {
+      "id": 29,
+      "treinoId": 9,
+      "exercicioId": 3
+    },
+    {
+      "id": 30,
+      "treinoId": 10,
+      "exercicioId": 4
+    },
+    {
+      "id": 31,
+      "treinoId": 10,
+      "exercicioId": 5
+    },
+    {
+      "id": 32,
+      "treinoId": 10,
+      "exercicioId": 6
+    },
+    {
+      "id": 33,
+      "treinoId": 11,
+      "exercicioId": 1
+    },
+    {
+      "id": 34,
+      "treinoId": 11,
+      "exercicioId": 2
+    },
+    {
+      "id": 35,
+      "treinoId": 11,
+      "exercicioId": 3
+    },
+    {
+      "id": 36,
+      "treinoId": 12,
+      "exercicioId": 4
+    },
+    {
+      "id": 37,
+      "treinoId": 12,
+      "exercicioId": 5
+    },
+    {
+      "id": 38,
+      "treinoId": 12,
+      "exercicioId": 6
+    },
+    {
+      "id": 39,
+      "treinoId": 13,
+      "exercicioId": 1
+    },
+    {
+      "id": 40,
+      "treinoId": 13,
+      "exercicioId": 2
+    },
+    {
+      "id": 41,
+      "treinoId": 13,
+      "exercicioId": 3
+    },
+    {
+      "id": 42,
+      "treinoId": 14,
+      "exercicioId": 4
+    },
+    {
+      "id": 43,
+      "treinoId": 14,
+      "exercicioId": 5
+    },
+    {
+      "id": 44,
+      "treinoId": 14,
+      "exercicioId": 6
+    },
+    {
+      "id": 45,
+      "treinoId": 15,
+      "exercicioId": 1
+    },
+    {
+      "id": 46,
+      "treinoId": 15,
+      "exercicioId": 2
+    },
+    {
+      "id": 47,
+      "treinoId": 15,
+      "exercicioId": 3
+    },
+    {
+      "id": 48,
+      "treinoId": 16,
+      "exercicioId": 4
+    },
+    {
+      "id": 49,
+      "treinoId": 16,
+      "exercicioId": 5
+    },
+    {
+      "id": 50,
+      "treinoId": 16,
+      "exercicioId": 6
+    },
+    {
+      "id": 51,
+      "treinoId": 17,
+      "exercicioId": 1
+    },
+    {
+      "id": 52,
+      "treinoId": 17,
+      "exercicioId": 2
+    },
+    {
+      "id": 53,
+      "treinoId": 17,
+      "exercicioId": 3
+    },
+    {
+      "id": 54,
+      "treinoId": 18,
+      "exercicioId": 4
+    },
+    {
+      "id": 55,
+      "treinoId": 18,
+      "exercicioId": 5
+    },
+    {
+      "id": 56,
+      "treinoId": 18,
+      "exercicioId": 6
+    },
+    {
+      "id": 57,
+      "treinoId": 19,
+      "exercicioId": 1
+    },
+    {
+      "id": 58,
+      "treinoId": 19,
+      "exercicioId": 2
+    },
+    {
+      "id": 59,
+      "treinoId": 19,
+      "exercicioId": 3
+    },
+    {
+      "id": 60,
+      "treinoId": 20,
+      "exercicioId": 4
+    },
+    {
+      "id": 61,
+      "treinoId": 20,
+      "exercicioId": 5
+    },
+    {
+      "id": 62,
+      "treinoId": 20,
+      "exercicioId": 6
+    },
+    {
+      "id": 63,
+      "treinoId": 21,
+      "exercicioId": 1
+    },
+    {
+      "id": 64,
+      "treinoId": 21,
+      "exercicioId": 2
+    },
+    {
+      "id": 65,
+      "treinoId": 21,
+      "exercicioId": 3
+    },
+    {
+      "id": 66,
+      "treinoId": 22,
+      "exercicioId": 4
+    },
+    {
+      "id": 67,
+      "treinoId": 22,
+      "exercicioId": 5
+    },
+    {
+      "id": 68,
+      "treinoId": 22,
+      "exercicioId": 6
+    },
+    {
+      "id": 69,
+      "treinoId": 23,
+      "exercicioId": 1
+    },
+    {
+      "id": 70,
+      "treinoId": 23,
+      "exercicioId": 2
+    },
+    {
+      "id": 71,
+      "treinoId": 23,
+      "exercicioId": 3
+    },
+    {
+      "id": 72,
+      "treinoId": 24,
+      "exercicioId": 4
+    },
+    {
+      "id": 73,
+      "treinoId": 24,
+      "exercicioId": 5
+    },
+    {
+      "id": 74,
+      "treinoId": 24,
+      "exercicioId": 6
+    },
+    {
+      "id": 75,
+      "treinoId": 25,
+      "exercicioId": 1
+    },
+    {
+      "id": 76,
+      "treinoId": 25,
+      "exercicioId": 2
+    },
+    {
+      "id": 77,
+      "treinoId": 25,
+      "exercicioId": 3
     }
   ],
   "locais": [
@@ -308,6 +765,48 @@
       "descricao": "Grupo para quem quer correr no parque mangabeiras !",
       "imagem": "../public/assets/images/",
       "link": "link_whatsapp"
+    },
+    {
+      "titulo": "aaa",
+      "descricao": "aaaaaaaaaaaaaaaaaaaaaaaaa",
+      "link": "aaaaaaaaaa",
+      "categoria": "volei",
+      "imagem": "",
+      "id": 5
+    },
+    {
+      "titulo": "Teste",
+      "descricao": "wdfwwwwwwwwww",
+      "link": "testeteee",
+      "categoria": "basquete",
+      "imagem": "",
+      "id": 6
+    },
+    {
+      "titulo": "aaa",
+      "descricao": "aaaaaaaaaaaaaaaaaaaaaaaaa",
+      "link": "aaaaaaaaaa",
+      "categoria": "volei",
+      "imagem": "",
+      "id": 7
+    },
+    {
+      "id_usuario": 4,
+      "titulo": "aaa",
+      "descricao": "aaaaaaaaaaaaaa",
+      "link": "aaaaa",
+      "categoria": "futebol",
+      "imagem": "",
+      "id": 8
+    },
+    {
+      "id_usuario": 4,
+      "titulo": "Basquete Anchieta",
+      "descricao": "Teste sim basquete no ancheita",
+      "link": "whatsapp",
+      "categoria": "basquete",
+      "imagem": "",
+      "id": 9
     }
   ],
   "conteudos": [

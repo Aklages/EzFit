@@ -8,7 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
     <script src="https://kit.fontawesome.com/4f6d2b1093.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../../assets/css/style.css" />
-        <script>
+    <script>
         function initPage() {
             // Associa a função de logout ao botão
             document.getElementById('btn_logout').addEventListener('click', logoutUser);
@@ -47,6 +47,20 @@
             <div class="mb-3">
                 <input type="number" id="tempoTreino" class="form-control" placeholder="Quanto tempo (em minutos) você tem para treinar?" style="background-color: #d9f2d9;" min="5" required />
             </div>
+
+            <div class="mb-3">
+                <select id="diasTreino" class="form-control" style="background-color: #d9f2d9;" required>
+                    <option value="" disabled selected>Quantos dias por semana você pode treinar?</option>
+                    <option value="1">1 dia</option>
+                    <option value="2">2 dias</option>
+                    <option value="3">3 dias</option>
+                    <option value="4">4 dias</option>
+                    <option value="5">5 dias</option>
+                    <option value="6">6 dias</option>
+                    <option value="7">7 dias</option>
+                </select>
+            </div>
+
             <div class="mb-3">
                 <select id="tipoAtividade" class="form-control" style="background-color: #d9f2d9;" required>
                     <option value="" disabled selected>Tipo de atividade</option>
@@ -59,6 +73,9 @@
             </div>
         </form>
         <div id="resultadoSugestao" class="mt-4"></div>
+        <div id="divEscolherTreino" class="mt-3 text-center" style="display: none;">
+            <button id="btnEscolherTreino" class="btn btn-success">Escolher este Treino</button>
+        </div>
     </div>
 </main>
 
