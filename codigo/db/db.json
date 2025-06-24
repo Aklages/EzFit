@@ -308,48 +308,6 @@
       "descricao": "Grupo para quem quer correr no parque mangabeiras !",
       "imagem": "../public/assets/images/",
       "link": "link_whatsapp"
-    },
-    {
-      "titulo": "aaa",
-      "descricao": "aaaaaaaaaaaaaaaaaaaaaaaaa",
-      "link": "aaaaaaaaaa",
-      "categoria": "volei",
-      "imagem": "",
-      "id": 5
-    },
-    {
-      "titulo": "Teste",
-      "descricao": "wdfwwwwwwwwww",
-      "link": "testeteee",
-      "categoria": "basquete",
-      "imagem": "",
-      "id": 6
-    },
-    {
-      "titulo": "aaa",
-      "descricao": "aaaaaaaaaaaaaaaaaaaaaaaaa",
-      "link": "aaaaaaaaaa",
-      "categoria": "volei",
-      "imagem": "",
-      "id": 7
-    },
-    {
-      "id_usuario": 4,
-      "titulo": "aaa",
-      "descricao": "aasdqwfwerfqgergqergqergqg",
-      "link": "aaaaaaaaaaaa",
-      "categoria": "futebol",
-      "imagem": "",
-      "id": 8
-    },
-    {
-      "id_usuario": 4,
-      "titulo": "Basquete Anchieta",
-      "descricao": "Teste sim basquete no ancheita",
-      "link": "whatsapp",
-      "categoria": "basquete",
-      "imagem": "",
-      "id": 9
     }
   ],
   "conteudos": [
@@ -456,6 +414,24 @@
       "favorito": 7,
       "categoria": "video",
       "id": 5
+    },
+    {
+      "usuarioId": 4,
+      "favorito": 10,
+      "categoria": "local",
+      "id": 6
+    },
+    {
+      "usuarioId": 4,
+      "favorito": 6,
+      "categoria": "artigo",
+      "id": 7
+    },
+    {
+      "usuarioId": 4,
+      "favorito": 3,
+      "categoria": "artigo",
+      "id": 8
     }
   ]
 }
