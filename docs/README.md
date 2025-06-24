@@ -315,7 +315,7 @@ O vídeo a seguir traz uma apresentação do problema que a equipe está tratand
 
 ## Funcionalidades
 
-Esta seção apresenta as funcionalidades da solução.Info
+Esta seção apresenta as funcionalidades da solução
 
 ##### Funcionalidade 1 - Sugerir Treinos
 
@@ -327,7 +327,7 @@ Apresentação
   * Clique no card de meus treinos
 * **Tela da funcionalidade**:
 
-![Tela de Funcionalidade](images/exemplo-funcionalidade.png)
+![Tela de Funcionalidade](images/funcionalidade-1.png)
 
 ##### Funcionalidade 2 - Apresentar Treinos
 
@@ -340,7 +340,7 @@ Apresentação
   * Caso não tenha um treino associado ao usuario, escolha um na funcionalidade de sugerir treino para ser redirecionado para a tela de apresentar treinos
 * **Tela da funcionalidade**:
 
-![Tela de Funcionalidade](images/exemplo-funcionalidade.png)
+![Tela de Funcionalidade](images/funcionalidade-2.png)
 
 ##### Funcionalidade 3 - Econtrar um local
 
@@ -352,7 +352,7 @@ Apresentação
   * Clique no card de encontrar um local
 * **Tela da funcionalidade**:
 
-![Tela de Funcionalidade](images/exemplo-funcionalidade.png)
+![Tela de Funcionalidade](images/funcionalidade-3.png)
 
 ##### Funcionalidade 4 - Apresentar videos motivacionais
 
@@ -364,7 +364,7 @@ Apresentação
   * Clique no card de vídeos motivacionais
 * **Tela da funcionalidade**:
 
-![Tela de Funcionalidade](images/exemplo-funcionalidade.png)
+![Tela de Funcionalidade](images/funcionalidade-4.png)
 
 ##### Funcionalidade 5 - Apresentar informações científicas
 
@@ -376,7 +376,7 @@ Apresentação
   * Clique no card de informações científicas
 * **Tela da funcionalidade**:
 
-![Tela de Funcionalidade](images/exemplo-funcionalidade.png)
+![Tela de Funcionalidade](images/funcionalidade-5.png)
 
 ##### Funcionalidade 6 - Apresentar comunidades
 
@@ -388,7 +388,7 @@ Apresentação
   * Clique no card de comunidades
 * **Tela da funcionalidade**:
 
-![Tela de Funcionalidade](images/exemplo-funcionalidade.png)
+![Tela de Funcionalidade](images/funcionalidade-6.png)
 
 ##### Funcionalidade 7 - Crud comunidade
 
@@ -401,7 +401,7 @@ Apresentação
   * Clique no botão de criar/ver grupos
 * **Tela da funcionalidade**:
 
-![Tela de Funcionalidade](images/exemplo-funcionalidade.png)
+![Tela de Funcionalidade](images/funcionalidade-7.png)
 
 ##### Funcionalidade 8 - Apresentar Favoritos
 
@@ -413,7 +413,7 @@ Apresentação
   * Clique no card de favoritos
 * **Tela da funcionalidade**:
 
-![Tela de Funcionalidade](images/exemplo-funcionalidade.png)
+![Tela de Funcionalidade](images/funcionalidade-8.png)
 
 ##### Funcionalidade 9 - Crud Conteudos
 
@@ -425,7 +425,7 @@ Apresentação
   * Clique no card de Cadastrar Conteudos
 * **Tela da funcionalidade**:
 
-![Tela de Funcionalidade](images/exemplo-funcionalidade.png)
+![Tela de Funcionalidade](images/funcionalidade-9.png)
 
 ##### Funcionalidade 10 - Crud Exercicios
 
@@ -437,7 +437,7 @@ Apresentação
   * Clique no card de Cadastrar Exercicios
 * **Tela da funcionalidade**:
 
-![Tela de Funcionalidade](images/exemplo-funcionalidade.png)
+![Tela de Funcionalidade](images/funcionalidade-10.png)
 
 ##### Funcionalidade 11 - Crud Treinos
 
@@ -449,7 +449,7 @@ Apresentação
   * Clique no card de Cadastrar Treinos
 * **Tela da funcionalidade**:
 
-![Tela de Funcionalidade](images/exemplo-funcionalidade.png)
+![Tela de Funcionalidade](images/funcionalidade-11.png)
 
 ##### Funcionalidade 12 - Crud Locais
 
@@ -461,11 +461,11 @@ Apresentação
   * Clique no card de Cadastrar Locais
 * **Tela da funcionalidade**:
 
-![Tela de Funcionalidade](images/exemplo-funcionalidade.png)
+![Tela de Funcionalidade](images/funcionalidade-12.png)
 
 ## Estruturas de Dados
 
-Descrição das estruturas de dados utilizadas na solução com exemplos no formato JSON.Info
+Descrição das estruturas de dados utilizadas na solução com exemplos no formato JSON
 
 ##### Estrutura de Dados - Contatos   ⚠️ EXEMPLO ⚠️
 
