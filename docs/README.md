@@ -271,31 +271,17 @@ Relação de ferramentas empregadas pelo grupo durante o projeto.
 | --------------------------- | ---------- | -------------------------------------------------- |
 | Processo de Design Thinking | Miro       | https://miro.com/app/board/uXjVIRySsuU=/?share_link_id=309987947790  |
 | Repositório de código       | GitHub     | https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2025-1-ti1-0385100-ezfit.git|
-| Hospedagem do site          | Replit     | https://site.render.com/XXXXXXX ⚠️ EXEMPLO ⚠️ |
+| Hospedagem do site          | Replit     | https://replit.com/@ak1lages/EzFit |
 | Protótipo Interativo        | Figma      | https://www.figma.com/proto/q5gZfvlqbbKevA76tNFEP8/EzFit?node-id=0-1&t=im2LzitrSZq5L4yf-1   |
 | Editor de código            | Vscode     | https://code.visualstudio.com/  |
 | Comunicação                 | Discord    | https://discord.com/  |
-| Ferramenta método ágil      | Kanban     | https://site.render.com/XXXXXXX ⚠️ EXEMPLO ⚠️  |
+| Ferramenta método ágil      | Miro       | https://miro.com/app/board/uXjVISTy7Qw=/?share_link_id=616800660472  |
 
 ## Gerenciamento do Projeto
 
 Divisão de papéis no grupo e apresentação da estrutura da ferramenta de controle de tarefas (Kanban).
 
-![Exemplo de Kanban](images/exemplo-kanban.png)
-
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Nesta parte do documento, você deve apresentar  o processo de trabalho baseado nas metodologias ágeis, a divisão de papéis e tarefas, as ferramentas empregadas e como foi realizada a gestão de configuração do projeto via GitHub.
->
-> Coloque detalhes sobre o processo de Design Thinking e a implementação do Framework Scrum seguido pelo grupo. O grupo poderá fazer uso de ferramentas on-line para acompanhar o andamento do projeto, a execução das tarefas e o status de desenvolvimento da solução.
->
-> **Orientações**:
->
-> - [Sobre Projects - GitHub Docs](https://docs.github.com/pt/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects)
-> - [Gestão de projetos com GitHub | balta.io](https://balta.io/blog/gestao-de-projetos-com-github)
-> - [(460) GitHub Projects - YouTube](https://www.youtube.com/playlist?list=PLiO7XHcmTsldZR93nkTFmmWbCEVF_8F5H)
-> - [11 Passos Essenciais para Implantar Scrum no seu Projeto](https://mindmaster.com.br/scrum-11-passos/)
-> - [Scrum em 9 minutos](https://www.youtube.com/watch?v=XfvQWnRgxG0)
+![Exemplo de Kanban](files/EzFit Kanban.pdf)
 
 # Solução Implementada
 
