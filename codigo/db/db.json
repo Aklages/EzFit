@@ -33,7 +33,7 @@
       "senha": "123",
       "nome": "André",
       "email": "andre@gmail.com",
-      "treino": 0,
+      "treino": 12,
       "adm": false
     },
     {
@@ -718,163 +718,163 @@
     }
   ],
   "conteudos": [
-      {
-        "id": 1,
-        "titulo": "Qualquer prática de atividade física é benéfica para o corpo humano",
-        "descricao": "Entenda por que o corpo humano precisa de movimento e como pequenas ações diárias já fazem diferença.",
-        "categoria": "artigo",
-        "imagem": "https://institutoagf.com.br/wp-content/uploads/2023/03/preguica-1.jpg",
-        "link": "https://jornal.usp.br/radio-usp/qualquer-pratica-de-atividade-fisica-e-benefica-para-o-corpo-humano/"
-      },
-      {
-        "id": 2,
-        "titulo": "Benefícios da atividade física e do exercício físico na depressão",
-        "descricao": "Veja como a atividade física pode ser sua aliada na saúde mental e no bem-estar geral.",
-        "categoria": "artigo",
-        "imagem": "https://www.protagonismodigital.sed.ms.gov.br/uploads/7213bc99-3cb0-4555-83c9-99cb154ff8ad.jpeg",
-        "link": "https://www.scielo.br/j/rdpsi/a/RpX434mLxwCh976f4b3dKqw"
-      },
-      {
-        "id": 3,
-        "titulo": "12 dicas para vencer a preguiça e começar a se exercitar",
-        "descricao": "Descubra estratégias práticas para superar a preguiça e iniciar uma rotina de exercícios físicos.",
-        "categoria": "artigo",
-        "imagem": "https://istoedinheiro.com.br/wp-content/uploads/sites/17/2022/11/pexels-godisable-jacob-956724.jpg?x46096",
-        "link": "https://istoedinheiro.com.br/12-dicas-para-vencer-a-preguica-e-comecar-a-se-exercitar/"
-      },
-      {
-        "id": 4,
-        "titulo": "Descobrindo o fator motivação e prazer com a atividade física",
-        "descricao": "Exercitar-se não precisa ser um sacrifício. Descubra como encontrar prazer no movimento.",
-        "categoria": "artigo",
-        "imagem": "https://www.ufrgs.br/jornal/wp-content/uploads/2024/07/Fonte_Pexels-cottonbro-5319375-1.jpg",
-        "link": "https://www.ufrgs.br/jornal/descobrindo-o-fator-motivacao-e-prazer-com-a-atividade-fisica/"
-      },
-      {
-        "id": 5,
-        "titulo": "Como incorporar diferentes exercícios físicos na rotina",
-        "descricao": "Dicas práticas para encaixar atividades físicas na rotina mesmo com pouco tempo disponível.",
-        "categoria": "artigo",
-        "imagem": "https://www.infoescola.com/wp-content/uploads/2010/01/sedentarismo.jpg",
-        "link": "https://www.mackenzie.br/cemapi/noticias/artigo/n/a/i/como-incorporar-diferentes-exercicios-fisicos-na-rotina"
-      },
-      {
-        "id": 6,
-        "titulo": "Sedentarismo: o que é, riscos, recomendações da OMS",
-        "descricao": "Conheça os perigos reais de uma vida sedentária e porque agir agora é essencial.",
-        "categoria": "artigo",
-        "imagem": "https://s2.static.brasilescola.uol.com.br/be/2022/04/1-atividade-fisica.jpg",
-        "link": "https://brasilescola.uol.com.br/saude/sedentarismo.htm"
-      },
-      {
-        "id": 7,
-        "titulo": "Mexa-se contra o sedentarismo",
-        "descricao": "",
-        "categoria": "video",
-        "imagem": "",
-        "link": "https://www.youtube.com/embed/M6mJLvSAXwg"
-      },
-      {
-        "id": 8,
-        "titulo": "O que causa sedentarismo? Sintomas e consequências",
-        "descricao": "",
-        "categoria": "video",
-        "imagem": "",
-        "link": "https://www.youtube.com/embed/D2o29-kODQo"
-      },
-      {
-        "id": 9,
-        "titulo": "Sedentarismo: o pai de todos os males",
-        "descricao": "",
-        "categoria": "video",
-        "imagem": "",
-        "link": "https://www.youtube.com/embed/Hvte3XpPceQ"
-      },
-      {
-        "id": 10,
-        "titulo": "Os efeitos do sedentarismo em nossa saúde",
-        "descricao": "",
-        "categoria": "video",
-        "imagem": "",
-        "link": "https://www.youtube.com/embed/YtBLKxGpEWY"
-      },
-      {
-        "id": 11,
-        "titulo": "Sedentarismo: o mal do século?",
-        "descricao": "",
-        "categoria": "video",
-        "imagem": "",
-        "link": "https://www.youtube.com/embed/Tfgg2ZES0Wc"
-      },
-      {
-        "id": 12,
-        "titulo": "Especialista faz alerta sobre os riscos do sedentarismo",
-        "descricao": "",
-        "categoria": "video",
-        "imagem": "",
-        "link": "https://www.youtube.com/embed/6SBWyx6UeQg"
-      }
+    {
+      "id": 1,
+      "titulo": "Qualquer prática de atividade física é benéfica para o corpo humano",
+      "descricao": "Entenda por que o corpo humano precisa de movimento e como pequenas ações diárias já fazem diferença.",
+      "categoria": "artigo",
+      "imagem": "https://institutoagf.com.br/wp-content/uploads/2023/03/preguica-1.jpg",
+      "link": "https://jornal.usp.br/radio-usp/qualquer-pratica-de-atividade-fisica-e-benefica-para-o-corpo-humano/"
+    },
+    {
+      "id": 2,
+      "titulo": "Benefícios da atividade física e do exercício físico na depressão",
+      "descricao": "Veja como a atividade física pode ser sua aliada na saúde mental e no bem-estar geral.",
+      "categoria": "artigo",
+      "imagem": "https://www.protagonismodigital.sed.ms.gov.br/uploads/7213bc99-3cb0-4555-83c9-99cb154ff8ad.jpeg",
+      "link": "https://www.scielo.br/j/rdpsi/a/RpX434mLxwCh976f4b3dKqw"
+    },
+    {
+      "id": 3,
+      "titulo": "12 dicas para vencer a preguiça e começar a se exercitar",
+      "descricao": "Descubra estratégias práticas para superar a preguiça e iniciar uma rotina de exercícios físicos.",
+      "categoria": "artigo",
+      "imagem": "https://istoedinheiro.com.br/wp-content/uploads/sites/17/2022/11/pexels-godisable-jacob-956724.jpg?x46096",
+      "link": "https://istoedinheiro.com.br/12-dicas-para-vencer-a-preguica-e-comecar-a-se-exercitar/"
+    },
+    {
+      "id": 4,
+      "titulo": "Descobrindo o fator motivação e prazer com a atividade física",
+      "descricao": "Exercitar-se não precisa ser um sacrifício. Descubra como encontrar prazer no movimento.",
+      "categoria": "artigo",
+      "imagem": "https://www.ufrgs.br/jornal/wp-content/uploads/2024/07/Fonte_Pexels-cottonbro-5319375-1.jpg",
+      "link": "https://www.ufrgs.br/jornal/descobrindo-o-fator-motivacao-e-prazer-com-a-atividade-fisica/"
+    },
+    {
+      "id": 5,
+      "titulo": "Como incorporar diferentes exercícios físicos na rotina",
+      "descricao": "Dicas práticas para encaixar atividades físicas na rotina mesmo com pouco tempo disponível.",
+      "categoria": "artigo",
+      "imagem": "https://www.infoescola.com/wp-content/uploads/2010/01/sedentarismo.jpg",
+      "link": "https://www.mackenzie.br/cemapi/noticias/artigo/n/a/i/como-incorporar-diferentes-exercicios-fisicos-na-rotina"
+    },
+    {
+      "id": 6,
+      "titulo": "Sedentarismo: o que é, riscos, recomendações da OMS",
+      "descricao": "Conheça os perigos reais de uma vida sedentária e porque agir agora é essencial.",
+      "categoria": "artigo",
+      "imagem": "https://s2.static.brasilescola.uol.com.br/be/2022/04/1-atividade-fisica.jpg",
+      "link": "https://brasilescola.uol.com.br/saude/sedentarismo.htm"
+    },
+    {
+      "id": 7,
+      "titulo": "Mexa-se contra o sedentarismo",
+      "descricao": "",
+      "categoria": "video",
+      "imagem": "",
+      "link": "https://www.youtube.com/embed/M6mJLvSAXwg"
+    },
+    {
+      "id": 8,
+      "titulo": "O que causa sedentarismo? Sintomas e consequências",
+      "descricao": "",
+      "categoria": "video",
+      "imagem": "",
+      "link": "https://www.youtube.com/embed/D2o29-kODQo"
+    },
+    {
+      "id": 9,
+      "titulo": "Sedentarismo: o pai de todos os males",
+      "descricao": "",
+      "categoria": "video",
+      "imagem": "",
+      "link": "https://www.youtube.com/embed/Hvte3XpPceQ"
+    },
+    {
+      "id": 10,
+      "titulo": "Os efeitos do sedentarismo em nossa saúde",
+      "descricao": "",
+      "categoria": "video",
+      "imagem": "",
+      "link": "https://www.youtube.com/embed/YtBLKxGpEWY"
+    },
+    {
+      "id": 11,
+      "titulo": "Sedentarismo: o mal do século?",
+      "descricao": "",
+      "categoria": "video",
+      "imagem": "",
+      "link": "https://www.youtube.com/embed/Tfgg2ZES0Wc"
+    },
+    {
+      "id": 12,
+      "titulo": "Especialista faz alerta sobre os riscos do sedentarismo",
+      "descricao": "",
+      "categoria": "video",
+      "imagem": "",
+      "link": "https://www.youtube.com/embed/6SBWyx6UeQg"
+    }
   ],
   "favoritos": [
-      {
-        "usuarioId": 4,
-        "favorito": 1,
-        "categoria": "local",
-        "id": 1
-      },
-      {
-        "usuarioId": 4,
-        "favorito": 2,
-        "categoria": "local",
-        "id": 2
-      },
-      {
-        "usuarioId": 4,
-        "favorito": 1,
-        "categoria": "artigo",
-        "id": 4
-      },
-      {
-        "usuarioId": 4,
-        "favorito": 7,
-        "categoria": "video",
-        "id": 5
-      },
-      {
-        "usuarioId": 4,
-        "favorito": 6,
-        "categoria": "artigo",
-        "id": 7
-      },
-      {
-        "usuarioId": 4,
-        "favorito": 3,
-        "categoria": "artigo",
-        "id": 8
-      },
-      {
-        "usuarioId": 5,
-        "favorito": 7,
-        "categoria": "local",
-        "id": 9
-      },
-      {
-        "usuarioId": 5,
-        "favorito": 7,
-        "categoria": "video",
-        "id": 10
-      },
-      {
-        "usuarioId": 5,
-        "favorito": 1,
-        "categoria": "artigo",
-        "id": 11
-      },
-      {
-        "usuarioId": 5,
-        "favorito": 3,
-        "categoria": "artigo",
-        "id": 12
-      }
+    {
+      "usuarioId": 4,
+      "favorito": 1,
+      "categoria": "local",
+      "id": 1
+    },
+    {
+      "usuarioId": 4,
+      "favorito": 2,
+      "categoria": "local",
+      "id": 2
+    },
+    {
+      "usuarioId": 4,
+      "favorito": 1,
+      "categoria": "artigo",
+      "id": 4
+    },
+    {
+      "usuarioId": 4,
+      "favorito": 7,
+      "categoria": "video",
+      "id": 5
+    },
+    {
+      "usuarioId": 4,
+      "favorito": 6,
+      "categoria": "artigo",
+      "id": 7
+    },
+    {
+      "usuarioId": 4,
+      "favorito": 3,
+      "categoria": "artigo",
+      "id": 8
+    },
+    {
+      "usuarioId": 5,
+      "favorito": 7,
+      "categoria": "local",
+      "id": 9
+    },
+    {
+      "usuarioId": 5,
+      "favorito": 7,
+      "categoria": "video",
+      "id": 10
+    },
+    {
+      "usuarioId": 5,
+      "favorito": 1,
+      "categoria": "artigo",
+      "id": 11
+    },
+    {
+      "usuarioId": 5,
+      "favorito": 3,
+      "categoria": "artigo",
+      "id": 12
+    }
   ]
 }
