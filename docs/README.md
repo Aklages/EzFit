@@ -269,7 +269,7 @@ Relação de ferramentas empregadas pelo grupo durante o projeto.
 
 | Ambiente                    | Plataforma | Link de acesso                                     |
 | --------------------------- | ---------- | -------------------------------------------------- |
-| Processo de Design Thinking | Miro       | https://miro.com/app/board/uXjVIRySsuU=/  |
+| Processo de Design Thinking | Miro       | https://miro.com/app/board/uXjVIRySsuU=/?share_link_id=309987947790  |
 | Repositório de código       | GitHub     | https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2025-1-ti1-0385100-ezfit.git|
 | Hospedagem do site          | Replit     | https://site.render.com/XXXXXXX ⚠️ EXEMPLO ⚠️ |
 | Protótipo Interativo        | Figma      | https://www.figma.com/proto/q5gZfvlqbbKevA76tNFEP8/EzFit?node-id=0-1&t=im2LzitrSZq5L4yf-1   |
@@ -321,7 +321,7 @@ Esta seção apresenta as funcionalidades da solução
 
 Apresentação
 
-* **Estrutura de dados:** [Treinos](#ti_ed_contatos)
+* **Estrutura de dados:** [Treinos](#estrutura-de-dados---treinos)
 * **Instruções de acesso:**
   * Abra o site e faça cadastro
   * Clique no card de meus treinos
@@ -333,7 +333,7 @@ Apresentação
 
 Apresentação
 
-* **Estrutura de dados:** [Treinos](#ti_ed_contatos)
+* **Estrutura de dados:** [Treinos](#estrutura-de-dados---treinos)
 * **Instruções de acesso:**
   * Abra o site e faça cadastro
   * Clique no card de meus treinos
@@ -346,7 +346,7 @@ Apresentação
 
 Apresentação
 
-* **Estrutura de dados:** [Locais](#ti_ed_contatos)
+* **Estrutura de dados:** [Locais](#estrutura-de-dados---locais)
 * **Instruções de acesso:**
   * Abra o site e faça cadastro
   * Clique no card de encontrar um local
@@ -358,7 +358,7 @@ Apresentação
 
 Apresentação
 
-* **Estrutura de dados:** [Conteudos](#ti_ed_contatos)
+* **Estrutura de dados:** [Conteudos](#estrutura-de-dados---conteudos)
 * **Instruções de acesso:**
   * Abra o site e faça cadastro
   * Clique no card de vídeos motivacionais
@@ -370,7 +370,7 @@ Apresentação
 
 Apresentação
 
-* **Estrutura de dados:** [Conteudos](#ti_ed_contatos)
+* **Estrutura de dados:** [Conteudos](#estrutura-de-dados---conteudos)
 * **Instruções de acesso:**
   * Abra o site e faça cadastro
   * Clique no card de informações científicas
@@ -382,7 +382,7 @@ Apresentação
 
 Apresentação
 
-* **Estrutura de dados:** [Grupos](#ti_ed_contatos)
+* **Estrutura de dados:** [Grupos](#estrutura-de-dados---grupos)
 * **Instruções de acesso:**
   * Abra o site e faça cadastro
   * Clique no card de comunidades
@@ -394,7 +394,7 @@ Apresentação
 
 Apresentação
 
-* **Estrutura de dados:** [Grupos](#ti_ed_contatos)
+* **Estrutura de dados:** [Grupos](#estrutura-de-dados---grupos)
 * **Instruções de acesso:**
   * Abra o site e faça cadastro
   * Clique no card de comunidades
@@ -407,7 +407,7 @@ Apresentação
 
 Apresentação
 
-* **Estrutura de dados:** [Favoritos](#ti_ed_contatos)
+* **Estrutura de dados:** [Favoritos](#estrutura-de-dados---favoritos)
 * **Instruções de acesso:**
   * Abra o site e faça cadastro
   * Clique no card de favoritos
@@ -419,7 +419,7 @@ Apresentação
 
 Apresentação
 
-* **Estrutura de dados:** [Conteudos](#ti_ed_contatos)
+* **Estrutura de dados:** [Conteudos](#estrutura-de-dados---conteudos)
 * **Instruções de acesso:**
   * Abra o site e faça cadastro com uma conta com permissao de administrador(user: adm, senha: 123)
   * Clique no card de Cadastrar Conteudos
@@ -431,7 +431,7 @@ Apresentação
 
 Apresentação
 
-* **Estrutura de dados:** [Exercicios](#ti_ed_contatos)
+* **Estrutura de dados:** [Exercicios](#estrutura-de-dados---exercicios)
 * **Instruções de acesso:**
   * Abra o site e faça cadastro com uma conta com permissao de administrador(user: adm, senha: 123)
   * Clique no card de Cadastrar Exercicios
@@ -443,7 +443,7 @@ Apresentação
 
 Apresentação
 
-* **Estrutura de dados:** [Treinos](#ti_ed_contatos)
+* **Estrutura de dados:** [Treinos](#estrutura-de-dados---treinos)
 * **Instruções de acesso:**
   * Abra o site e faça cadastro com uma conta com permissao de administrador(user: adm, senha: 123)
   * Clique no card de Cadastrar Treinos
@@ -455,7 +455,7 @@ Apresentação
 
 Apresentação
 
-* **Estrutura de dados:** [Locais](#ti_ed_contatos)
+* **Estrutura de dados:** [Locais](#estrutura-de-dados---locais)
 * **Instruções de acesso:**
   * Abra o site e faça cadastro com uma conta com permissao de administrador(user: adm, senha: 123)
   * Clique no card de Cadastrar Locais
@@ -467,48 +467,128 @@ Apresentação
 
 Descrição das estruturas de dados utilizadas na solução com exemplos no formato JSON
 
-##### Estrutura de Dados - Contatos   ⚠️ EXEMPLO ⚠️
+##### Estrutura de Dados - Usuarios
 
-Contatos da aplicação
+Usuarios da aplicação
 
 ```json
   {
-    "id": 1,
-    "nome": "Leanne Graham",
-    "cidade": "Belo Horizonte",
-    "categoria": "amigos",
-    "email": "Sincere@april.biz",
-    "telefone": "1-770-736-8031",
-    "website": "hildegard.org"
+     "id": 1,
+     "login": "adm",
+     "senha": "123",
+     "nome": "Administrador do Sistema",
+     "email": "adm@ezfit.com",
+     "treino": 0,
+     "adm": true
   }
   
 ```
 
-##### Estrutura de Dados - Usuários  ⚠️ EXEMPLO ⚠️
+##### Estrutura de Dados - Exercicios
 
-Registro dos usuários do sistema utilizados para login e para o perfil do sistema
+Exercicios usados nos treinos
 
 ```json
   {
-    id: "eed55b91-45be-4f2c-81bc-7686135503f9",
-    email: "admin@abc.com",
-    id: "eed55b91-45be-4f2c-81bc-7686135503f9",
-    login: "admin",
-    nome: "Administrador do Sistema",
-    senha: "123"
+    "id": 1,
+    "nome": "Polichinelo",
+    "duracao_min": 5,
+    "repeticoes": 20
   }
 ```
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Apresente as estruturas de dados utilizadas na solução tanto para dados utilizados na essência da aplicação quanto outras estruturas que foram criadas para algum tipo de configuração
->
-> Nomeie a estrutura, coloque uma descrição sucinta e apresente um exemplo em formato JSON.
->
-> **Orientações:**
->
-> * [JSON Introduction](https://www.w3schools.com/js/js_json_intro.asp)
-> * [Trabalhando com JSON - Aprendendo desenvolvimento web | MDN](https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/Objects/JSON)
+##### Estrutura de Dados - Treinos
+
+Treinos para os usuarios
+
+```json
+  {
+    "id": 1,
+    "objetivo": "cardio",
+    "dias": 3,
+    "tempo_livre_m": 30,
+    "local": "casa"
+  }
+```
+
+##### Estrutura de Dados - Treinos_exercicios
+
+Entidade relacional de treinos e exercicios
+
+```json
+  {
+    "id": 1,
+    "treinoId": 1,
+    "exercicioId": 1
+  }
+```
+
+##### Estrutura de Dados - Locais
+
+Localizações usadas na tela de encontrar locais
+
+```json
+  {
+    "id": 1,
+    "nome": "Academia Smart Fit - Avenida Prudente de Morais",
+    "tipo": "Academia",
+    "link": "https://www.smartfit.com.br/academias/avenida-prudente-de-morais",
+    "latitude": "-19.940607825663637",
+    "longitude": "-43.9478355100661"
+  }
+```
+
+##### Estrutura de Dados - Grupos
+
+Grupos disponiveis e criados pelos usuarios
+
+```json
+  {
+    "id": 1,
+    "id_usuario": 1,
+    "categoria": "basquete",
+    "titulo": "Basquete BH",
+    "descricao": "Grupo para quem quer praticar basquete em bh no bairro castelo",
+    "imagem": "../public/assets/images/",
+    "link": "https://chat.whatsapp.com/DiMIZNIg6qfKGJtf1DflaR"
+  }
+```
+
+##### Estrutura de Dados - Conteudos
+
+Conteudos como artigos e videos
+
+```json
+  {
+    "id": 1,
+    "titulo": "Qualquer prática de atividade física é benéfica para o corpo humano",
+    "descricao": "Entenda por que o corpo humano precisa de movimento e como pequenas ações diárias já fazem diferença.",
+    "categoria": "artigo",
+    "imagem": "https://institutoagf.com.br/wp-content/uploads/2023/03/preguica-1.jpg",
+    "link": "https://jornal.usp.br/radio-usp/qualquer-pratica-de-atividade-fisica-e-benefica-para-o-corpo-humano/"
+  },
+  {
+    "id": 7,
+    "titulo": "Mexa-se contra o sedentarismo",
+    "descricao": "",
+    "categoria": "video",
+    "imagem": "",
+    "link": "https://www.youtube.com/embed/M6mJLvSAXwg"
+  }
+```
+
+##### Estrutura de Dados - Favoritos
+
+Entidade para guardar os itens favoritados pelo usuario
+
+```json
+  {
+    "usuarioId": 4,
+    "favorito": 1,
+    "categoria": "local",
+    "id": 1
+  }
+```
 
 ## Módulos e APIs
 
