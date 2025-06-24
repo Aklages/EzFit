@@ -118,7 +118,7 @@ document.getElementById('btn_excluirGrupo').addEventListener('click', () => {
 });
 
 document.getElementById('btn_voltar').addEventListener('click', () => {
-    window.location.href = "/modulos/apr_comunidade/detalhes.html"
+    window.location.href = "/modulos/apr_comunidade/index.html"
 });
 
 
