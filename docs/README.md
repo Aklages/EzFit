@@ -317,24 +317,151 @@ O vídeo a seguir traz uma apresentação do problema que a equipe está tratand
 
 Esta seção apresenta as funcionalidades da solução.Info
 
-##### Funcionalidade 1 - Cadastro de Contatos ⚠️ EXEMPLO ⚠️
+##### Funcionalidade 1 - Sugerir Treinos
 
-Permite a inclusão, leitura, alteração e exclusão de contatos para o sistema
+Apresentação
 
-* **Estrutura de dados:** [Contatos](#ti_ed_contatos)
+* **Estrutura de dados:** [Treinos](#ti_ed_contatos)
 * **Instruções de acesso:**
-  * Abra o site e efetue o login
-  * Acesse o menu principal e escolha a opção Cadastros
-  * Em seguida, escolha a opção Contatos
+  * Abra o site e faça cadastro
+  * Clique no card de meus treinos
 * **Tela da funcionalidade**:
 
 ![Tela de Funcionalidade](images/exemplo-funcionalidade.png)
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Apresente cada uma das funcionalidades que a aplicação fornece tanto para os usuários quanto aos administradores da solução.
->
-> Inclua, para cada funcionalidade, itens como: (1) titulos e descrição da funcionalidade; (2) Estrutura de dados associada; (3) o detalhe sobre as instruções de acesso e uso.
+##### Funcionalidade 2 - Apresentar Treinos
+
+Apresentação
+
+* **Estrutura de dados:** [Treinos](#ti_ed_contatos)
+* **Instruções de acesso:**
+  * Abra o site e faça cadastro
+  * Clique no card de meus treinos
+  * Caso não tenha um treino associado ao usuario, escolha um na funcionalidade de sugerir treino para ser redirecionado para a tela de apresentar treinos
+* **Tela da funcionalidade**:
+
+![Tela de Funcionalidade](images/exemplo-funcionalidade.png)
+
+##### Funcionalidade 3 - Econtrar um local
+
+Apresentação
+
+* **Estrutura de dados:** [Locais](#ti_ed_contatos)
+* **Instruções de acesso:**
+  * Abra o site e faça cadastro
+  * Clique no card de encontrar um local
+* **Tela da funcionalidade**:
+
+![Tela de Funcionalidade](images/exemplo-funcionalidade.png)
+
+##### Funcionalidade 4 - Apresentar videos motivacionais
+
+Apresentação
+
+* **Estrutura de dados:** [Conteudos](#ti_ed_contatos)
+* **Instruções de acesso:**
+  * Abra o site e faça cadastro
+  * Clique no card de vídeos motivacionais
+* **Tela da funcionalidade**:
+
+![Tela de Funcionalidade](images/exemplo-funcionalidade.png)
+
+##### Funcionalidade 5 - Apresentar informações científicas
+
+Apresentação
+
+* **Estrutura de dados:** [Conteudos](#ti_ed_contatos)
+* **Instruções de acesso:**
+  * Abra o site e faça cadastro
+  * Clique no card de informações científicas
+* **Tela da funcionalidade**:
+
+![Tela de Funcionalidade](images/exemplo-funcionalidade.png)
+
+##### Funcionalidade 6 - Apresentar comunidades
+
+Apresentação
+
+* **Estrutura de dados:** [Grupos](#ti_ed_contatos)
+* **Instruções de acesso:**
+  * Abra o site e faça cadastro
+  * Clique no card de comunidades
+* **Tela da funcionalidade**:
+
+![Tela de Funcionalidade](images/exemplo-funcionalidade.png)
+
+##### Funcionalidade 7 - Crud comunidade
+
+Apresentação
+
+* **Estrutura de dados:** [Grupos](#ti_ed_contatos)
+* **Instruções de acesso:**
+  * Abra o site e faça cadastro
+  * Clique no card de comunidades
+  * Clique no botão de criar/ver grupos
+* **Tela da funcionalidade**:
+
+![Tela de Funcionalidade](images/exemplo-funcionalidade.png)
+
+##### Funcionalidade 8 - Apresentar Favoritos
+
+Apresentação
+
+* **Estrutura de dados:** [Favoritos](#ti_ed_contatos)
+* **Instruções de acesso:**
+  * Abra o site e faça cadastro
+  * Clique no card de favoritos
+* **Tela da funcionalidade**:
+
+![Tela de Funcionalidade](images/exemplo-funcionalidade.png)
+
+##### Funcionalidade 9 - Crud Conteudos
+
+Apresentação
+
+* **Estrutura de dados:** [Conteudos](#ti_ed_contatos)
+* **Instruções de acesso:**
+  * Abra o site e faça cadastro com uma conta com permissao de administrador(user: adm, senha: 123)
+  * Clique no card de Cadastrar Conteudos
+* **Tela da funcionalidade**:
+
+![Tela de Funcionalidade](images/exemplo-funcionalidade.png)
+
+##### Funcionalidade 10 - Crud Exercicios
+
+Apresentação
+
+* **Estrutura de dados:** [Exercicios](#ti_ed_contatos)
+* **Instruções de acesso:**
+  * Abra o site e faça cadastro com uma conta com permissao de administrador(user: adm, senha: 123)
+  * Clique no card de Cadastrar Exercicios
+* **Tela da funcionalidade**:
+
+![Tela de Funcionalidade](images/exemplo-funcionalidade.png)
+
+##### Funcionalidade 11 - Crud Treinos
+
+Apresentação
+
+* **Estrutura de dados:** [Treinos](#ti_ed_contatos)
+* **Instruções de acesso:**
+  * Abra o site e faça cadastro com uma conta com permissao de administrador(user: adm, senha: 123)
+  * Clique no card de Cadastrar Treinos
+* **Tela da funcionalidade**:
+
+![Tela de Funcionalidade](images/exemplo-funcionalidade.png)
+
+##### Funcionalidade 12 - Crud Locais
+
+Apresentação
+
+* **Estrutura de dados:** [Locais](#ti_ed_contatos)
+* **Instruções de acesso:**
+  * Abra o site e faça cadastro com uma conta com permissao de administrador(user: adm, senha: 123)
+  * Clique no card de Cadastrar Locais
+* **Tela da funcionalidade**:
+
+![Tela de Funcionalidade](images/exemplo-funcionalidade.png)
 
 ## Estruturas de Dados
 
@@ -387,7 +514,7 @@ Registro dos usuários do sistema utilizados para login e para o perfil do siste
 
 Esta seção apresenta os módulos e APIs utilizados na solução
 
-** APIs **:
+**APIs**:
 
 * Mapbox - [https://www.mapbox.com/](https://www.mapbox.com/)
 * Viacep - [https://viacep.com.br/](https://viacep.com.br/) 
