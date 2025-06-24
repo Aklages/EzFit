@@ -269,15 +269,13 @@ Relação de ferramentas empregadas pelo grupo durante o projeto.
 
 | Ambiente                    | Plataforma | Link de acesso                                     |
 | --------------------------- | ---------- | -------------------------------------------------- |
-| Processo de Design Thinking | Miro       | https://miro.com/XXXXXXX ⚠️ EXEMPLO ⚠️        |
-| Repositório de código     | GitHub     | https://github.com/XXXXXXX ⚠️ EXEMPLO ⚠️      |
-| Hospedagem do site          | Render     | https://site.render.com/XXXXXXX ⚠️ EXEMPLO ⚠️ |
-| Protótipo Interativo       | MarvelApp  | https://marvelapp.com/XXXXXXX ⚠️ EXEMPLO ⚠️   |
-|                             |            |                                                    |
-
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Liste as ferramentas empregadas no desenvolvimento do projeto, justificando a escolha delas, sempre que possível. Inclua itens como: (1) Editor de código, (2) )ferramentas de comunicação, (3) )ferramentas de diagramação, (4) )plataformas de hospedagem, entre outras.
+| Processo de Design Thinking | Miro       | https://miro.com/app/board/uXjVIRySsuU=/  |
+| Repositório de código       | GitHub     | https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2025-1-ti1-0385100-ezfit.git|
+| Hospedagem do site          | Replit     | https://site.render.com/XXXXXXX ⚠️ EXEMPLO ⚠️ |
+| Protótipo Interativo        | Figma      | https://www.figma.com/proto/q5gZfvlqbbKevA76tNFEP8/EzFit?node-id=0-1&t=im2LzitrSZq5L4yf-1   |
+| Editor de código            | Vscode     | https://code.visualstudio.com/  |
+| Comunicação                 | Discord    | https://discord.com/  |
+| Ferramenta método ágil      | Kanban     | https://site.render.com/XXXXXXX ⚠️ EXEMPLO ⚠️  |
 
 ## Gerenciamento do Projeto
 
@@ -389,22 +387,35 @@ Registro dos usuários do sistema utilizados para login e para o perfil do siste
 
 Esta seção apresenta os módulos e APIs utilizados na solução
 
+** APIs **:
+
+* Mapbox - [https://www.mapbox.com/](https://www.mapbox.com/)
+* Viacep - [https://viacep.com.br/](https://viacep.com.br/) 
+
 **Images**:
 
-* Unsplash - [https://unsplash.com/](https://unsplash.com/) ⚠️ EXEMPLO ⚠️
+* Unsplash - [https://unsplash.com/](https://unsplash.com/)
+* Freepick - [https://br.freepik.com/](https://br.freepik.com/)
+
+**Videos**:
+
+* Youtube - [https://www.youtube.com/](https://www.youtube.com/)
 
 **Fonts:**
 
-* Icons Font Face - [https://fontawesome.com/](https://fontawesome.com/) ⚠️ EXEMPLO ⚠️
+* Font Awesome - [https://fontawesome.com/](https://fontawesome.com/)
+* Google Fonts - [https://fonts.google.com/](https://fonts.google.com/)
 
 **Scripts:**
 
-* jQuery - [http://www.jquery.com/](http://www.jquery.com/) ⚠️ EXEMPLO ⚠️
-* Bootstrap 4 - [http://getbootstrap.com/](http://getbootstrap.com/) ⚠️ EXEMPLO ⚠️
+* jQuery - [http://www.jquery.com/](http://www.jquery.com/)
+* Bootstrap 4 e 5 - [http://getbootstrap.com/](http://getbootstrap.com/)
+* PooperJs - [https://popper.js.org/docs/v2/](https://popper.js.org/docs/v2/)
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Apresente os módulos e APIs utilizados no desenvolvimento da solução. Inclua itens como: (1) Frameworks, bibliotecas, módulos, etc. utilizados no desenvolvimento da solução; (2) APIs utilizadas para acesso a dados, serviços, etc.
+**Módulos:**
+
+* Crud Contatos - [https://replit.com/@rommelpuc/Cadastro-de-Contatos-localStorage?v=1#app.js](https://replit.com/@rommelpuc/Cadastro-de-Contatos-localStorage?v=1#app.js)
+* Login App - [https://replit.com/@rommelpuc/LoginApp?v=1#index.html](https://replit.com/@rommelpuc/LoginApp?v=1#index.html)
 
 # Referências
 
