@@ -46,3 +46,28 @@ a:hover {
     height: 400px;
 }
 
+.corte{
+    height: 60vh;
+    object-fit: cover;
+    object-position: center;
+}
+
+@media (max-width: 767px) {
+
+    .corte{
+        height: 30vh;
+    }
+
+}
+  
+@media (max-width: 575px) {
+    .banner{
+        width: 20vw;
+    }
+}
+
+@media (max-width: 450px) {
+    .corte{
+        height: 20vh;
+    }
+}

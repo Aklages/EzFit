@@ -154,10 +154,10 @@ function processaFormLogin(event) {
     if (resultadoLogin) {
         const permissao = JSON.parse(sessionStorage.getItem('usuarioCorrente')).adm;
         if(permissao == true){
-            window.location.href = "http://localhost:3000/hub/adm.html";
+            window.location.href = "./hub/adm.html";
         }
         else{
-            window.location.href = "http://localhost:3000/hub/user.html";
+            window.location.href = "./hub/user.html";
         }
     }
     else { // Se login falhou, avisa ao usuário
