@@ -30,7 +30,7 @@ document.getElementById('btn_criarGrupo').addEventListener('click', () => {
         imagem: ""
     };
 
-    fetch('http://localhost:3000/grupos', {
+    fetch('/grupos', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -77,7 +77,7 @@ document.getElementById('btn_alterarGrupo').addEventListener('click', () => {
         imagem: ""
     };
 
-    fetch(`http://localhost:3000/grupos/${idGrupo}`, {
+    fetch(`/grupos/${idGrupo}`, {
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json'
@@ -103,7 +103,7 @@ document.getElementById('btn_excluirGrupo').addEventListener('click', () => {
         return;
     }
 
-    fetch(`http://localhost:3000/grupos/${idGrupo}`, {
+    fetch(`/grupos/${idGrupo}`, {
         method: 'DELETE'
     })
         .then(res => {
@@ -117,9 +117,14 @@ document.getElementById('btn_excluirGrupo').addEventListener('click', () => {
         .catch(erro => console.error('Erro ao excluir grupo:', erro));
 });
 
+document.getElementById('btn_voltar').addEventListener('click', () => {
+    window.location.href = "/modulos/apr_comunidade/detalhes.html"
+});
+
+
 // Método GET
 function carregarGrupos() {
-    fetch('http://localhost:3000/grupos')
+    fetch('/grupos')
         .then(res => res.json())
         .then(grupos => {
             listaGrupos.innerHTML = '';

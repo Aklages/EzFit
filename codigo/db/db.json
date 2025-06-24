@@ -33,8 +33,17 @@
       "senha": "123",
       "nome": "André",
       "email": "andre@gmail.com",
-      "treino": 0,
+      "treino": 12,
       "adm": false
+    },
+    {
+      "login": "simone",
+      "senha": "123",
+      "nome": "simone",
+      "email": "simone@gmail.com",
+      "treino": 16,
+      "adm": false,
+      "id": 5
     }
   ],
   "exercicios": [
@@ -807,6 +816,24 @@
       "categoria": "basquete",
       "imagem": "",
       "id": 9
+    },
+    {
+      "id_usuario": 5,
+      "titulo": "corrida",
+      "descricao": "corrida bh",
+      "link": "123",
+      "categoria": "outros",
+      "imagem": "",
+      "id": 10
+    },
+    {
+      "id_usuario": 5,
+      "titulo": "2",
+      "descricao": "aaa",
+      "link": "aaa",
+      "categoria": "basquete",
+      "imagem": "",
+      "id": 11
     }
   ],
   "conteudos": [
@@ -898,12 +925,6 @@
     },
     {
       "usuarioId": 4,
-      "favorito": 3,
-      "categoria": "local",
-      "id": 3
-    },
-    {
-      "usuarioId": 4,
       "favorito": 1,
       "categoria": "artigo",
       "id": 4
@@ -916,12 +937,6 @@
     },
     {
       "usuarioId": 4,
-      "favorito": 10,
-      "categoria": "local",
-      "id": 6
-    },
-    {
-      "usuarioId": 4,
       "favorito": 6,
       "categoria": "artigo",
       "id": 7
@@ -931,6 +946,30 @@
       "favorito": 3,
       "categoria": "artigo",
       "id": 8
+    },
+    {
+      "usuarioId": 5,
+      "favorito": 7,
+      "categoria": "local",
+      "id": 9
+    },
+    {
+      "usuarioId": 5,
+      "favorito": 7,
+      "categoria": "video",
+      "id": 10
+    },
+    {
+      "usuarioId": 5,
+      "favorito": 1,
+      "categoria": "artigo",
+      "id": 11
+    },
+    {
+      "usuarioId": 5,
+      "favorito": 3,
+      "categoria": "artigo",
+      "id": 12
     }
   ]
 }

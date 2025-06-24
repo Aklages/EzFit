@@ -4,3 +4,13 @@
     --white-color: #fefefe;
     --bg-color: #F5FFED;
 }
+
+.exercicios-dia {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+.exercicios-dia.show {
+  max-height: 500px;
+}

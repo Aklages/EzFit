@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function loadAllGroups() {
-        fetch('http://localhost:3000/grupos') 
+        fetch('/grupos') 
             .then(res => res.json())
             .then(data => {
                 grupos = data; 
@@ -52,23 +52,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const filtrados = filterGroups(termo);
         renderGroups(filtrados);
     });
-
-    
-    document.getElementById('btnVisualizarGrupos').addEventListener('click', () => {
-        const usuarioLogado = JSON.parse(sessionStorage.getItem('usuarioCorrente'));
-        const idUsuarioLogado = usuarioLogado ? usuarioLogado.id : null;
-
-        if (idUsuarioLogado) {
-            const meusGrupos = grupos.filter(g => g.id_usuario === idUsuarioLogado);
-            renderGroups(meusGrupos); 
-        } else {
-            alert('Por favor, faça login para visualizar seus grupos.');
-            renderGroups([]); 
-        }
-    });
-
     
     document.getElementById('btnCriarGrupo').addEventListener('click', () => {
-        window.location.href = "http://localhost:3000/modulos/crud_comunidade/index.html";
+        window.location.href = "/modulos/crud_comunidade/index.html";
     });
 });

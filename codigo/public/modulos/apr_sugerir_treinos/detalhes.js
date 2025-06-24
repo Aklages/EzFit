@@ -14,7 +14,7 @@ document.getElementById('formSugerirTreino').addEventListener('submit', function
     resultadoDiv.innerHTML = `<p>Buscando a melhor sugestão para você...</p>`;
     divEscolherTreino.style.display = 'none'; // Esconde o botão de escolher enquanto busca
 
-    fetch('http://localhost:3000/treinos')
+    fetch('/treinos')
         .then(res => res.json())
         .then(treinos => {
             let melhorTreino = null;
@@ -92,7 +92,7 @@ document.getElementById('formSugerirTreino').addEventListener('submit', function
                 <h6>Exercícios:</h6>
             `;
 
-            fetch(`http://localhost:3000/treinos_exercicios?treinoId=${melhorTreino.id}`)
+            fetch(`/treinos_exercicios?treinoId=${melhorTreino.id}`)
                 .then(res => res.json())
                 .then(treinosExercicios => {
                     const exercicioIds = treinosExercicios.map(te => te.exercicioId);
@@ -105,7 +105,7 @@ document.getElementById('formSugerirTreino').addEventListener('submit', function
                     }
 
                     const fetchExerciciosPromises = exercicioIds.map(id => 
-                        fetch(`http://localhost:3000/exercicios/${id}`).then(res => res.json())
+                        fetch(`/exercicios/${id}`).then(res => res.json())
                     );
 
                     Promise.all(fetchExerciciosPromises)
@@ -148,7 +148,7 @@ document.getElementById('formSugerirTreino').addEventListener('submit', function
 document.getElementById('btnEscolherTreino').addEventListener('click', function() {
     if (suggestedTreinoId) {
         let usuario = JSON.parse(sessionStorage.getItem('usuarioCorrente'));
-        fetch(`http://localhost:3000/usuarios/${usuario.id}`, {
+        fetch(`/usuarios/${usuario.id}`, {
             method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json'
@@ -160,7 +160,7 @@ document.getElementById('btnEscolherTreino').addEventListener('click', function(
             console.log("Usuário atualizado com novo treino:", usuarioAtualizado);
             sessionStorage.setItem('usuarioCorrente', JSON.stringify(usuarioAtualizado)); // Atualiza o sessionStorage
             alert('Treino escolhido com sucesso!');
-            window.location.href = "http://localhost:3000/modulos/apr_treinos/index.html"; // Redireciona para a página de apresentação do treino
+            window.location.href = "/modulos/apr_treinos/index.html"; // Redireciona para a página de apresentação do treino
         })
         .catch(err => {
             alert('Erro ao salvar o treino. Tente novamente.');

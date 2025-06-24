@@ -5,7 +5,7 @@ const treinoId = JSON.parse(sessionStorage.getItem('usuarioCorrente')).treino;
 
 $("#button").on("click", function () {
     let usuario = JSON.parse(sessionStorage.getItem('usuarioCorrente'));
-    fetch(`http://localhost:3000/usuarios/${usuario.id}`, {
+    fetch(`/usuarios/${usuario.id}`, {
         method: 'PATCH',
         headers: {
             'Content-Type': 'application/json'
@@ -16,7 +16,7 @@ $("#button").on("click", function () {
     .then(usuarioAtualizado => {
         console.log(usuarioAtualizado);
         sessionStorage.setItem('usuarioCorrente', JSON.stringify(usuarioAtualizado));
-        window.location.href = "http://localhost:3000/modulos/apr_sugerir_treinos/detalhes.html"
+        window.location.href = "/modulos/apr_sugerir_treinos/detalhes.html"
     })
 });
 
@@ -74,12 +74,17 @@ function processarDadosSeTudoCarregado() {
     }
 }
 
+function capitalize(str) {
+    if (!str) return '';
+    return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
+}
+
 function exibirResumoTreino() {
     treinoDiv.html(`
         <div class="p-3 border rounded shadow-sm mb-3 bg-light">
             <h3>Informações do Treino:</h3>
-            <p><strong>Objetivo:</strong> ${treinoSelecionado.objetivo.replace("_", " ")}</p>
-            <p><strong>Local:</strong> ${treinoSelecionado.local}</p>
+            <p><strong>Objetivo:</strong> ${capitalize(treinoSelecionado.objetivo.replace("_", " "))}</p>
+            <p><strong>Local:</strong> ${capitalize(treinoSelecionado.local)}</p>
             <p><strong>Duração:</strong> ${treinoSelecionado.tempo_livre_m} min</p>
         </div>
     `);
@@ -98,7 +103,7 @@ function exibirDiasSemana() {
                     <h5 class="mb-0">${diasNomes[i]}</h5>
                     ${isTreino ? `<button class="btn btn-sm btn-light toggle-btn" data-target="${diaId}">▼</button>` : ""}
                 </div>
-                ${isTreino ? `<div class="mt-2 exercicios-dia d-none" id="${diaId}">${gerarExerciciosHTML()}</div>` : `<p class="text-center mb-0">Descanso</p>`}
+                ${isTreino ? `<div class="mt-2 exercicios-dia" id="${diaId}">${gerarExerciciosHTML()}</div>` : `<p class="text-center mb-0">Descanso</p>`}
             </div>
         `);
 
@@ -108,8 +113,8 @@ function exibirDiasSemana() {
     diasSemanaDiv.on("click", ".toggle-btn", function () {
         const targetId = $(this).data("target");
         const target = $(`#${targetId}`);
-        target.toggleClass("d-none");
-        const isOpen = !target.hasClass("d-none");
+        target.toggleClass("show");
+        const isOpen = target.hasClass("show");
         $(this).text(isOpen ? "▲" : "▼");
     });
 }
