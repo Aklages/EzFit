@@ -44,6 +44,15 @@
       "treino": 16,
       "adm": false,
       "id": 5
+    },
+    {
+      "login": "mari",
+      "senha": "123",
+      "nome": "Mari",
+      "email": "ma@gmail.com",
+      "treino": 0,
+      "adm": false,
+      "id": 6
     }
   ],
   "exercicios": [
@@ -679,7 +688,7 @@
       "longitude": "-43.981089934634745"
     }
   ],
-    "grupos": [
+  "grupos": [
     {
       "id": 1,
       "id_usuario": 1,

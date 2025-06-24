@@ -154,7 +154,6 @@ function carregarGrupos() {
                 card.style.width = '250px';
                 card.style.flex = '0 0 auto';
 
-                // Adicionado link de entrar no card, como estava na versão original
                 card.innerHTML = `
                     <div class="card-body">
                         <h5 class="card-title fw-bold">${grupo.titulo}</h5>
@@ -164,10 +163,19 @@ function carregarGrupos() {
                     </div>
                 `;
 
+                card.addEventListener('click', () => {
+                    document.getElementById('idGrupo').value = grupo.id;
+                    document.getElementById('nomeGrupo').value = grupo.titulo;
+                    document.getElementById('linkGrupo').value = grupo.link;
+                    document.getElementById('categoriaGrupo').value = grupo.categoria;
+                    document.getElementById('descricaoGrupo').value = grupo.descricao;
+                });
+
                 listaGrupos.appendChild(card);
             });
         })
         .catch(erro => console.error('Erro ao carregar grupos:', erro));
 }
+
 
 window.addEventListener('load', carregarGrupos);
