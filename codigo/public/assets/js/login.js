@@ -119,7 +119,7 @@ function addUser (nome, login, senha, email) {
         .then(response => response.json())
         .then(data => {
             // Adiciona o novo usuário na variável db_usuarios em memória
-            db_usuarios.push (usuario);
+            db_usuarios.push (data);
             displayMessage("Usuário inserido com sucesso");
         })
         .catch(error => {

@@ -913,6 +913,24 @@
       "favorito": 7,
       "categoria": "video",
       "id": 5
+    },
+    {
+      "usuarioId": 4,
+      "favorito": 10,
+      "categoria": "local",
+      "id": 6
+    },
+    {
+      "usuarioId": 4,
+      "favorito": 6,
+      "categoria": "artigo",
+      "id": 7
+    },
+    {
+      "usuarioId": 4,
+      "favorito": 3,
+      "categoria": "artigo",
+      "id": 8
     }
   ]
 }
