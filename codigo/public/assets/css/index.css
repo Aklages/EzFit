@@ -58,6 +58,10 @@ a:hover {
         height: 30vh;
     }
 
+    .invisivel{
+        display: none;
+    }
+
 }
   
 @media (max-width: 575px) {
@@ -67,6 +71,11 @@ a:hover {
 }
 
 @media (max-width: 450px) {
+
+    #logo{
+        width: 200px;
+    }
+
     .corte{
         height: 20vh;
     }
