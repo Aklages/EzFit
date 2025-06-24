@@ -614,13 +614,8 @@ Esta seção apresenta os módulos e APIs utilizados na solução
 
 As referências utilizadas no trabalho foram:
 
-* SOBRENOME, Nome do autor. Título da obra. 8. ed. Cidade: Editora, 2000. 287 p ⚠️ EXEMPLO ⚠️
+* POZENA, Regina; CUNHA, Nancy Ferreira da Silva. Construindo um futuro saudável através da prática da atividade física diária. Saúde e Sociedade, São Paulo, v. 18, 2009. Disponível em: https://doi.org/10.1590/s0104-12902009000500009. Acesso em: 10 mar. 2025.
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Inclua todas as referências (livros, artigos, sites, etc) utilizados no desenvolvimento do trabalho.
->
-> **Orientações**:
->
-> - [Formato ABNT](https://www.normastecnicas.com/abnt/trabalhos-academicos/referencias/)
-> - [Referências Bibliográficas da ABNT](https://comunidade.rockcontent.com/referencia-bibliografica-abnt/)
+* SILVA, Paulo Vitor Bernardes Sidney et al. A íntima relação entre obesidade e má qualidade de vida de estudantes universitários. Research, Society and Development, v. 11, n. 9, 2022. Disponível em: https://doi.org/10.33448/rsd-v11i9.31819. Acesso em: 10 mar. 2025.
+
+* SALES, Synara Sepúlveda; COSTA, Talita Mendes da; GAI, Maria Júlia Pegoraro. Adolescentes na era digital: impactos na saúde mental. Research, Society and Development, v. 10, n. 9, 2021. Disponível em: https://doi.org/10.33448/rsd-v10i9.17800. Acesso em: 10 mar. 2025.
