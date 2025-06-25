@@ -279,7 +279,7 @@ Relação de ferramentas empregadas pelo grupo durante o projeto.
 
 ## Gerenciamento do Projeto
 
-Divisão de papéis no grupo e apresentação da estrutura da ferramenta de controle de tarefas (Kanban).
+Divisão de papéis no grupo e apresentação da estrutura da ferramenta de controle de tarefas (Kanban)
 
 ![Kanban Miro](images/Kanban_Miro.jpg)
 
